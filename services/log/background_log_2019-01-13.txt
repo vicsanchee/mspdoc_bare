@@ -1,0 +1,108 @@
+[2019-01-13 08:49:00]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00002","module_id":"18","emp_id":"15"}
+
+
+[2019-01-13 08:49:02]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2019-01-13 10:39:04]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00002","module_id":"18","emp_id":"15","email_type":1}
+
+
+[2019-01-13 10:39:06]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2019-01-13 10:39:24]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00002","module_id":"18","emp_id":"15","email_type":2}
+
+
+[2019-01-13 10:39:26]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2019-01-13 11:47:59]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00001","module_id":"18","emp_id":"15","email_type":0}
+
+
+[2019-01-13 11:48:01]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2019-01-13 11:48:24]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00001","module_id":"18","emp_id":"15","email_type":1}
+
+
+[2019-01-13 11:48:27]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2019-01-13 11:48:44]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00001","module_id":"18","emp_id":"15","email_type":2}
+
+
+[2019-01-13 11:48:46]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2019-01-13 14:39:09]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00004","module_id":"18","emp_id":"15","email_type":0}
+
+
+[2019-01-13 14:39:13]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2019-01-13 17:14:06]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00004","module_id":"18","emp_id":"15","email_type":0}
+
+
+[2019-01-13 17:14:08]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2019-01-13 17:56:25]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00004","module_id":"18","emp_id":"15","email_type":0}
+
+
+[2019-01-13 17:56:27]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+

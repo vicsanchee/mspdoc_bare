@@ -1,0 +1,270 @@
+[2018-12-09 09:19:14]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+{"outbound_no":"18-0000004","module_id":"16","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-09 09:19:20]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-09 10:03:37]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+{"outbound_no":"18-0000001","module_id":"16","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-09 10:03:41]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-09 10:05:34]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+{"outbound_no":"18-0000001","module_id":"16","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-09 10:05:39]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-09 10:07:49]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+{"outbound_no":"18-0000001","module_id":"16","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-09 10:07:54]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-09 10:09:30]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+{"outbound_no":"18-0000001","module_id":"16","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-09 10:09:35]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-09 11:02:49]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+{"outbound_no":"18-0000001","module_id":"16","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-09 11:02:53]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-09 11:03:52]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+{"outbound_no":"18-0000001","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-09 11:03:51"},"approve":{"approved":null,"approved_by":null,"approved_date":null}},"status_id":"199","module_id":"16","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-09 11:03:56]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-09 11:04:41]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+{"outbound_no":"18-0000001","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-09 11:03:51"},"approve":{"approved":1,"approved_by":"15","approved_date":"2018-12-09 11:04:40"}},"status_id":"200","module_id":"16","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-09 11:04:45]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-09 11:04:45]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+{"outbound_no":"18-0000001","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-09 11:03:51"},"approve":{"approved":1,"approved_by":"15","approved_date":"2018-12-09 11:04:40"}},"status_id":"200","module_id":"16","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-09 11:04:48]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-09 11:10:26]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","status_id":"201","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-09 11:10:42]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","status_id":"201","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-09 11:10:59]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","status_id":"201","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-09 11:11:15]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","status_id":"201","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-09 11:13:17]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","status_id":"201","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-09 11:13:57]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","status_id":"201","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-09 11:15:35]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","status_id":"201","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-09 11:24:41]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","status_id":"201","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-09 11:24:46]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-09 11:27:14]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+{"outbound_no":"18-0000002","module_id":"16","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-09 11:27:19]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-09 11:28:04]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+{"outbound_no":"18-0000002","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-09 11:28:03"},"approve":{"approved":null,"approved_by":null,"approved_date":null}},"status_id":"199","module_id":"16","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-09 11:28:07]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-09 11:28:37]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+{"outbound_no":"18-0000002","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-09 11:28:03"},"approve":{"approved":1,"approved_by":"15","approved_date":"2018-12-09 11:28:36"}},"status_id":"200","module_id":"16","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-09 11:28:41]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-09 11:29:11]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"18-0000002","status_id":"201","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-09 11:29:16]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-09 11:31:33]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"18-0000002","status_id":"201","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-09 11:31:38]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-09 11:32:32]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"18-0000002","status_id":"201","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-09 11:32:37]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-09 15:58:13]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+{"document_no":"18-0000002","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-09 15:58:12"},"approve":{"approved":null,"approved_by":null,"approved_date":null}},"module_id":"17","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-09 15:58:13]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+"Send outbound Notification Email Failed"
+
+
+[2018-12-09 16:05:17]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+{"document_no":"18-0000002","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-09 16:05:16"},"approve":{"approved":null,"approved_by":null,"approved_date":null}},"module_id":"17","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-09 16:05:21]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-09 16:05:54]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+{"document_no":"18-0000002","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-09 16:05:16"},"approve":{"approved":1,"approved_by":"15","approved_date":"2018-12-09 16:05:53"}},"module_id":"17","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-09 16:05:58]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+

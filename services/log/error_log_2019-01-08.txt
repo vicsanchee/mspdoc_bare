@@ -1,0 +1,40 @@
+[2019-01-08 22:06:20]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT prefix,s...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\helperfunctions.php(1130): db_query('prefix,sequence...', 'cms_master_empl...', 'id = ')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(114): get_doc_primary_no('service_no', 'cms_service_req...', '')
+#3 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(158): add_edit_service_request(Object(stdClass))
+#4 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+
+
+[2019-01-08 22:08:50]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT cms_serv...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(342): db_query('cms_service_req...', 'cms_service_req...', 'service_no='MSP...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(185): send_email_verifier_approver_service_request(Object(stdClass))
+#3 {main}SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cms_document_archiving.created_by' in 'on clause'
+
+
+[2019-01-08 22:10:48]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT cms_serv...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(342): db_query('cms_service_req...', 'cms_service_req...', 'service_no='MSP...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(185): send_email_verifier_approver_service_request(Object(stdClass))
+#3 {main}SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cms_document_archiving.created_by' in 'on clause'
+
+
+[2019-01-08 23:05:55]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT id,name,...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\public\modules\contract\contracts.php(42): db_query('id,name,descr', 'cms_upload_doc', 'is_active = 1')
+#2 {main}SQLSTATE[42S02]: Base table or view not found: 1146 Table 'msphitec_hrms.cms_upload_doc' doesn't exist
+
+
+[2019-01-08 23:05:55]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT id,ref_n...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\public\modules\contract\contracts.php(47): db_query('id,ref_name,per...', 'cms_master_refe...', 'ref_type = 0 an...')
+#2 {main}SQLSTATE[42S02]: Base table or view not found: 1146 Table 'msphitec_hrms.cms_master_referral' doesn't exist
+
+
+[2019-01-08 23:05:55]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT id,ref_n...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\public\modules\contract\contracts.php(48): db_query('id,ref_name,per...', 'cms_master_refe...', 'ref_type = 1 an...')
+#2 {main}SQLSTATE[42S02]: Base table or view not found: 1146 Table 'msphitec_hrms.cms_master_referral' doesn't exist
+
+

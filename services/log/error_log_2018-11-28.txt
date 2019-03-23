@@ -1,0 +1,8 @@
+[2018-11-28 21:50:31]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\helperfunctions.php(450): PHPMailer->Send()
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\outbound-document.php(202): smtpmailer(Array, 'notify@msphitec...', 'MSP HITECT', '$Category', '%3Ctitle%3E%3C%...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\outbound-document.php(153): send_email_notification_outbound(Object(stdClass))
+#3 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(81): add_edit_outbound(Object(stdClass))
+#4 {main}You must provide at least one recipient email address.
+
+

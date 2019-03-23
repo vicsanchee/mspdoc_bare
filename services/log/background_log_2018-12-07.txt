@@ -1,0 +1,84 @@
+[2018-12-07 22:51:11]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"18-0000002","status_id":"201","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-07 22:51:17]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-07 22:54:07]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"18-0000002","status_id":"201","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-07 22:54:12]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-07 22:54:46]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"18-0000002","status_id":"201","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-07 22:54:51]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-07 22:56:26]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"18-0000002","status_id":"201","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-07 22:56:30]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-07 23:01:46]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"18-0000002","status_id":"201","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-07 23:01:51]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-07 23:53:38]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+{"outbound_no":"18-0000003","module_id":"16","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-07 23:53:43]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-07 23:55:31]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"18-0000003","status_id":"201","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-07 23:55:36]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+

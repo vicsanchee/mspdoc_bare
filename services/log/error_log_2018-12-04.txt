@@ -1,0 +1,14 @@
+[2018-12-04 22:03:58]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(233): PDOStatement->execute(Array)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\outbound_document.php(154): db_add(Array, 'cms_outbound_do...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(81): add_edit_outbound(Object(stdClass))
+#3 {main}SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'outbound_no' cannot be null
+
+
+[2018-12-04 22:04:40]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(233): PDOStatement->execute(Array)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\outbound_document.php(154): db_add(Array, 'cms_outbound_do...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(81): add_edit_outbound(Object(stdClass))
+#3 {main}SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'outbound_no' cannot be null
+
+

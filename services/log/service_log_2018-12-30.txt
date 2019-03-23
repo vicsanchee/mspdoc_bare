@@ -1,0 +1,635 @@
+[2018-12-30 00:12:21]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-12-30 00:12:21]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 38
+
+
+[2018-12-30 00:12:21]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer WHERE is_active = 1
+
+
+[2018-12-30 00:12:21]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-12-30 00:12:21]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_appt_pic.id,cms_appt_pic.name,cms_appt_pic.email, cms_clients.name as company_name
+                        FROM cms_appt_pic INNER JOIN cms_clients ON cms_appt_pic.client = cms_clients.id
+                        WHERE cms_appt_pic.created_by = 15 
+                         UNION ALL
+                        SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email,
+                        cms_master_employer.employer_name  as company_name
+                        FROM
+                        cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+                        WHERE cms_employees.is_active = 1
+
+
+[2018-12-30 00:12:22]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 37
+
+
+[2018-12-30 00:12:22]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 36
+
+
+[2018-12-30 00:12:46]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-12-30 00:12:46]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 38
+
+
+[2018-12-30 00:12:46]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer WHERE is_active = 1
+
+
+[2018-12-30 00:12:46]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-12-30 00:12:46]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_appt_pic.id,cms_appt_pic.name,cms_appt_pic.email, cms_clients.name as company_name
+                        FROM cms_appt_pic INNER JOIN cms_clients ON cms_appt_pic.client = cms_clients.id
+                        WHERE cms_appt_pic.created_by = 15 
+                         UNION ALL
+                        SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email,
+                        cms_master_employer.employer_name  as company_name
+                        FROM
+                        cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+                        WHERE cms_employees.is_active = 1
+
+
+[2018-12-30 00:12:47]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 37
+
+
+[2018-12-30 00:12:47]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 36
+
+
+[2018-12-30 00:14:20]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-12-30 00:14:20]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 38
+
+
+[2018-12-30 00:14:20]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer WHERE is_active = 1
+
+
+[2018-12-30 00:14:20]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-12-30 00:14:20]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_appt_pic.id,cms_appt_pic.name,cms_appt_pic.email, cms_clients.name as company_name
+                        FROM cms_appt_pic INNER JOIN cms_clients ON cms_appt_pic.client = cms_clients.id
+                        WHERE cms_appt_pic.created_by = 15 
+                         UNION ALL
+                        SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email,
+                        cms_master_employer.employer_name  as company_name
+                        FROM
+                        cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+                        WHERE cms_employees.is_active = 1
+
+
+[2018-12-30 00:14:21]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 37
+
+
+[2018-12-30 00:14:21]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 36
+
+
+[2018-12-30 00:14:48]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-12-30 00:14:48]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 38
+
+
+[2018-12-30 00:14:48]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer WHERE is_active = 1
+
+
+[2018-12-30 00:14:48]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-12-30 00:14:48]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_appt_pic.id,cms_appt_pic.name,cms_appt_pic.email, cms_clients.name as company_name
+                        FROM cms_appt_pic INNER JOIN cms_clients ON cms_appt_pic.client = cms_clients.id
+                        WHERE cms_appt_pic.created_by = 15 
+                         UNION ALL
+                        SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email,
+                        cms_master_employer.employer_name  as company_name
+                        FROM
+                        cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+                        WHERE cms_employees.is_active = 1
+
+
+[2018-12-30 00:14:49]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 37
+
+
+[2018-12-30 00:14:49]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 36
+
+
+[2018-12-30 00:19:23]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-12-30 00:19:23]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 38
+
+
+[2018-12-30 00:19:23]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer WHERE is_active = 1
+
+
+[2018-12-30 00:19:23]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-12-30 00:19:23]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_appt_pic.id,cms_appt_pic.name,cms_appt_pic.email, cms_clients.name as company_name
+                        FROM cms_appt_pic INNER JOIN cms_clients ON cms_appt_pic.client = cms_clients.id
+                        WHERE cms_appt_pic.created_by = 15 
+                         UNION ALL
+                        SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email,
+                        cms_master_employer.employer_name  as company_name
+                        FROM
+                        cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+                        WHERE cms_employees.is_active = 1
+
+
+[2018-12-30 00:19:24]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 37
+
+
+[2018-12-30 00:19:24]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 36
+
+
+[2018-12-30 00:28:18]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-12-30 00:28:18]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 38
+
+
+[2018-12-30 00:28:18]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer WHERE is_active = 1
+
+
+[2018-12-30 00:28:18]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-12-30 00:28:18]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_appt_pic.id,cms_appt_pic.name,cms_appt_pic.email, cms_clients.name as company_name
+                        FROM cms_appt_pic INNER JOIN cms_clients ON cms_appt_pic.client = cms_clients.id
+                        WHERE cms_appt_pic.created_by = 15 
+                         UNION ALL
+                        SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email,
+                        cms_master_employer.employer_name  as company_name
+                        FROM
+                        cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+                        WHERE cms_employees.is_active = 1
+
+
+[2018-12-30 00:28:19]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 37
+
+
+[2018-12-30 00:28:19]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 36
+
+
+[2018-12-30 00:31:53]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-12-30 00:31:53]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 38
+
+
+[2018-12-30 00:31:53]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer WHERE is_active = 1
+
+
+[2018-12-30 00:31:53]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-12-30 00:31:53]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 36
+
+
+[2018-12-30 00:32:42]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-12-30 00:32:42]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 38
+
+
+[2018-12-30 00:32:42]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer WHERE is_active = 1
+
+
+[2018-12-30 00:32:42]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-12-30 00:32:42]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 36
+
+
+[2018-12-30 00:33:11]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-12-30 00:33:11]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 38
+
+
+[2018-12-30 00:33:11]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer WHERE is_active = 1
+
+
+[2018-12-30 00:33:11]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-12-30 00:33:11]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 36
+
+
+[2018-12-30 09:02:00]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-12-30 09:02:00]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 38
+
+
+[2018-12-30 09:02:00]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer WHERE is_active = 1
+
+
+[2018-12-30 09:02:00]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-12-30 09:02:00]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 36
+
+
+[2018-12-30 14:23:02]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-12-30 14:23:02]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 38
+
+
+[2018-12-30 14:23:02]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer WHERE is_active = 1
+
+
+[2018-12-30 14:23:02]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-12-30 14:23:02]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 36
+
+
+[2018-12-30 14:27:17]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-12-30 14:27:17]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 38
+
+
+[2018-12-30 14:27:17]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer WHERE is_active = 1
+
+
+[2018-12-30 14:27:17]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-12-30 14:27:17]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 36
+
+
+[2018-12-30 16:17:10]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-12-30 16:17:10]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 38
+
+
+[2018-12-30 16:17:10]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer WHERE is_active = 1
+
+
+[2018-12-30 16:17:10]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-12-30 16:17:10]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 36
+
+
+[2018-12-30 16:35:37]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-12-30 16:35:37]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-12-30 16:35:37]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer WHERE is_active = 1
+
+
+[2018-12-30 16:35:37]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_appt_pic.id,cms_appt_pic.name,cms_appt_pic.email, cms_clients.name as company_name
+                        FROM cms_appt_pic INNER JOIN cms_clients ON cms_appt_pic.client = cms_clients.id
+                        WHERE cms_appt_pic.created_by = 15 
+                         UNION ALL
+                        SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email,
+                        cms_master_employer.employer_name  as company_name
+                        FROM
+                        cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+                        WHERE cms_employees.is_active = 1
+
+
+[2018-12-30 16:35:38]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 37
+
+
+[2018-12-30 16:35:38]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 36
+
+
+[2018-12-30 16:35:38]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_document_archiving_list","data":{"client_id":"","created_by":"","type_id":"","status_id":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-12-30 16:35:38]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-12-30 16:35:38]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-12-30 16:35:38]
+Function Details: get_document_archiving_list 
+ Param Details : 
+{"client_id":"","created_by":"","type_id":"","status_id":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-12-30 16:35:38]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_document_archiving.doc_no
+				, cms_document_archiving.doc_date
+				, cms_document_archiving.client_id
+				, cms_document_archiving.employer_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_document_archiving.from_date
+				, cms_document_archiving.to_date
+				, IF(cms_document_archiving.notify = 1, 'Yes','No') as notify
+				, cms_document_archiving.notify_by
+				, cms_document_archiving.notify_email
+				, cms_document_archiving.attachment
+				, cms_document_archiving.remarks
+				, cms_document_archiving.notes
+				, cms_document_archiving.approvals
+				, cms_document_archiving.status_id
+				, cms_document_archiving.created_date
+				, (select descr from cms_master_list list where list.id = cms_document_archiving.doc_type) as doc_type
+				, (select descr from cms_master_list list where list.id = cms_document_archiving.status_id) as status_name		
+				, (select name from cms_employees emp where emp.id = cms_document_archiving.created_by) as created_by		
+                 FROM 
+                cms_document_archiving
+				LEFT JOIN cms_clients
+                    ON (cms_document_archiving.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_document_archiving.created_by) AND cms_document_archiving.is_active in(1) ORDER BY doc_no DESC limit 0,10
+
+
+[2018-12-30 16:39:43]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-12-30 16:39:43]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 38
+
+
+[2018-12-30 16:39:43]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer WHERE is_active = 1
+
+
+[2018-12-30 16:39:43]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-12-30 16:39:43]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 36
+
+

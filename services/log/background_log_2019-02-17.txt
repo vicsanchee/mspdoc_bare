@@ -1,0 +1,168 @@
+[2019-02-17 17:43:42]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00001","module_id":"18","emp_id":"15","email_type":0,"attachment":["IA RPP IBFT DuitNow Menu_WD version.xlsx","lang_updated.xls"]}
+
+
+[2019-02-17 17:43:54]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-17 18:11:35]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00001","module_id":"18","emp_id":"15","email_type":0,"attachment":["IA RPP IBFT DuitNow Menu_WD version.xlsx","lang_updated.xls","IME Malaysia Online.pdf"]}
+
+
+[2019-02-17 18:11:44]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-17 18:17:19]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00001","module_id":"18","emp_id":"15","email_type":0,"attachment":["IA RPP IBFT DuitNow Menu_WD version.xlsx","lang_updated.xls"]}
+
+
+[2019-02-17 18:17:28]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-17 18:18:58]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00001","module_id":"18","emp_id":"15","email_type":2,"attachment":["IA RPP IBFT DuitNow Menu_WD version.xlsx","lang_updated.xls"]}
+
+
+[2019-02-17 18:19:06]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-17 18:20:19]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00002","module_id":"18","emp_id":"15","email_type":0,"attachment":["IA RPP IBFT DuitNow Menu_WD version.xlsx","lang_updated.xls"]}
+
+
+[2019-02-17 18:20:26]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-17 18:21:52]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00002","module_id":"18","emp_id":"15","email_type":0,"attachment":["IA RPP IBFT DuitNow Menu_WD version.xlsx","lang_updated.xls"]}
+
+
+[2019-02-17 18:22:00]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-17 18:26:22]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00002","module_id":"18","emp_id":"15","email_type":0,"attachment":["IA RPP IBFT DuitNow Menu_WD version.xlsx","lang_updated.xls"]}
+
+
+[2019-02-17 18:26:30]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-17 18:27:15]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00003","module_id":"18","emp_id":"15","email_type":0,"attachment":["lang_updated.xls","IME Malaysia Online.pdf"]}
+
+
+[2019-02-17 18:27:18]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-17 18:28:20]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00004","module_id":"18","emp_id":"15","email_type":0,"attachment":["lang_updated.xls","IME Malaysia Online.pdf"]}
+
+
+[2019-02-17 18:28:22]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-17 18:29:18]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00004","module_id":"18","emp_id":"15","email_type":1,"attachment":["lang_updated.xls","IME Malaysia Online.pdf"]}
+
+
+[2019-02-17 18:29:22]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-17 18:29:51]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00004","module_id":"18","emp_id":"15","email_type":0,"attachment":["lang_updated.xls","IME Malaysia Online.pdf","IA RPP IBFT DuitNow Menu_WD version.xlsx"]}
+
+
+[2019-02-17 18:29:59]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-17 18:31:27]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00004","module_id":"18","emp_id":"15","email_type":0,"attachment":["lang_updated.xls","IME Malaysia Online.pdf","IA RPP IBFT DuitNow Menu_WD version.xlsx"]}
+
+
+[2019-02-17 18:31:36]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-17 18:32:03]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00004","module_id":"18","emp_id":"15","email_type":2,"attachment":["lang_updated.xls","IME Malaysia Online.pdf","IA RPP IBFT DuitNow Menu_WD version.xlsx"]}
+
+
+[2019-02-17 18:32:11]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-17 18:39:28]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00003","module_id":"18","emp_id":"15","email_type":1,"attachment":["lang_updated.xls","IME Malaysia Online.pdf"]}
+
+
+[2019-02-17 18:39:31]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+

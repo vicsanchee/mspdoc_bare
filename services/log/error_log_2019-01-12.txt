@@ -1,0 +1,35 @@
+[2019-01-12 23:28:40]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(289): PDOStatement->execute(Array)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(227): db_update(Array, 'cms_service_req...', 'service_no')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[2019-01-12 23:31:08]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(289): PDOStatement->execute(Array)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(227): db_update(Array, 'cms_service_req...', 'service_no')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[2019-01-12 23:46:40]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(289): PDOStatement->execute(Array)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(229): db_update(Array, 'cms_service_req...', 'service_no')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[22032]: <<Unknown error>>: 3140 Invalid JSON text: "Invalid value." at position 0 in value for column 'cms_service_request.sr_data'.
+
+
+[2019-01-12 23:48:01]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(289): PDOStatement->execute(Array)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(229): db_update(Array, 'cms_service_req...', 'service_no')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[22032]: <<Unknown error>>: 3140 Invalid JSON text: "Invalid value." at position 0 in value for column 'cms_service_request.sr_data'.
+
+
+[2019-01-12 23:50:28]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(289): PDOStatement->execute(Array)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(229): db_update(Array, 'cms_service_req...', 'service_no')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[22032]: <<Unknown error>>: 3140 Invalid JSON text: "Invalid value." at position 0 in value for column 'cms_service_request.sr_data'.
+
+

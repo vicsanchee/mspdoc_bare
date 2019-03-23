@@ -1,0 +1,384 @@
+[2019-02-16 00:03:38]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00001","module_id":"18","emp_id":"15","email_type":0}
+
+
+[2019-02-16 00:03:41]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2019-02-16 00:05:22]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00001","module_id":"18","emp_id":"15","email_type":0}
+
+
+[2019-02-16 00:05:24]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2019-02-16 00:15:59]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00001","module_id":"18","emp_id":"15","email_type":0}
+
+
+[2019-02-16 00:16:01]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 00:16:35]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00001","module_id":"18","emp_id":"15","email_type":0}
+
+
+[2019-02-16 00:16:38]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 00:19:29]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00001","module_id":"18","emp_id":"15","email_type":0}
+
+
+[2019-02-16 00:19:31]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 00:22:29]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00001","module_id":"18","emp_id":"15","email_type":0}
+
+
+[2019-02-16 00:22:31]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 00:23:33]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00001","module_id":"18","emp_id":"15","email_type":0}
+
+
+[2019-02-16 00:23:36]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 00:29:01]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00001","module_id":"18","emp_id":"15","email_type":0}
+
+
+[2019-02-16 00:29:04]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 00:30:15]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00001","module_id":"18","emp_id":"15","email_type":0}
+
+
+[2019-02-16 00:30:17]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 00:42:38]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00001","module_id":"18","emp_id":"15","email_type":0}
+
+
+[2019-02-16 00:42:39]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 00:43:00]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00001","module_id":"18","emp_id":"15","email_type":0,"attachment":["lang_updated.xls","Task_List_29-01-2019.xlsx"]}
+
+
+[2019-02-16 00:43:03]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 00:43:45]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00002","module_id":"18","emp_id":"15","email_type":0,"attachment":["Task_List_29-01-2019.xlsx"]}
+
+
+[2019-02-16 00:43:47]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 00:44:51]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00002","module_id":"18","emp_id":"15","email_type":0,"attachment":["Task_List_29-01-2019.xlsx"]}
+
+
+[2019-02-16 00:44:53]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 00:45:06]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00002","module_id":"18","emp_id":"15","email_type":0,"attachment":["Task_List_29-01-2019.xlsx"]}
+
+
+[2019-02-16 00:45:08]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 00:46:01]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00002","module_id":"18","emp_id":"15","email_type":0,"attachment":["Task_List_29-01-2019.xlsx"]}
+
+
+[2019-02-16 00:46:02]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 06:28:58]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00003","module_id":"18","emp_id":"15","email_type":0,"attachment":["Electronic Report.pdf"]}
+
+
+[2019-02-16 06:29:01]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 06:36:25]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00003","module_id":"18","emp_id":"15","email_type":0,"attachment":["Electronic Report.pdf"]}
+
+
+[2019-02-16 06:36:27]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 06:38:37]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00003","module_id":"18","emp_id":"15","email_type":0,"attachment":["Electronic Report.pdf"]}
+
+
+[2019-02-16 06:38:39]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 06:39:27]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00001","module_id":"18","emp_id":"15","email_type":0,"attachment":["lang_updated.xls","Task_List_29-01-2019.xlsx"]}
+
+
+[2019-02-16 06:39:30]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 06:42:23]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00003","module_id":"18","emp_id":"15","email_type":0,"attachment":["Electronic Report.pdf"]}
+
+
+[2019-02-16 06:42:25]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 06:43:34]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00004","module_id":"18","emp_id":"15","email_type":0,"attachment":["List of SR - Ver 1.2 (User can test).xlsx"]}
+
+
+[2019-02-16 06:43:40]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 06:48:13]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00004","module_id":"18","emp_id":"15","email_type":1,"attachment":["List of SR - Ver 1.2 (User can test).xlsx"]}
+
+
+[2019-02-16 06:48:17]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 06:48:46]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00003","module_id":"18","emp_id":"15","email_type":1,"attachment":["Electronic Report.pdf"]}
+
+
+[2019-02-16 06:48:48]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 06:49:25]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00004","module_id":"18","emp_id":"15","email_type":2,"attachment":["List of SR - Ver 1.2 (User can test).xlsx"]}
+
+
+[2019-02-16 06:49:29]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 07:01:41]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00005","module_id":"18","emp_id":"15","email_type":0,"attachment":["IA RPP IBFT DuitNow Menu_WD version.xlsx","lang_updated.xls"]}
+
+
+[2019-02-16 07:01:52]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 07:02:54]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00005","module_id":"18","emp_id":"15","email_type":1,"attachment":["IA RPP IBFT DuitNow Menu_WD version.xlsx","lang_updated.xls"]}
+
+
+[2019-02-16 07:03:01]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 07:03:42]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00005","module_id":"18","emp_id":"15","email_type":2,"attachment":["IA RPP IBFT DuitNow Menu_WD version.xlsx","lang_updated.xls"]}
+
+
+[2019-02-16 07:03:49]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 07:47:07]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00003","module_id":"18","emp_id":"15","email_type":0,"attachment":["Electronic Report.pdf"]}
+
+
+[2019-02-16 07:47:09]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 07:47:29]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00003","module_id":"18","emp_id":"15","email_type":2,"attachment":["Electronic Report.pdf"]}
+
+
+[2019-02-16 07:47:32]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 07:55:50]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00006","module_id":"18","emp_id":"15","email_type":0,"attachment":["lang_updated.xls"]}
+
+
+[2019-02-16 07:55:53]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 07:56:23]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00006","module_id":"18","emp_id":"15","email_type":1,"attachment":["lang_updated.xls"]}
+
+
+[2019-02-16 07:56:25]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+
+[2019-02-16 07:56:36]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+{"service_no":"MSP19-00006","module_id":"18","emp_id":"15","email_type":2,"attachment":["lang_updated.xls"]}
+
+
+[2019-02-16 07:56:38]
+Function Details: send_email_verifier_approver_service_request 
+ Param Details : 
+"Send service request notification email success"
+
+

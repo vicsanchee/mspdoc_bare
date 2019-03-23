@@ -1,0 +1,30 @@
+[2018-11-18 09:09:14]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(156): PDO->query('SELECT cms_appt...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\public\modules\appointments\appointments.php(24): db_execute_custom_sql('SELECT cms_appt...')
+#2 {main}SQLSTATE[42S02]: Base table or view not found: 1146 Table 'msphitec_hrms.cms_appt_pic' doesn't exist
+
+
+[2018-11-18 09:09:28]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(156): PDO->query('SELECT cms_appt...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\public\modules\appointments\appointments.php(24): db_execute_custom_sql('SELECT cms_appt...')
+#2 {main}SQLSTATE[42S02]: Base table or view not found: 1146 Table 'msphitec_hrms.cms_appt_pic' doesn't exist
+
+
+[2018-11-18 10:23:31]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(156): PDO->query('SELECT cms_appt...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\public\modules\appointments\appointments.php(24): db_execute_custom_sql('SELECT cms_appt...')
+#2 {main}SQLSTATE[42S02]: Base table or view not found: 1146 Table 'msphitec_hrms.cms_appt_pic' doesn't exist
+
+
+[2018-11-18 10:23:49]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(156): PDO->query('SELECT cms_appt...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\public\modules\appointments\appointments.php(24): db_execute_custom_sql('SELECT cms_appt...')
+#2 {main}SQLSTATE[42S02]: Base table or view not found: 1146 Table 'msphitec_hrms.cms_appt_pic' doesn't exist
+
+
+[2018-11-18 11:47:39]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(156): PDO->query('SELECT cms_appt...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\public\modules\appointments\appointments.php(24): db_execute_custom_sql('SELECT cms_appt...')
+#2 {main}SQLSTATE[42S02]: Base table or view not found: 1146 Table 'msphitec_hrms.cms_appt_pic' doesn't exist
+
+

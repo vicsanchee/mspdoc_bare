@@ -1,0 +1,21 @@
+[2018-11-19 21:46:34]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(32): PDO->query('SELECT cms_cont...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\quotation.php(133): db_query_list('cms_contracts.c...', '\r\n             ...', '15 IN (cms_cont...', 0, 10, 'contract_no', 'DESC')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(76): get_quotation_list(Object(stdClass))
+#3 {main}SQLSTATE[42S02]: Base table or view not found: 1146 Table 'msphitec_hrms.cms_contracts' doesn't exist
+
+
+[2018-11-19 22:01:08]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(32): PDO->query('SELECT cms_quot...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\quotation.php(71): db_query_list('cms_quotation.q...', '\r\n             ...', '15 IN (cms_quot...', 0, 10, 'quote_no', 'DESC')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(76): get_quotation_list(Object(stdClass))
+#3 {main}SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cms_contracts.client_id' in 'on clause'
+
+
+[2018-11-19 22:01:20]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(32): PDO->query('SELECT cms_quot...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\quotation.php(71): db_query_list('cms_quotation.q...', '\r\n             ...', '15 IN (cms_quot...', 0, 10, 'quote_no', 'DESC')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(76): get_quotation_list(Object(stdClass))
+#3 {main}SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cms_contracts.client_id' in 'on clause'
+
+

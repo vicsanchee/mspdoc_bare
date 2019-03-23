@@ -1,0 +1,18 @@
+[2019-01-05 10:29:11]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT id,name,...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\public\modules\contract\contracts.php(42): db_query('id,name,descr', 'cms_upload_doc', 'is_active = 1')
+#2 {main}SQLSTATE[42S02]: Base table or view not found: 1146 Table 'msphitec_hrms.cms_upload_doc' doesn't exist
+
+
+[2019-01-05 10:29:11]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT id,ref_n...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\public\modules\contract\contracts.php(47): db_query('id,ref_name,per...', 'cms_master_refe...', 'ref_type = 0 an...')
+#2 {main}SQLSTATE[42S02]: Base table or view not found: 1146 Table 'msphitec_hrms.cms_master_referral' doesn't exist
+
+
+[2019-01-05 10:29:11]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT id,ref_n...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\public\modules\contract\contracts.php(48): db_query('id,ref_name,per...', 'cms_master_refe...', 'ref_type = 1 an...')
+#2 {main}SQLSTATE[42S02]: Base table or view not found: 1146 Table 'msphitec_hrms.cms_master_referral' doesn't exist
+
+

@@ -1,0 +1,71 @@
+[2018-12-09 11:10:26]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT email_co...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\outbound_document.php(441): db_query('email_content,a...', 'cms_outbound_do...', 'outbound_no='18...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(111): send_email_notification_outbound(Object(stdClass))
+#3 {main}SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'email' in field list is ambiguous
+
+
+[2018-12-09 11:10:42]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT email_co...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\outbound_document.php(441): db_query('email_content,a...', 'cms_outbound_do...', 'outbound_no='18...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(111): send_email_notification_outbound(Object(stdClass))
+#3 {main}SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'email' in field list is ambiguous
+
+
+[2018-12-09 11:10:59]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT email_co...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\outbound_document.php(441): db_query('email_content,a...', 'cms_outbound_do...', 'outbound_no='18...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(111): send_email_notification_outbound(Object(stdClass))
+#3 {main}SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'email' in field list is ambiguous
+
+
+[2018-12-09 11:11:15]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT email_co...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\outbound_document.php(441): db_query('email_content,a...', 'cms_outbound_do...', 'outbound_no='18...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(111): send_email_notification_outbound(Object(stdClass))
+#3 {main}SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'email' in field list is ambiguous
+
+
+[2018-12-09 11:13:17]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT email_co...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\outbound_document.php(441): db_query('email_content,a...', 'cms_outbound_do...', 'outbound_no='18...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(111): send_email_notification_outbound(Object(stdClass))
+#3 {main}SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'email' in field list is ambiguous
+
+
+[2018-12-09 11:13:57]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT email_co...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\outbound_document.php(441): db_query('email_content,a...', 'cms_outbound_do...', 'outbound_no='18...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(111): send_email_notification_outbound(Object(stdClass))
+#3 {main}SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'email' in field list is ambiguous
+
+
+[2018-12-09 11:15:35]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT email_co...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\outbound_document.php(442): db_query('email_content,a...', 'cms_outbound_do...', 'outbound_no='18...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(111): send_email_notification_outbound(Object(stdClass))
+#3 {main}SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'email' in field list is ambiguous
+
+
+[2018-12-09 11:19:07]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT email_co...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\public\modules\outbound_document\outbound_document.php(42): db_query('email_content,a...', 'cms_outbound_do...', 'outbound_no='18...')
+#2 {main}SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'email' in field list is ambiguous
+
+
+[2018-12-09 11:20:56]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT email_co...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\public\modules\outbound_document\outbound_document.php(42): db_query('email_content,a...', 'cms_outbound_do...', 'outbound_no='18...')
+#2 {main}SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'email' in field list is ambiguous
+
+
+[2018-12-09 15:58:13]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\lib\phpmailer\class.phpmailer.php(705): PHPMailer->SmtpConnect()
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\lib\phpmailer\class.phpmailer.php(576): PHPMailer->SmtpSend('Date: Sun, 9 De...', '--b1_756a76ba5d...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\helperfunctions.php(461): PHPMailer->Send()
+#3 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\document_archiving.php(390): smtpmailer('sancheev@gmail....', 'notify@msphitec...', 'MSP HITECT', 'Document Archiv...', '<!DOCTYPE HTML ...', 'sancheev@gmail....', Array)
+#4 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\document_archiving.php(284): send_email_verifier_approver(Object(stdClass), 1)
+#5 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(136): document_archiving_verify_approval(Object(stdClass))
+#6 {main}SMTP Error: Could not connect to SMTP host.
+
+

@@ -1,0 +1,21 @@
+[2018-11-27 23:54:41]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(32): PDO->query('SELECT cms_quot...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\outbound-document.php(80): db_query_list('cms_quotation.q...', '\r\n             ...', '15 IN (cms_quot...', 0, 10, 'quote_no', 'DESC')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(76): get_quotation_list(Object(stdClass))
+#3 {main}SQLSTATE[42S02]: Base table or view not found: 1146 Table 'msphitec_hrms.cms_quotation' doesn't exist
+
+
+[2018-11-27 23:54:47]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(32): PDO->query('SELECT cms_quot...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\outbound-document.php(80): db_query_list('cms_quotation.q...', '\r\n             ...', '15 IN (cms_quot...', 0, 10, 'quote_no', 'DESC')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(76): get_quotation_list(Object(stdClass))
+#3 {main}SQLSTATE[42S02]: Base table or view not found: 1146 Table 'msphitec_hrms.cms_quotation' doesn't exist
+
+
+[2018-11-27 23:55:01]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(32): PDO->query('SELECT cms_quot...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\outbound-document.php(80): db_query_list('cms_quotation.q...', '\r\n             ...', '15 IN (cms_quot...', 0, 10, 'quote_no', 'DESC')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(76): get_quotation_list(Object(stdClass))
+#3 {main}SQLSTATE[42S02]: Base table or view not found: 1146 Table 'msphitec_hrms.cms_quotation' doesn't exist
+
+

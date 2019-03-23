@@ -1,0 +1,24 @@
+[2018-11-30 04:50:57]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\helperfunctions.php(418): PHPMailer->AddAttachment('Cover Letter.do...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\outbound-document.php(209): smtpmailer('sancheev@gmail....', 'notify@msphitec...', 'MSP HITECT', 'Outbound Docume...', '<title></title>...', NULL, Array)
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\outbound-document.php(153): send_email_notification_outbound(Object(stdClass))
+#3 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(81): add_edit_outbound(Object(stdClass))
+#4 {main}Could not access file: Cover Letter.docx
+
+
+[2018-11-30 04:51:47]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\helperfunctions.php(418): PHPMailer->AddAttachment('Cover Letter.do...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\outbound-document.php(209): smtpmailer('sancheev@gmail....', 'notify@msphitec...', 'MSP HITECT', 'Outbound Docume...', '<title></title>...', NULL, Array)
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\outbound-document.php(153): send_email_notification_outbound(Object(stdClass))
+#3 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(81): add_edit_outbound(Object(stdClass))
+#4 {main}Could not access file: Cover Letter.docx
+
+
+[2018-11-30 05:00:05]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\helperfunctions.php(418): PHPMailer->AddAttachment('Cover Letter.do...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\outbound-document.php(209): smtpmailer('sancheev@gmail....', 'notify@msphitec...', 'MSP HITECT', 'Outbound Docume...', '<title></title>...', NULL, Array)
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\outbound-document.php(153): send_email_notification_outbound(Object(stdClass))
+#3 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(81): add_edit_outbound(Object(stdClass))
+#4 {main}Could not access file: Cover Letter.docx
+
+

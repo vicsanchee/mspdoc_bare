@@ -1,0 +1,12 @@
+[2018-12-08 23:37:04]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+{"outbound_no":"18-0000004","module_id":"16","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-08 23:37:11]
+Function Details: send_email_verifier_approver 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+

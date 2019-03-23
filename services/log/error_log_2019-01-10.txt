@@ -1,0 +1,63 @@
+[2019-01-10 23:13:53]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(32): PDO->query('SELECT cms_serv...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(71): db_query_list('cms_service_req...', '\r\n             ...', '15 IN (cms_docu...', 0, 10, 'doc_no', 'DESC')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(153): get_service_request_list(Object(stdClass))
+#3 {main}SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cms_service_request.service_no' in 'field list'
+
+
+[2019-01-10 23:15:14]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(32): PDO->query('SELECT cms_serv...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(71): db_query_list('cms_service_req...', '\r\n             ...', '15 IN (cms_docu...', 0, 10, 'doc_no', 'DESC')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(153): get_service_request_list(Object(stdClass))
+#3 {main}SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cms_document_archiving.created_by' in 'where clause'
+
+
+[2019-01-10 23:15:24]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(32): PDO->query('SELECT cms_serv...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(71): db_query_list('cms_service_req...', '\r\n             ...', '15 IN (cms_docu...', 0, 10, 'doc_no', 'DESC')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(153): get_service_request_list(Object(stdClass))
+#3 {main}SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cms_document_archiving.created_by' in 'where clause'
+
+
+[2019-01-10 23:16:24]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(32): PDO->query('SELECT cms_serv...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(68): db_query_list('cms_service_req...', '\r\n             ...', '15 IN (cms_docu...', 0, 10, 'doc_no', 'DESC')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(153): get_service_request_list(Object(stdClass))
+#3 {main}SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cms_document_archiving.created_by' in 'where clause'
+
+
+[2019-01-10 23:16:54]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(32): PDO->query('SELECT cms_serv...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(71): db_query_list('cms_service_req...', '\r\n             ...', '15 IN (cms_docu...', 0, 10, 'doc_no', 'DESC')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(153): get_service_request_list(Object(stdClass))
+#3 {main}SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cms_document_archiving.created_by' in 'where clause'
+
+
+[2019-01-10 23:17:37]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(32): PDO->query('SELECT cms_serv...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(71): db_query_list('cms_service_req...', '\r\n             ...', '15 IN (cms_serv...', 0, 10, 'doc_no', 'DESC')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(153): get_service_request_list(Object(stdClass))
+#3 {main}SQLSTATE[42S22]: Column not found: 1054 Unknown column 'doc_no' in 'order clause'
+
+
+[2019-01-10 23:18:01]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(32): PDO->query('SELECT cms_serv...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(68): db_query_list('cms_service_req...', '\r\n             ...', '15 IN (cms_serv...', 0, 10, 'doc_no', 'DESC')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(153): get_service_request_list(Object(stdClass))
+#3 {main}SQLSTATE[42S22]: Column not found: 1054 Unknown column 'doc_no' in 'order clause'
+
+
+[2019-01-10 23:22:16]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(32): PDO->query('SELECT cms_serv...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(68): db_query_list('cms_service_req...', '\r\n             ...', '15 IN (cms_serv...', 0, 10, 'doc_no', 'DESC')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(153): get_service_request_list(Object(stdClass))
+#3 {main}SQLSTATE[42S22]: Column not found: 1054 Unknown column 'doc_no' in 'order clause'
+
+
+[2019-01-10 23:22:26]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(32): PDO->query('SELECT cms_serv...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(68): db_query_list('cms_service_req...', '\r\n             ...', '15 IN (cms_serv...', 0, 10, 'doc_no', 'DESC')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(153): get_service_request_list(Object(stdClass))
+#3 {main}SQLSTATE[42S22]: Column not found: 1054 Unknown column 'doc_no' in 'order clause'
+
+

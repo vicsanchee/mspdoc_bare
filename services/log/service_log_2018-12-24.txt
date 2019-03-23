@@ -1,0 +1,3248 @@
+[2018-12-24 00:07:09]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:07:09]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            LEFT JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_document_archiving.notify_by >= cms_document_archiving.from_date 
+                AND cms_document_archiving.notify_by <= cms_document_archiving.to_date 
+                AND cms_document_archiving.status_id = '205' 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:07:47]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:07:47]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:07:48]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:07:48]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:07:49]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:07:49]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:07:49]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:07:49]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:08:26]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:08:26]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:08:28]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:08:28]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:08:28]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:08:28]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:08:28]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:08:28]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:10:13]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:10:13]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by >= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:10:14]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:10:14]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by >= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:10:14]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:10:14]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by >= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:10:14]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:10:14]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by >= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:10:18]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:10:18]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by >= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:10:57]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:10:57]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:10:58]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:10:58]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:10:58]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:10:58]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:10:59]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:10:59]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:10:59]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:10:59]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:11:00]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:11:00]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:11:40]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:11:40]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:11:41]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:11:41]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:12:25]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:12:25]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:13:07]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:13:07]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:13:08]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:13:08]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:13:08]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:13:08]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:13:31]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:13:31]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	             WHERE cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:13:31]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:13:31]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	             WHERE cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:13:31]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:13:31]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	             WHERE cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:13:41]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:13:41]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	             WHERE cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:13:41]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:13:41]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	             WHERE cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:13:42]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:13:42]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	             WHERE cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:13:42]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:13:42]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+             date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+             date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date,
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	             WHERE cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:14:45]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:14:45]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:14:46]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:14:46]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:14:46]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:14:46]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:15:09]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:15:09]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:15:09]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:15:09]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:15:10]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:15:10]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:16:09]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:16:09]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:16:10]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:16:10]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:16:10]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:16:10]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:16:46]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:16:46]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_document_archiving.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:17:41]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:17:41]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_document_archiving.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:17:41]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:17:41]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_document_archiving.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:17:42]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:17:42]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_document_archiving.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:18:02]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:18:02]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            ,cms_document_archiving.doc_no
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	             WHERE cms_document_archiving.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:18:20]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:18:20]
+Function Details: db_query
+ Param Details: 
+SELECT ,cms_document_archiving.doc_no
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	             WHERE cms_document_archiving.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:18:21]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:18:21]
+Function Details: db_query
+ Param Details: 
+SELECT ,cms_document_archiving.doc_no
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	             WHERE cms_document_archiving.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:19:17]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:19:17]
+Function Details: db_query
+ Param Details: 
+SELECT ,cms_document_archiving.doc_no,cms_document_archiving.attachment,cms_employees.name as emp_name,cms_employees.office_email FROM cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id WHERE cms_document_archiving.is_active = 1 ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:19:18]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:19:18]
+Function Details: db_query
+ Param Details: 
+SELECT ,cms_document_archiving.doc_no,cms_document_archiving.attachment,cms_employees.name as emp_name,cms_employees.office_email FROM cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id WHERE cms_document_archiving.is_active = 1 ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:19:18]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:19:18]
+Function Details: db_query
+ Param Details: 
+SELECT ,cms_document_archiving.doc_no,cms_document_archiving.attachment,cms_employees.name as emp_name,cms_employees.office_email FROM cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id WHERE cms_document_archiving.is_active = 1 ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:19:28]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:19:28]
+Function Details: db_query
+ Param Details: 
+SELECT ,cms_document_archiving.doc_no,cms_document_archiving.attachment,cms_employees.name as emp_name,cms_employees.office_email FROM cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id WHERE cms_document_archiving.is_active = 1 ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:19:29]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:19:29]
+Function Details: db_query
+ Param Details: 
+SELECT ,cms_document_archiving.doc_no,cms_document_archiving.attachment,cms_employees.name as emp_name,cms_employees.office_email FROM cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id WHERE cms_document_archiving.is_active = 1 ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:20:03]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:20:03]
+Function Details: db_query
+ Param Details: 
+SELECT cms_document_archiving.doc_no,cms_document_archiving.attachment,cms_employees.name as emp_name,cms_employees.office_email FROM cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id WHERE cms_document_archiving.is_active = 1 ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:20:03]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@gmail.com"
+
+
+[2018-12-24 00:20:03]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@gmail.com') AND cms_employees.is_active = 1
+
+
+[2018-12-24 00:20:04]
+Function Details: send_appt_reminder_email 
+ Param Details : 
+"sancheev@gmail.com"
+
+
+[2018-12-24 00:20:04]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@msphitect.com.my"
+
+
+[2018-12-24 00:20:04]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@msphitect.com.my') AND cms_employees.is_active = 1
+
+
+[2018-12-24 00:20:04]
+Function Details: send_appt_reminder_email 
+ Param Details : 
+"sancheev@msphitect.com.my"
+
+
+[2018-12-24 00:20:35]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:20:35]
+Function Details: db_query
+ Param Details: 
+SELECT cms_document_archiving.doc_no,cms_document_archiving.attachment,cms_employees.name as emp_name,cms_employees.office_email FROM cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id WHERE cms_document_archiving.is_active = 1 ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:20:35]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@gmail.com"
+
+
+[2018-12-24 00:20:35]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@gmail.com') AND cms_employees.is_active = 1
+
+
+[2018-12-24 00:20:36]
+Function Details: send_appt_reminder_email 
+ Param Details : 
+"sancheev@gmail.com"
+
+
+[2018-12-24 00:20:36]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@msphitect.com.my"
+
+
+[2018-12-24 00:20:36]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@msphitect.com.my') AND cms_employees.is_active = 1
+
+
+[2018-12-24 00:20:36]
+Function Details: send_appt_reminder_email 
+ Param Details : 
+"sancheev@msphitect.com.my"
+
+
+[2018-12-24 00:21:17]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:21:17]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:21:17]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@gmail.com"
+
+
+[2018-12-24 00:21:17]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@gmail.com') AND cms_employees.is_active = 1
+
+
+[2018-12-24 00:21:18]
+Function Details: send_appt_reminder_email 
+ Param Details : 
+"sancheev@gmail.com"
+
+
+[2018-12-24 00:21:35]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 00:21:35]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 00:21:35]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@gmail.com"
+
+
+[2018-12-24 00:21:35]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@gmail.com') AND cms_employees.is_active = 1
+
+
+[2018-12-24 00:21:36]
+Function Details: send_appt_reminder_email 
+ Param Details : 
+"sancheev@gmail.com"
+
+
+[2018-12-24 00:21:36]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@msphitect.com.my"
+
+
+[2018-12-24 00:21:36]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@msphitect.com.my') AND cms_employees.is_active = 1
+
+
+[2018-12-24 00:21:36]
+Function Details: send_appt_reminder_email 
+ Param Details : 
+"sancheev@msphitect.com.my"
+
+
+[2018-12-24 01:07:50]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 01:07:50]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,group_concat(notify_email SEPARATOR ';') as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 01:07:50]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@gmail.com"
+
+
+[2018-12-24 01:07:50]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@gmail.com') AND cms_employees.is_active = 1
+
+
+[2018-12-24 01:07:56]
+Function Details: smtpmailer 
+ Param Details : 
+"Email Sent : [\"sancheev@gmail.com\"];[\"sancheev@gmail.com\", \"vicsanchee@yahoo.com\"] CC'ed : sancheev@gmail.com"
+
+
+[2018-12-24 01:10:19]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 01:10:19]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,group_concat(notify_email SEPARATOR ';') as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 01:10:19]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@gmail.com"
+
+
+[2018-12-24 01:10:19]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@gmail.com') AND cms_employees.is_active = 1
+
+
+[2018-12-24 01:10:23]
+Function Details: smtpmailer 
+ Param Details : 
+"Email Sent : [\"sancheev@gmail.com\"];[\"sancheev@gmail.com\", \"vicsanchee@yahoo.com\"] CC'ed : sancheev@gmail.com"
+
+
+[2018-12-24 01:11:30]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 01:11:30]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,group_concat(notify_email SEPARATOR ';') as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 01:11:30]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@gmail.com"
+
+
+[2018-12-24 01:11:30]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@gmail.com') AND cms_employees.is_active = 1
+
+
+[2018-12-24 01:11:35]
+Function Details: smtpmailer 
+ Param Details : 
+"Email Sent : [\"sancheev@gmail.com\"];[\"sancheev@gmail.com\", \"vicsanchee@yahoo.com\"] CC'ed : sancheev@gmail.com"
+
+
+[2018-12-24 01:12:04]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 01:12:04]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,group_concat(notify_email SEPARATOR ';') as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 01:12:04]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@gmail.com"
+
+
+[2018-12-24 01:12:04]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@gmail.com') AND cms_employees.is_active = 1
+
+
+[2018-12-24 01:12:08]
+Function Details: smtpmailer 
+ Param Details : 
+"Email Sent : [\"sancheev@gmail.com\"];[\"sancheev@gmail.com\", \"vicsanchee@yahoo.com\"] CC'ed : sancheev@gmail.com"
+
+
+[2018-12-24 01:12:25]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 01:12:25]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,group_concat(notify_email SEPARATOR ';') as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 01:12:25]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@gmail.com"
+
+
+[2018-12-24 01:12:25]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@gmail.com') AND cms_employees.is_active = 1
+
+
+[2018-12-24 01:12:29]
+Function Details: smtpmailer 
+ Param Details : 
+"Email Sent : [\"sancheev@gmail.com\"];[\"sancheev@gmail.com\", \"vicsanchee@yahoo.com\"] CC'ed : sancheev@gmail.com"
+
+
+[2018-12-24 05:50:05]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 05:50:05]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,group_concat(notify_email SEPARATOR ';') as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 05:50:05]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@gmail.com"
+
+
+[2018-12-24 05:50:05]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@gmail.com') AND cms_employees.is_active = 1
+
+
+[2018-12-24 05:50:13]
+Function Details: smtpmailer 
+ Param Details : 
+"Email Sent : [\"sancheev@gmail.com\"];[\"sancheev@gmail.com\", \"vicsanchee@yahoo.com\"] CC'ed : sancheev@gmail.com"
+
+
+[2018-12-24 05:52:33]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 05:52:33]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,group_concat(notify_email SEPARATOR ';') as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 05:52:33]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@gmail.com"
+
+
+[2018-12-24 05:52:33]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@gmail.com') AND cms_employees.is_active = 1
+
+
+[2018-12-24 05:52:44]
+Function Details: smtpmailer 
+ Param Details : 
+"Email Sent : [\"sancheev@gmail.com\"];[\"sancheev@gmail.com\", \"vicsanchee@yahoo.com\"] CC'ed : sancheev@gmail.com"
+
+
+[2018-12-24 05:53:56]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 05:53:56]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,group_concat(notify_email SEPARATOR ';') as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 05:53:56]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@gmail.com"
+
+
+[2018-12-24 05:53:56]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@gmail.com') AND cms_employees.is_active = 1
+
+
+[2018-12-24 05:54:00]
+Function Details: smtpmailer 
+ Param Details : 
+"Email Sent : [\"sancheev@gmail.com\"];[\"sancheev@gmail.com\", \"vicsanchee@yahoo.com\"] CC'ed : sancheev@gmail.com"
+
+
+[2018-12-24 05:56:58]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 05:56:58]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,group_concat(notify_email SEPARATOR ';') as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            LEFT JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 05:56:58]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@gmail.com"
+
+
+[2018-12-24 05:56:58]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@gmail.com') AND cms_employees.is_active = 1
+
+
+[2018-12-24 05:57:03]
+Function Details: smtpmailer 
+ Param Details : 
+"Email Sent : [\"sancheev@gmail.com\"];[\"sancheev@gmail.com\", \"vicsanchee@yahoo.com\"] CC'ed : sancheev@gmail.com"
+
+
+[2018-12-24 05:57:46]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 05:57:46]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,group_concat(notify_email SEPARATOR ';') as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            LEFT JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 05:57:46]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@gmail.com"
+
+
+[2018-12-24 05:57:46]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@gmail.com') AND cms_employees.is_active = 1
+
+
+[2018-12-24 05:57:50]
+Function Details: smtpmailer 
+ Param Details : 
+"Email Sent : [\"sancheev@gmail.com\"];[\"sancheev@gmail.com\", \"vicsanchee@yahoo.com\"] CC'ed : sancheev@gmail.com"
+
+
+[2018-12-24 06:00:08]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:00:08]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,group_concat(notify_email SEPARATOR ';') as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:00:09]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:00:09]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,group_concat(notify_email SEPARATOR ';') as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:00:10]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:00:10]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,group_concat(notify_email SEPARATOR ';') as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:00:10]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:00:10]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,group_concat(notify_email SEPARATOR ';') as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:00:39]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:00:39]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:01:11]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:01:11]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,group_concat(cms_document_archiving.notify_email SEPARATOR ';') as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:04:13]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:04:13]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,group_concat(cms_document_archiving.notify_email SEPARATOR ';') as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:04:14]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:04:14]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,group_concat(cms_document_archiving.notify_email SEPARATOR ';') as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:04:58]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:04:58]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:06:19]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:06:19]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,group_concat(cms_document_archiving.notify_email SEPARATOR ';') as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:09:06]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:09:06]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,group_concat(cms_document_archiving.notify_email SEPARATOR ';') as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:09:24]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:09:24]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,group_concat(cms_document_archiving.notify_email SEPARATOR ';') as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:09:24]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:09:24]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,group_concat(cms_document_archiving.notify_email SEPARATOR ';') as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:09:25]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:09:25]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,group_concat(cms_document_archiving.notify_email SEPARATOR ';') as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:10:01]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:10:01]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,group_concat(cms_document_archiving.notify_email SEPARATOR ';') as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:10:15]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:10:15]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:13:53]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:13:53]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,cms_document_archiving.notify_email as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:14:27]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:14:27]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,cms_document_archiving.notify_email as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:17:36]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:17:36]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,cms_document_archiving.notify_email as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:17:36]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@gmail.com"
+
+
+[2018-12-24 06:17:36]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@gmail.com') AND cms_employees.is_active = 1
+
+
+[2018-12-24 06:17:41]
+Function Details: smtpmailer 
+ Param Details : 
+"Email Sent : sancheev@gmail.com CC'ed : sancheev@gmail.com"
+
+
+[2018-12-24 06:17:41]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@msphitect.com.my"
+
+
+[2018-12-24 06:17:41]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@msphitect.com.my') AND cms_employees.is_active = 1
+
+
+[2018-12-24 06:17:41]
+Function Details: smtpmailer 
+ Param Details : 
+"Email Sent : sancheev@gmail.com;vicsanchee@yahoo.com CC'ed : sancheev@msphitect.com.my"
+
+
+[2018-12-24 06:19:05]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:19:05]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,cms_document_archiving.notify_email as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:19:05]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@gmail.com"
+
+
+[2018-12-24 06:19:05]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@gmail.com') AND cms_employees.is_active = 1
+
+
+[2018-12-24 06:19:10]
+Function Details: smtpmailer 
+ Param Details : 
+"Email Sent : sancheev@gmail.com CC'ed : sancheev@gmail.com"
+
+
+[2018-12-24 06:19:10]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@msphitect.com.my"
+
+
+[2018-12-24 06:19:10]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@msphitect.com.my') AND cms_employees.is_active = 1
+
+
+[2018-12-24 06:19:10]
+Function Details: smtpmailer 
+ Param Details : 
+"Email Sent : sancheev@gmail.com;vicsanchee@yahoo.com CC'ed : sancheev@msphitect.com.my"
+
+
+[2018-12-24 06:20:39]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:20:39]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,cms_document_archiving.notify_email as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:20:39]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@gmail.com"
+
+
+[2018-12-24 06:20:39]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@gmail.com') AND cms_employees.is_active = 1
+
+
+[2018-12-24 06:20:43]
+Function Details: smtpmailer 
+ Param Details : 
+"Email Sent : sancheev@gmail.com CC'ed : sancheev@gmail.com"
+
+
+[2018-12-24 06:20:43]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@msphitect.com.my"
+
+
+[2018-12-24 06:20:43]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@msphitect.com.my') AND cms_employees.is_active = 1
+
+
+[2018-12-24 06:20:44]
+Function Details: smtpmailer 
+ Param Details : 
+"Email Sent : sancheev@gmail.com;vicsanchee@yahoo.com CC'ed : sancheev@msphitect.com.my"
+
+
+[2018-12-24 06:21:13]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:21:13]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,cms_document_archiving.notify_email as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:21:13]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@gmail.com"
+
+
+[2018-12-24 06:21:13]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@gmail.com') AND cms_employees.is_active = 1
+
+
+[2018-12-24 06:21:17]
+Function Details: smtpmailer 
+ Param Details : 
+"Email Sent : sancheev@gmail.com CC'ed : sancheev@gmail.com"
+
+
+[2018-12-24 06:21:17]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@msphitect.com.my"
+
+
+[2018-12-24 06:21:17]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@msphitect.com.my') AND cms_employees.is_active = 1
+
+
+[2018-12-24 06:21:17]
+Function Details: smtpmailer 
+ Param Details : 
+"Email Sent : sancheev@gmail.com;vicsanchee@yahoo.com CC'ed : sancheev@msphitect.com.my"
+
+
+[2018-12-24 06:22:17]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:22:17]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,cms_document_archiving.notify_email as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by <= CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:22:17]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@gmail.com"
+
+
+[2018-12-24 06:22:17]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@gmail.com') AND cms_employees.is_active = 1
+
+
+[2018-12-24 06:22:22]
+Function Details: smtpmailer 
+ Param Details : 
+"Email Sent : sancheev@gmail.com CC'ed : sancheev@gmail.com"
+
+
+[2018-12-24 06:22:22]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@msphitect.com.my"
+
+
+[2018-12-24 06:22:22]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@msphitect.com.my') AND cms_employees.is_active = 1
+
+
+[2018-12-24 06:22:22]
+Function Details: smtpmailer 
+ Param Details : 
+"Email Sent : sancheev@gmail.com;vicsanchee@yahoo.com CC'ed : sancheev@msphitect.com.my"
+
+
+[2018-12-24 06:34:35]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:34:35]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,cms_document_archiving.notify_email as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by == CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:34:36]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:34:36]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,cms_document_archiving.notify_email as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by == CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:35:09]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:35:09]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,cms_document_archiving.notify_email as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by == CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:35:10]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:35:10]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,cms_document_archiving.notify_email as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by == CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:35:18]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:35:18]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,cms_document_archiving.notify_email as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by = CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:35:34]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:35:34]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,cms_document_archiving.notify_email as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list ON cms_document_archiving.doc_type = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by = CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:40:15]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:40:15]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,cms_document_archiving.notify_email as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list on cms_document_archiving.doc_type = cms_master_list.id
+	            INNER JOIN cms_master_list on cms_document_archiving.status_id = cms_master_list.id
+	             WHERE cms_document_archiving.notify_by = CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:41:41]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:41:41]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,cms_document_archiving.notify_email as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list on (cms_document_archiving.doc_type = cms_master_list.id OR cms_document_archiving.status_id = cms_master_list.id)
+	             WHERE cms_document_archiving.notify_by = CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:42:12]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:42:12]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,cms_document_archiving.notify_email as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            INNER JOIN cms_master_list on (cms_document_archiving.doc_type = cms_master_list.id AND cms_document_archiving.status_id = cms_master_list.id)
+	             WHERE cms_document_archiving.notify_by = CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:51:26]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:51:26]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,doc_status.descr as status_name
+            ,cms_document_archiving.notify_email as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            LEFT JOIN cms_master_list on cms_document_archiving.doc_type = cms_master_list.id
+	            LEFT JOIN cms_master_list doc_status on cms_document_archiving.status_id = doc_status.id
+	             WHERE cms_document_archiving.notify_by = CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:53:40]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 06:53:40]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,doc_status.descr as status_name
+            ,cms_document_archiving.notify_email as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            LEFT JOIN cms_master_list on cms_document_archiving.doc_type = cms_master_list.id
+	            LEFT JOIN cms_master_list doc_status on cms_document_archiving.status_id = doc_status.id
+	             WHERE cms_document_archiving.notify_by = CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 06:53:40]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@gmail.com"
+
+
+[2018-12-24 06:53:40]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@gmail.com') AND cms_employees.is_active = 1
+
+
+[2018-12-24 06:53:45]
+Function Details: smtpmailer 
+ Param Details : 
+"Email Sent : sancheev@gmail.com CC'ed : sancheev@gmail.com"
+
+
+[2018-12-24 06:53:45]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@msphitect.com.my"
+
+
+[2018-12-24 06:53:45]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@msphitect.com.my') AND cms_employees.is_active = 1
+
+
+[2018-12-24 06:53:45]
+Function Details: smtpmailer 
+ Param Details : 
+"Email Sent : sancheev@gmail.com;vicsanchee@yahoo.com CC'ed : sancheev@msphitect.com.my"
+
+
+[2018-12-24 07:34:40]
+Function Details: send_notification_archiving 
+ Param Details : 
+[]
+
+
+[2018-12-24 07:34:40]
+Function Details: db_query
+ Param Details: 
+SELECT 
+            cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+            ,doc_status.descr as status_name
+            ,cms_document_archiving.notify_email as notify_email
+            ,date_format(cms_document_archiving.from_date,'%d-%b-%Y %h:%i %p') as from_date
+            ,date_format(cms_document_archiving.to_date,'%d-%b-%Y %h:%i %p') as to_date
+            ,cms_document_archiving.attachment
+            ,cms_employees.name as emp_name
+            ,cms_employees.office_email
+             FROM 
+            cms_document_archiving
+	            INNER JOIN cms_employees on cms_document_archiving.created_by = cms_employees.id
+	            LEFT JOIN cms_master_list on cms_document_archiving.doc_type = cms_master_list.id
+	            LEFT JOIN cms_master_list doc_status on cms_document_archiving.status_id = doc_status.id
+	             WHERE cms_document_archiving.notify_by = CURDATE() 
+                AND cms_employees.is_active = 1
+             ORDER BY cms_employees.name ASC, cms_document_archiving.notify_by ASC
+
+
+[2018-12-24 07:34:40]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@gmail.com"
+
+
+[2018-12-24 07:34:40]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@gmail.com') AND cms_employees.is_active = 1
+
+
+[2018-12-24 07:34:44]
+Function Details: smtpmailer 
+ Param Details : 
+"Email Sent : sancheev@gmail.com CC'ed : sancheev@gmail.com"
+
+
+[2018-12-24 07:34:44]
+Function Details: get_mail_signature 
+ Param Details : 
+"sancheev@msphitect.com.my"
+
+
+[2018-12-24 07:34:44]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_employees.name, cms_master_employer.mail_signature, 
+									cms_employees.device_info, cms_employees.device_id
+									FROM cms_employees
+									LEFT JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+									WHERE cms_employees.office_email in('sancheev@msphitect.com.my') AND cms_employees.is_active = 1
+
+
+[2018-12-24 07:34:45]
+Function Details: smtpmailer 
+ Param Details : 
+"Email Sent : sancheev@gmail.com;vicsanchee@yahoo.com CC'ed : sancheev@msphitect.com.my"
+
+

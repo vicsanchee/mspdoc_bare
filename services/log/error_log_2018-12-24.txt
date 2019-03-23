@@ -1,0 +1,507 @@
+[2018-12-24 00:07:09]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(54): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:07:47]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(51): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:07:48]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(51): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:07:49]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(51): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:07:49]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(51): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:08:26]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(51): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:08:28]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(51): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:08:28]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(51): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:08:28]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(51): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:10:13]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(51): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:10:14]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(51): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:10:14]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(51): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:10:14]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(51): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:10:18]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(51): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:10:57]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(50): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:10:58]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(50): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:10:58]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(50): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:10:59]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(50): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:10:59]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(50): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:11:00]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(50): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:11:40]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(49): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:11:41]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(49): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:12:25]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(51): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:13:07]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(50): db_query('\r\n            ,...', '\r\n            c...', 'cms_employees.i...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:13:08]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(50): db_query('\r\n            ,...', '\r\n            c...', 'cms_employees.i...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:13:08]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(50): db_query('\r\n            ,...', '\r\n            c...', 'cms_employees.i...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:13:31]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(48): db_query('\r\n            ,...', '\r\n            c...', 'cms_employees.i...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+             date_format(cms_document_archiving.f' at line 2
+
+
+[2018-12-24 00:13:31]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(48): db_query('\r\n            ,...', '\r\n            c...', 'cms_employees.i...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+             date_format(cms_document_archiving.f' at line 2
+
+
+[2018-12-24 00:13:31]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(48): db_query('\r\n            ,...', '\r\n            c...', 'cms_employees.i...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+             date_format(cms_document_archiving.f' at line 2
+
+
+[2018-12-24 00:13:41]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(48): db_query('\r\n            ,...', '\r\n            c...', 'cms_employees.i...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+             date_format(cms_document_archiving.f' at line 2
+
+
+[2018-12-24 00:13:41]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(48): db_query('\r\n            ,...', '\r\n            c...', 'cms_employees.i...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+             date_format(cms_document_archiving.f' at line 2
+
+
+[2018-12-24 00:13:42]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(48): db_query('\r\n            ,...', '\r\n            c...', 'cms_employees.i...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+             date_format(cms_document_archiving.f' at line 2
+
+
+[2018-12-24 00:13:42]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(48): db_query('\r\n            ,...', '\r\n            c...', 'cms_employees.i...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+             date_format(cms_document_archiving.f' at line 2
+
+
+[2018-12-24 00:14:45]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(51): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:14:46]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(51): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:14:46]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(51): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_master_list.descr as doc_type
+ ' at line 2
+
+
+[2018-12-24 00:15:09]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(47): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+
+            ,cms_employees.office_email
+      ' at line 2
+
+
+[2018-12-24 00:15:09]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(47): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+
+            ,cms_employees.office_email
+      ' at line 2
+
+
+[2018-12-24 00:15:10]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(47): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+
+            ,cms_employees.office_email
+      ' at line 2
+
+
+[2018-12-24 00:16:09]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(49): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,date_format(cms_document_archiving.f' at line 2
+
+
+[2018-12-24 00:16:10]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(49): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,date_format(cms_document_archiving.f' at line 2
+
+
+[2018-12-24 00:16:10]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(49): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,date_format(cms_document_archiving.f' at line 2
+
+
+[2018-12-24 00:16:46]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(49): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,date_format(cms_document_archiving.f' at line 2
+
+
+[2018-12-24 00:17:41]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(49): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,date_format(cms_document_archiving.f' at line 2
+
+
+[2018-12-24 00:17:41]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(49): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,date_format(cms_document_archiving.f' at line 2
+
+
+[2018-12-24 00:17:42]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(49): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,date_format(cms_document_archiving.f' at line 2
+
+
+[2018-12-24 00:18:02]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(48): db_query('\r\n            ,...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,date_format(cms_document_archiving.f' at line 2
+
+
+[2018-12-24 00:18:20]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT ,cms_doc...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(45): db_query(',cms_document_a...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_document_archiving.attachment
+ ' at line 1
+
+
+[2018-12-24 00:18:21]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT ,cms_doc...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(45): db_query(',cms_document_a...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no
+            ,cms_document_archiving.attachment
+ ' at line 1
+
+
+[2018-12-24 00:19:17]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT ,cms_doc...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(38): db_query(',cms_document_a...', 'cms_document_ar...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no,cms_document_archiving.attachment,cms_employees.na' at line 1
+
+
+[2018-12-24 00:19:18]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT ,cms_doc...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(38): db_query(',cms_document_a...', 'cms_document_ar...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no,cms_document_archiving.attachment,cms_employees.na' at line 1
+
+
+[2018-12-24 00:19:18]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT ,cms_doc...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(38): db_query(',cms_document_a...', 'cms_document_ar...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no,cms_document_archiving.attachment,cms_employees.na' at line 1
+
+
+[2018-12-24 00:19:28]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT ,cms_doc...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(38): db_query(',cms_document_a...', 'cms_document_ar...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no,cms_document_archiving.attachment,cms_employees.na' at line 1
+
+
+[2018-12-24 00:19:29]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT ,cms_doc...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(38): db_query(',cms_document_a...', 'cms_document_ar...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cms_document_archiving.doc_no,cms_document_archiving.attachment,cms_employees.na' at line 1
+
+
+[2018-12-24 06:34:35]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(44): db_query('\r\n            c...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== CURDATE() 
+                AND cms_employees.is_active = 1
+             ORD' at line 14
+
+
+[2018-12-24 06:34:36]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(44): db_query('\r\n            c...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== CURDATE() 
+                AND cms_employees.is_active = 1
+             ORD' at line 14
+
+
+[2018-12-24 06:35:09]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(44): db_query('\r\n            c...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== CURDATE() 
+                AND cms_employees.is_active = 1
+             ORD' at line 14
+
+
+[2018-12-24 06:35:10]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(44): db_query('\r\n            c...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== CURDATE() 
+                AND cms_employees.is_active = 1
+             ORD' at line 14
+
+
+[2018-12-24 06:40:15]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n      ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(45): db_query('\r\n            c...', '\r\n            c...', 'cms_document_ar...', '', '', 'cms_employees.n...', 'ASC, cms_docume...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\send_notification.php(15): send_notification_archiving()
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'cms_master_list'
+
+

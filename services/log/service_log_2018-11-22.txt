@@ -1,0 +1,2326 @@
+[2018-11-22 21:25:18]
+Function Details: check_login 
+ Param Details : 
+{"username":"jamal","password":"74f56399c89f4bd03ff5e85b6bf4e85f"}
+
+
+[2018-11-22 21:25:18]
+Function Details: db_query
+ Param Details: 
+SELECT id as emp_id, name, email,office_email, username
+						, is_admin, initial_pswd
+						, (select id from cms_master_list where cms_master_list.id = cms_employees.access_level) as access_level
+						
+						, cms_emp_login_sessions.token
+		                , accessible_ctg
+						, malaysia_phone
+						, concat('http://127.0.0.1/code/projects/mspdoc/services/files/', 'photos/',id,'.jpeg') as profile_pic
+		                , super_admin  FROM cms_employees
+						LEFT join cms_emp_login_sessions ON
+						 	cms_employees.id = cms_emp_login_sessions.emp_id WHERE cms_employees.username	= 'jamal' AND cms_employees.pswd = '74f56399c89f4bd03ff5e85b6bf4e85f' AND cms_employees.is_active = 1
+
+
+[2018-11-22 21:25:18]
+Function Details: is_login_token_valid 
+ Param Details : 
+{"username":"jamal","password":"74f56399c89f4bd03ff5e85b6bf4e85f","emp_id":"15","token":"03293db0a67871ad036730841905cf98"}
+
+
+[2018-11-22 21:25:18]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 21:25:18]
+Function Details: update_session 
+ Param Details : 
+{"username":"jamal","password":"74f56399c89f4bd03ff5e85b6bf4e85f","emp_id":"15","token":"03293db0a67871ad036730841905cf98"}
+
+
+[2018-11-22 21:25:18]
+Function Details: db_update
+ Param Details: 
+   		UPDATE cms_emp_login_sessions SET token = :token, emp_id = :emp_id, last_active = :last_active, client_ip = :client_ip WHERE token = :token 
+
+
+[2018-11-22 21:25:19]
+Function Details: db_update
+ Param Details: 
+ Array
+(
+    [:token] => 03293db0a67871ad036730841905cf98
+    [:emp_id] => 15
+    [:last_active] => 2018-11-22 21:25:18
+    [:client_ip] => 127.0.0.1
+)
+ 
+ Result 1
+
+
+[2018-11-22 21:25:19]
+Function Details: db_query
+ Param Details: 
+SELECT cms_modules.descr, cms_employees_access.* FROM cms_employees_access INNER JOIN cms_modules ON cms_employees_access.module_id = cms_modules.id WHERE cms_employees_access.emp_id	= 15
+
+
+[2018-11-22 21:25:19]
+Function Details: arrange_accessibilty 
+ Param Details : 
+[{"descr":"Claims","id":"8","module_id":"1","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Timesheets","id":"9","module_id":"2","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Leaves","id":"10","module_id":"3","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Appointments","id":"11","module_id":"4","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Task","id":"12","module_id":"5","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Onboarding","id":"13","module_id":"7","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"FAQ","id":"14","module_id":"9","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"0","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Communication","id":"15","module_id":"10","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Settings","id":"252","module_id":"8","emp_id":"15","view_it":"0","view_it_all":"0","create_it":"0","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Job Posting","id":"253","module_id":"11","emp_id":"15","view_it":"0","view_it_all":"0","create_it":"0","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Clients","id":"348","module_id":"12","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Attendance","id":"384","module_id":"14","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Employees","id":"394","module_id":"6","emp_id":"15","view_it":"0","view_it_all":"0","create_it":"0","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Emails","id":"395","module_id":"13","emp_id":"15","view_it":"0","view_it_all":"0","create_it":"0","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Quotation","id":"396","module_id":"15","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":null,"created_date":null,"update_by":null,"updated_date":null},{"descr":"Document Archiving","id":"397","module_id":"16","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":null,"created_date":null,"update_by":null,"updated_date":null}]
+
+
+[2018-11-22 21:25:19]
+Function Details: db_query
+ Param Details: 
+SELECT id FROM cms_employees WHERE reporting_to_id = 15
+
+
+[2018-11-22 21:25:20]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_employees 
+
+
+[2018-11-22 21:25:20]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 1
+
+
+[2018-11-22 21:25:20]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 2
+
+
+[2018-11-22 21:25:20]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 8
+
+
+[2018-11-22 21:25:20]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr,no_of_days FROM cms_master_list WHERE category_id = 16
+
+
+[2018-11-22 21:25:20]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer 
+
+
+[2018-11-22 21:25:20]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 17
+
+
+[2018-11-22 21:25:20]
+Function Details: db_query
+ Param Details: 
+SELECT id,skills_name FROM cms_skills WHERE type_id = 67
+
+
+[2018-11-22 21:25:20]
+Function Details: db_query
+ Param Details: 
+SELECT id,skills_name FROM cms_skills WHERE type_id = 68
+
+
+[2018-11-22 21:25:20]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_employees_details","data":{"id":"15"}}
+
+
+[2018-11-22 21:25:20]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 21:25:20]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 21:25:20]
+Function Details: get_employees_details 
+ Param Details : 
+{"id":"15"}
+
+
+[2018-11-22 21:25:20]
+Function Details: db_query
+ Param Details: 
+SELECT 
+        id
+        , employee_no
+        , name
+        , photoname
+		, ic_passport
+		, sex_id
+		, age
+		, date_format(dob,'%d-%m-%Y') as dob
+		, nationality
+		, birth_place
+		, religion
+		, race
+		, designation
+        , employer_id
+		, home_phone
+		, malaysia_phone
+		, office_phone
+		, local_address
+        , home_address
+        , home_country
+		, email
+		, office_email
+		, username
+        , pswd
+		, is_admin
+        , access_level
+		, chat_id
+		, dept_id
+		, reporting_to_id
+		, allow_add
+        , allow_approve
+        , allow_verify
+        , allow_contract_approve
+		, allow_contract_create
+		, allow_contract_view_all
+		, allow_contract_access
+		, general_skills
+        , specific_skills
+        , date_format(work_start_date,'%d-%m-%Y') as work_start_date
+        , date_format(work_end_date,'%d-%m-%Y') as work_end_date
+        , salary
+        , date_format(ep_valid_till,'%d-%m-%Y') as ep_valid_till
+        , notice_period_id
+		, spouse_name
+		, spouse_occupation
+		, date_format(marriage_date,'%d-%m-%Y') as marriage_date
+		, spouse_ic
+		, spouse_company
+		, spouse_company_address
+		, no_of_children
+		, emergency_person
+		, emergency_relation
+		, emergency_address
+		, emergency_phone
+		, bank_acc_name
+		, bank_acc_ic
+		, bank_name
+		, bank_account_no
+		, accessible_ctg
+		, super_admin
+		, is_active
+		, concat('http://127.0.0.1/code/projects/mspdoc/services/files/', 'photos/',id,'.jpeg') as profile_pic
+		, date_format(leaving_date,'%d-%m-%Y') as leaving_date
+		, leaving_reason
+		, created_by
+        , (select employer_name from cms_master_employer where cms_master_employer.id = cms_employees.employer_id) as employer_name
+        , (select descr from cms_master_list where cms_master_list.id = cms_employees.dept_id) as dept_name
+        , (select descr from cms_master_list where cms_master_list.id = cms_employees.notice_period_id) as notice_period
+        , (select descr from cms_master_list where cms_master_list.id = cms_employees.access_level) as access_level_name
+         FROM cms_employees WHERE id = 15
+
+
+[2018-11-22 21:25:20]
+Function Details: db_query
+ Param Details: 
+SELECT skills_name FROM cms_skills WHERE id=0
+
+
+[2018-11-22 21:25:20]
+Function Details: db_query
+ Param Details: 
+SELECT skills_name FROM cms_skills WHERE id=0
+
+
+[2018-11-22 21:25:20]
+Function Details: db_query
+ Param Details: 
+SELECT module_id,view_it ,view_it_all ,create_it ,edit_it ,delete_it ,print_it ,verify_it ,approve_it,revoke_verify,revoke_approval FROM cms_employees_access WHERE emp_id = 15
+
+
+[2018-11-22 21:28:43]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-11-22 21:28:43]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-11-22 21:28:43]
+Function Details: db_query
+ Param Details: 
+SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email, cms_master_employer.employer_name  as company_name FROM cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id WHERE cms_employees.is_active = 1
+
+
+[2018-11-22 21:28:43]
+Function Details: db_query
+ Param Details: 
+SELECT template_content FROM cms_master_template WHERE id = 25
+
+
+[2018-11-22 21:28:44]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_quotation_list","data":{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-11-22 21:28:44]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 21:28:44]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 21:28:44]
+Function Details: get_quotation_list 
+ Param Details : 
+{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-11-22 21:28:44]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_quotation.quote_no
+				, cms_quotation.quote_date
+				, cms_quotation.client_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_quotation.attention_to
+				, cms_quotation.email_content
+				, cms_quotation.email
+				, cms_quotation.attachment
+				, cms_quotation.remarks
+				, cms_quotation.approvals
+				, cms_quotation.status_id
+				, cms_quotation.created_date
+				, cms_quotation.created_by			
+                 FROM 
+                cms_quotation
+				LEFT JOIN cms_clients
+                    ON (cms_quotation.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_quotation.created_by) AND cms_quotation.is_active in(1) ORDER BY quote_no DESC limit 0,10
+
+
+[2018-11-22 21:30:34]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-11-22 21:30:34]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-11-22 21:30:34]
+Function Details: db_query
+ Param Details: 
+SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email, cms_master_employer.employer_name  as company_name FROM cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id WHERE cms_employees.is_active = 1
+
+
+[2018-11-22 21:30:34]
+Function Details: db_query
+ Param Details: 
+SELECT template_content FROM cms_master_template WHERE id = 25
+
+
+[2018-11-22 21:30:34]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_quotation_list","data":{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-11-22 21:30:34]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 21:30:34]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 21:30:34]
+Function Details: get_quotation_list 
+ Param Details : 
+{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-11-22 21:30:34]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_quotation.quote_no
+				, cms_quotation.quote_date
+				, cms_quotation.client_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_quotation.attention_to
+				, cms_quotation.email_content
+				, cms_quotation.email
+				, cms_quotation.attachment
+				, cms_quotation.remarks
+				, cms_quotation.approvals
+				, cms_quotation.status_id
+				, cms_quotation.created_date
+				, cms_quotation.created_by			
+                 FROM 
+                cms_quotation
+				LEFT JOIN cms_clients
+                    ON (cms_quotation.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_quotation.created_by) AND cms_quotation.is_active in(1) ORDER BY quote_no DESC limit 0,10
+
+
+[2018-11-22 21:30:48]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-11-22 21:30:48]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-11-22 21:30:48]
+Function Details: db_query
+ Param Details: 
+SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email, cms_master_employer.employer_name  as company_name FROM cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id WHERE cms_employees.is_active = 1
+
+
+[2018-11-22 21:30:48]
+Function Details: db_query
+ Param Details: 
+SELECT template_content FROM cms_master_template WHERE id = 25
+
+
+[2018-11-22 21:30:48]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_quotation_list","data":{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-11-22 21:30:48]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 21:30:48]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 21:30:49]
+Function Details: get_quotation_list 
+ Param Details : 
+{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-11-22 21:30:49]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_quotation.quote_no
+				, cms_quotation.quote_date
+				, cms_quotation.client_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_quotation.attention_to
+				, cms_quotation.email_content
+				, cms_quotation.email
+				, cms_quotation.attachment
+				, cms_quotation.remarks
+				, cms_quotation.approvals
+				, cms_quotation.status_id
+				, cms_quotation.created_date
+				, cms_quotation.created_by			
+                 FROM 
+                cms_quotation
+				LEFT JOIN cms_clients
+                    ON (cms_quotation.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_quotation.created_by) AND cms_quotation.is_active in(1) ORDER BY quote_no DESC limit 0,10
+
+
+[2018-11-22 21:32:57]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-11-22 21:32:57]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-11-22 21:32:57]
+Function Details: db_query
+ Param Details: 
+SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email, cms_master_employer.employer_name  as company_name FROM cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id WHERE cms_employees.is_active = 1
+
+
+[2018-11-22 21:32:57]
+Function Details: db_query
+ Param Details: 
+SELECT template_content FROM cms_master_template WHERE id = 25
+
+
+[2018-11-22 21:32:57]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_quotation_list","data":{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-11-22 21:32:57]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 21:32:57]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 21:32:57]
+Function Details: get_quotation_list 
+ Param Details : 
+{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-11-22 21:32:57]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_quotation.quote_no
+				, cms_quotation.quote_date
+				, cms_quotation.client_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_quotation.attention_to
+				, cms_quotation.email_content
+				, cms_quotation.email
+				, cms_quotation.attachment
+				, cms_quotation.remarks
+				, cms_quotation.approvals
+				, cms_quotation.status_id
+				, cms_quotation.created_date
+				, cms_quotation.created_by			
+                 FROM 
+                cms_quotation
+				LEFT JOIN cms_clients
+                    ON (cms_quotation.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_quotation.created_by) AND cms_quotation.is_active in(1) ORDER BY quote_no DESC limit 0,10
+
+
+[2018-11-22 21:34:50]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-11-22 21:34:50]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-11-22 21:34:50]
+Function Details: db_query
+ Param Details: 
+SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email, cms_master_employer.employer_name  as company_name FROM cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id WHERE cms_employees.is_active = 1
+
+
+[2018-11-22 21:34:50]
+Function Details: db_query
+ Param Details: 
+SELECT template_content FROM cms_master_template WHERE id = 25
+
+
+[2018-11-22 21:34:50]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_quotation_list","data":{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-11-22 21:34:50]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 21:34:50]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 21:34:50]
+Function Details: get_quotation_list 
+ Param Details : 
+{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-11-22 21:34:51]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_quotation.quote_no
+				, cms_quotation.quote_date
+				, cms_quotation.client_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_quotation.attention_to
+				, cms_quotation.email_content
+				, cms_quotation.email
+				, cms_quotation.attachment
+				, cms_quotation.remarks
+				, cms_quotation.approvals
+				, cms_quotation.status_id
+				, cms_quotation.created_date
+				, cms_quotation.created_by			
+                 FROM 
+                cms_quotation
+				LEFT JOIN cms_clients
+                    ON (cms_quotation.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_quotation.created_by) AND cms_quotation.is_active in(1) ORDER BY quote_no DESC limit 0,10
+
+
+[2018-11-22 21:36:05]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-11-22 21:36:05]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-11-22 21:36:05]
+Function Details: db_query
+ Param Details: 
+SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email, cms_master_employer.employer_name  as company_name FROM cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id WHERE cms_employees.is_active = 1
+
+
+[2018-11-22 21:36:05]
+Function Details: db_query
+ Param Details: 
+SELECT template_content FROM cms_master_template WHERE id = 25
+
+
+[2018-11-22 21:36:05]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_quotation_list","data":{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-11-22 21:36:05]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 21:36:05]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 21:36:05]
+Function Details: get_quotation_list 
+ Param Details : 
+{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-11-22 21:36:05]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_quotation.quote_no
+				, cms_quotation.quote_date
+				, cms_quotation.client_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_quotation.attention_to
+				, cms_quotation.email_content
+				, cms_quotation.email
+				, cms_quotation.attachment
+				, cms_quotation.remarks
+				, cms_quotation.approvals
+				, cms_quotation.status_id
+				, cms_quotation.created_date
+				, cms_quotation.created_by			
+                 FROM 
+                cms_quotation
+				LEFT JOIN cms_clients
+                    ON (cms_quotation.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_quotation.created_by) AND cms_quotation.is_active in(1) ORDER BY quote_no DESC limit 0,10
+
+
+[2018-11-22 21:36:50]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-11-22 21:36:50]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-11-22 21:36:50]
+Function Details: db_query
+ Param Details: 
+SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email, cms_master_employer.employer_name  as company_name FROM cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id WHERE cms_employees.is_active = 1
+
+
+[2018-11-22 21:36:50]
+Function Details: db_query
+ Param Details: 
+SELECT template_content FROM cms_master_template WHERE id = 25
+
+
+[2018-11-22 21:36:50]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_quotation_list","data":{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-11-22 21:36:50]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 21:36:50]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 21:36:50]
+Function Details: get_quotation_list 
+ Param Details : 
+{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-11-22 21:36:50]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_quotation.quote_no
+				, cms_quotation.quote_date
+				, cms_quotation.client_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_quotation.attention_to
+				, cms_quotation.email_content
+				, cms_quotation.email
+				, cms_quotation.attachment
+				, cms_quotation.remarks
+				, cms_quotation.approvals
+				, cms_quotation.status_id
+				, cms_quotation.created_date
+				, cms_quotation.created_by			
+                 FROM 
+                cms_quotation
+				LEFT JOIN cms_clients
+                    ON (cms_quotation.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_quotation.created_by) AND cms_quotation.is_active in(1) ORDER BY quote_no DESC limit 0,10
+
+
+[2018-11-22 21:42:08]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-11-22 21:42:08]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-11-22 21:42:08]
+Function Details: db_query
+ Param Details: 
+SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email, cms_master_employer.employer_name  as company_name FROM cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id WHERE cms_employees.is_active = 1
+
+
+[2018-11-22 21:42:08]
+Function Details: db_query
+ Param Details: 
+SELECT template_content FROM cms_master_template WHERE id = 25
+
+
+[2018-11-22 21:42:09]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_quotation_list","data":{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-11-22 21:42:09]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 21:42:09]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 21:42:09]
+Function Details: get_quotation_list 
+ Param Details : 
+{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-11-22 21:42:09]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_quotation.quote_no
+				, cms_quotation.quote_date
+				, cms_quotation.client_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_quotation.attention_to
+				, cms_quotation.email_content
+				, cms_quotation.email
+				, cms_quotation.attachment
+				, cms_quotation.remarks
+				, cms_quotation.approvals
+				, cms_quotation.status_id
+				, cms_quotation.created_date
+				, cms_quotation.created_by			
+                 FROM 
+                cms_quotation
+				LEFT JOIN cms_clients
+                    ON (cms_quotation.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_quotation.created_by) AND cms_quotation.is_active in(1) ORDER BY quote_no DESC limit 0,10
+
+
+[2018-11-22 21:45:35]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-11-22 21:45:35]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-11-22 21:45:35]
+Function Details: db_query
+ Param Details: 
+SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email, cms_master_employer.employer_name  as company_name FROM cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id WHERE cms_employees.is_active = 1
+
+
+[2018-11-22 21:45:35]
+Function Details: db_query
+ Param Details: 
+SELECT template_content FROM cms_master_template WHERE id = 25
+
+
+[2018-11-22 21:45:36]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_quotation_list","data":{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-11-22 21:45:36]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 21:45:36]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 21:45:36]
+Function Details: get_quotation_list 
+ Param Details : 
+{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-11-22 21:45:36]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_quotation.quote_no
+				, cms_quotation.quote_date
+				, cms_quotation.client_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_quotation.attention_to
+				, cms_quotation.email_content
+				, cms_quotation.email
+				, cms_quotation.attachment
+				, cms_quotation.remarks
+				, cms_quotation.approvals
+				, cms_quotation.status_id
+				, cms_quotation.created_date
+				, cms_quotation.created_by			
+                 FROM 
+                cms_quotation
+				LEFT JOIN cms_clients
+                    ON (cms_quotation.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_quotation.created_by) AND cms_quotation.is_active in(1) ORDER BY quote_no DESC limit 0,10
+
+
+[2018-11-22 22:10:40]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =1 AND is_active = 1
+
+
+[2018-11-22 22:10:40]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-11-22 22:10:40]
+Function Details: db_query
+ Param Details: 
+SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email, cms_master_employer.employer_name  as company_name FROM cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id WHERE cms_employees.is_active = 1
+
+
+[2018-11-22 22:10:40]
+Function Details: db_query
+ Param Details: 
+SELECT template_content FROM cms_master_template WHERE id = 25
+
+
+[2018-11-22 22:10:42]
+Function Details: check_login 
+ Param Details : 
+{"username":"azlina","password":"21232f297a57a5a743894a0e4a801fc3"}
+
+
+[2018-11-22 22:10:42]
+Function Details: db_query
+ Param Details: 
+SELECT id as emp_id, name, email,office_email, username
+						, is_admin, initial_pswd
+						, (select id from cms_master_list where cms_master_list.id = cms_employees.access_level) as access_level
+						
+						, cms_emp_login_sessions.token
+		                , accessible_ctg
+						, malaysia_phone
+						, concat('http://127.0.0.1/code/projects/mspdoc/services/files/', 'photos/',id,'.jpeg') as profile_pic
+		                , super_admin  FROM cms_employees
+						LEFT join cms_emp_login_sessions ON
+						 	cms_employees.id = cms_emp_login_sessions.emp_id WHERE cms_employees.username	= 'azlina' AND cms_employees.pswd = '21232f297a57a5a743894a0e4a801fc3' AND cms_employees.is_active = 1
+
+
+[2018-11-22 22:10:50]
+Function Details: check_login 
+ Param Details : 
+{"username":"azlina","password":"21232f297a57a5a743894a0e4a801fc3"}
+
+
+[2018-11-22 22:10:50]
+Function Details: db_query
+ Param Details: 
+SELECT id as emp_id, name, email,office_email, username
+						, is_admin, initial_pswd
+						, (select id from cms_master_list where cms_master_list.id = cms_employees.access_level) as access_level
+						
+						, cms_emp_login_sessions.token
+		                , accessible_ctg
+						, malaysia_phone
+						, concat('http://127.0.0.1/code/projects/mspdoc/services/files/', 'photos/',id,'.jpeg') as profile_pic
+		                , super_admin  FROM cms_employees
+						LEFT join cms_emp_login_sessions ON
+						 	cms_employees.id = cms_emp_login_sessions.emp_id WHERE cms_employees.username	= 'azlina' AND cms_employees.pswd = '21232f297a57a5a743894a0e4a801fc3' AND cms_employees.is_active = 1
+
+
+[2018-11-22 22:10:54]
+Function Details: check_login 
+ Param Details : 
+{"username":"jamal","password":"74f56399c89f4bd03ff5e85b6bf4e85f"}
+
+
+[2018-11-22 22:10:54]
+Function Details: db_query
+ Param Details: 
+SELECT id as emp_id, name, email,office_email, username
+						, is_admin, initial_pswd
+						, (select id from cms_master_list where cms_master_list.id = cms_employees.access_level) as access_level
+						
+						, cms_emp_login_sessions.token
+		                , accessible_ctg
+						, malaysia_phone
+						, concat('http://127.0.0.1/code/projects/mspdoc/services/files/', 'photos/',id,'.jpeg') as profile_pic
+		                , super_admin  FROM cms_employees
+						LEFT join cms_emp_login_sessions ON
+						 	cms_employees.id = cms_emp_login_sessions.emp_id WHERE cms_employees.username	= 'jamal' AND cms_employees.pswd = '74f56399c89f4bd03ff5e85b6bf4e85f' AND cms_employees.is_active = 1
+
+
+[2018-11-22 22:10:54]
+Function Details: is_login_token_valid 
+ Param Details : 
+{"username":"jamal","password":"74f56399c89f4bd03ff5e85b6bf4e85f","emp_id":"15","token":"03293db0a67871ad036730841905cf98"}
+
+
+[2018-11-22 22:10:54]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 22:10:54]
+Function Details: update_session 
+ Param Details : 
+{"username":"jamal","password":"74f56399c89f4bd03ff5e85b6bf4e85f","emp_id":"15","token":"03293db0a67871ad036730841905cf98"}
+
+
+[2018-11-22 22:10:54]
+Function Details: db_update
+ Param Details: 
+   		UPDATE cms_emp_login_sessions SET token = :token, emp_id = :emp_id, last_active = :last_active, client_ip = :client_ip WHERE token = :token 
+
+
+[2018-11-22 22:10:55]
+Function Details: db_update
+ Param Details: 
+ Array
+(
+    [:token] => 03293db0a67871ad036730841905cf98
+    [:emp_id] => 15
+    [:last_active] => 2018-11-22 22:10:54
+    [:client_ip] => 127.0.0.1
+)
+ 
+ Result 1
+
+
+[2018-11-22 22:10:55]
+Function Details: db_query
+ Param Details: 
+SELECT cms_modules.descr, cms_employees_access.* FROM cms_employees_access INNER JOIN cms_modules ON cms_employees_access.module_id = cms_modules.id WHERE cms_employees_access.emp_id	= 15
+
+
+[2018-11-22 22:10:55]
+Function Details: arrange_accessibilty 
+ Param Details : 
+[{"descr":"Claims","id":"8","module_id":"1","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Timesheets","id":"9","module_id":"2","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Leaves","id":"10","module_id":"3","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Appointments","id":"11","module_id":"4","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Task","id":"12","module_id":"5","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Onboarding","id":"13","module_id":"7","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"FAQ","id":"14","module_id":"9","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"0","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Communication","id":"15","module_id":"10","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Settings","id":"252","module_id":"8","emp_id":"15","view_it":"0","view_it_all":"0","create_it":"0","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Job Posting","id":"253","module_id":"11","emp_id":"15","view_it":"0","view_it_all":"0","create_it":"0","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Clients","id":"348","module_id":"12","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Attendance","id":"384","module_id":"14","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Employees","id":"394","module_id":"6","emp_id":"15","view_it":"0","view_it_all":"0","create_it":"0","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Emails","id":"395","module_id":"13","emp_id":"15","view_it":"0","view_it_all":"0","create_it":"0","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Quotation","id":"396","module_id":"15","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":null,"created_date":null,"update_by":null,"updated_date":null},{"descr":"Document Archiving","id":"397","module_id":"16","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":null,"created_date":null,"update_by":null,"updated_date":null}]
+
+
+[2018-11-22 22:10:55]
+Function Details: db_query
+ Param Details: 
+SELECT id FROM cms_employees WHERE reporting_to_id = 15
+
+
+[2018-11-22 22:10:55]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_employees 
+
+
+[2018-11-22 22:10:55]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 1
+
+
+[2018-11-22 22:10:55]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 2
+
+
+[2018-11-22 22:10:55]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 8
+
+
+[2018-11-22 22:10:55]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr,no_of_days FROM cms_master_list WHERE category_id = 16
+
+
+[2018-11-22 22:10:55]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer 
+
+
+[2018-11-22 22:10:55]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 17
+
+
+[2018-11-22 22:10:55]
+Function Details: db_query
+ Param Details: 
+SELECT id,skills_name FROM cms_skills WHERE type_id = 67
+
+
+[2018-11-22 22:10:55]
+Function Details: db_query
+ Param Details: 
+SELECT id,skills_name FROM cms_skills WHERE type_id = 68
+
+
+[2018-11-22 22:10:56]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_employees_details","data":{"id":"15"}}
+
+
+[2018-11-22 22:10:56]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 22:10:56]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 22:10:56]
+Function Details: get_employees_details 
+ Param Details : 
+{"id":"15"}
+
+
+[2018-11-22 22:10:56]
+Function Details: db_query
+ Param Details: 
+SELECT 
+        id
+        , employee_no
+        , name
+        , photoname
+		, ic_passport
+		, sex_id
+		, age
+		, date_format(dob,'%d-%m-%Y') as dob
+		, nationality
+		, birth_place
+		, religion
+		, race
+		, designation
+        , employer_id
+		, home_phone
+		, malaysia_phone
+		, office_phone
+		, local_address
+        , home_address
+        , home_country
+		, email
+		, office_email
+		, username
+        , pswd
+		, is_admin
+        , access_level
+		, chat_id
+		, dept_id
+		, reporting_to_id
+		, allow_add
+        , allow_approve
+        , allow_verify
+        , allow_contract_approve
+		, allow_contract_create
+		, allow_contract_view_all
+		, allow_contract_access
+		, general_skills
+        , specific_skills
+        , date_format(work_start_date,'%d-%m-%Y') as work_start_date
+        , date_format(work_end_date,'%d-%m-%Y') as work_end_date
+        , salary
+        , date_format(ep_valid_till,'%d-%m-%Y') as ep_valid_till
+        , notice_period_id
+		, spouse_name
+		, spouse_occupation
+		, date_format(marriage_date,'%d-%m-%Y') as marriage_date
+		, spouse_ic
+		, spouse_company
+		, spouse_company_address
+		, no_of_children
+		, emergency_person
+		, emergency_relation
+		, emergency_address
+		, emergency_phone
+		, bank_acc_name
+		, bank_acc_ic
+		, bank_name
+		, bank_account_no
+		, accessible_ctg
+		, super_admin
+		, is_active
+		, concat('http://127.0.0.1/code/projects/mspdoc/services/files/', 'photos/',id,'.jpeg') as profile_pic
+		, date_format(leaving_date,'%d-%m-%Y') as leaving_date
+		, leaving_reason
+		, created_by
+        , (select employer_name from cms_master_employer where cms_master_employer.id = cms_employees.employer_id) as employer_name
+        , (select descr from cms_master_list where cms_master_list.id = cms_employees.dept_id) as dept_name
+        , (select descr from cms_master_list where cms_master_list.id = cms_employees.notice_period_id) as notice_period
+        , (select descr from cms_master_list where cms_master_list.id = cms_employees.access_level) as access_level_name
+         FROM cms_employees WHERE id = 15
+
+
+[2018-11-22 22:10:56]
+Function Details: db_query
+ Param Details: 
+SELECT skills_name FROM cms_skills WHERE id=0
+
+
+[2018-11-22 22:10:56]
+Function Details: db_query
+ Param Details: 
+SELECT skills_name FROM cms_skills WHERE id=0
+
+
+[2018-11-22 22:10:56]
+Function Details: db_query
+ Param Details: 
+SELECT module_id,view_it ,view_it_all ,create_it ,edit_it ,delete_it ,print_it ,verify_it ,approve_it,revoke_verify,revoke_approval FROM cms_employees_access WHERE emp_id = 15
+
+
+[2018-11-22 22:10:58]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-11-22 22:10:58]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-11-22 22:10:58]
+Function Details: db_query
+ Param Details: 
+SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email, cms_master_employer.employer_name  as company_name FROM cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id WHERE cms_employees.is_active = 1
+
+
+[2018-11-22 22:10:58]
+Function Details: db_query
+ Param Details: 
+SELECT template_content FROM cms_master_template WHERE id = 25
+
+
+[2018-11-22 22:10:58]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_quotation_list","data":{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-11-22 22:10:58]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 22:10:58]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 22:10:58]
+Function Details: get_quotation_list 
+ Param Details : 
+{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-11-22 22:10:58]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_quotation.quote_no
+				, cms_quotation.quote_date
+				, cms_quotation.client_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_quotation.attention_to
+				, cms_quotation.email_content
+				, cms_quotation.email
+				, cms_quotation.attachment
+				, cms_quotation.remarks
+				, cms_quotation.approvals
+				, cms_quotation.status_id
+				, cms_quotation.created_date
+				, cms_quotation.created_by			
+                 FROM 
+                cms_quotation
+				LEFT JOIN cms_clients
+                    ON (cms_quotation.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_quotation.created_by) AND cms_quotation.is_active in(1) ORDER BY quote_no DESC limit 0,10
+
+
+[2018-11-22 22:16:02]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-11-22 22:16:02]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-11-22 22:16:02]
+Function Details: db_query
+ Param Details: 
+SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email, cms_master_employer.employer_name  as company_name FROM cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id WHERE cms_employees.is_active = 1
+
+
+[2018-11-22 22:16:02]
+Function Details: db_query
+ Param Details: 
+SELECT template_content FROM cms_master_template WHERE id = 25
+
+
+[2018-11-22 22:16:02]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_quotation_list","data":{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-11-22 22:16:02]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 22:16:02]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 22:16:02]
+Function Details: get_quotation_list 
+ Param Details : 
+{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-11-22 22:16:02]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_quotation.quote_no
+				, cms_quotation.quote_date
+				, cms_quotation.client_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_quotation.attention_to
+				, cms_quotation.email_content
+				, cms_quotation.email
+				, cms_quotation.attachment
+				, cms_quotation.remarks
+				, cms_quotation.approvals
+				, cms_quotation.status_id
+				, cms_quotation.created_date
+				, cms_quotation.created_by			
+                 FROM 
+                cms_quotation
+				LEFT JOIN cms_clients
+                    ON (cms_quotation.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_quotation.created_by) AND cms_quotation.is_active in(1) ORDER BY quote_no DESC limit 0,10
+
+
+[2018-11-22 22:16:22]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-11-22 22:16:22]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-11-22 22:16:22]
+Function Details: db_query
+ Param Details: 
+SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email, cms_master_employer.employer_name  as company_name FROM cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id WHERE cms_employees.is_active = 1
+
+
+[2018-11-22 22:16:22]
+Function Details: db_query
+ Param Details: 
+SELECT template_content FROM cms_master_template WHERE id = 25
+
+
+[2018-11-22 22:16:22]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_quotation_list","data":{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-11-22 22:16:22]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 22:16:22]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 22:16:22]
+Function Details: get_quotation_list 
+ Param Details : 
+{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-11-22 22:16:22]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_quotation.quote_no
+				, cms_quotation.quote_date
+				, cms_quotation.client_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_quotation.attention_to
+				, cms_quotation.email_content
+				, cms_quotation.email
+				, cms_quotation.attachment
+				, cms_quotation.remarks
+				, cms_quotation.approvals
+				, cms_quotation.status_id
+				, cms_quotation.created_date
+				, cms_quotation.created_by			
+                 FROM 
+                cms_quotation
+				LEFT JOIN cms_clients
+                    ON (cms_quotation.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_quotation.created_by) AND cms_quotation.is_active in(1) ORDER BY quote_no DESC limit 0,10
+
+
+[2018-11-22 22:17:03]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-11-22 22:17:03]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-11-22 22:17:03]
+Function Details: db_query
+ Param Details: 
+SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email, cms_master_employer.employer_name  as company_name FROM cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id WHERE cms_employees.is_active = 1
+
+
+[2018-11-22 22:17:03]
+Function Details: db_query
+ Param Details: 
+SELECT template_content FROM cms_master_template WHERE id = 25
+
+
+[2018-11-22 22:17:03]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_quotation_list","data":{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-11-22 22:17:03]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 22:17:03]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 22:17:03]
+Function Details: get_quotation_list 
+ Param Details : 
+{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-11-22 22:17:03]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_quotation.quote_no
+				, cms_quotation.quote_date
+				, cms_quotation.client_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_quotation.attention_to
+				, cms_quotation.email_content
+				, cms_quotation.email
+				, cms_quotation.attachment
+				, cms_quotation.remarks
+				, cms_quotation.approvals
+				, cms_quotation.status_id
+				, cms_quotation.created_date
+				, cms_quotation.created_by			
+                 FROM 
+                cms_quotation
+				LEFT JOIN cms_clients
+                    ON (cms_quotation.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_quotation.created_by) AND cms_quotation.is_active in(1) ORDER BY quote_no DESC limit 0,10
+
+
+[2018-11-22 22:17:12]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-11-22 22:17:12]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-11-22 22:17:12]
+Function Details: db_query
+ Param Details: 
+SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email, cms_master_employer.employer_name  as company_name FROM cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id WHERE cms_employees.is_active = 1
+
+
+[2018-11-22 22:17:12]
+Function Details: db_query
+ Param Details: 
+SELECT template_content FROM cms_master_template WHERE id = 25
+
+
+[2018-11-22 22:17:12]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_quotation_list","data":{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-11-22 22:17:12]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 22:17:12]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 22:17:12]
+Function Details: get_quotation_list 
+ Param Details : 
+{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-11-22 22:17:12]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_quotation.quote_no
+				, cms_quotation.quote_date
+				, cms_quotation.client_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_quotation.attention_to
+				, cms_quotation.email_content
+				, cms_quotation.email
+				, cms_quotation.attachment
+				, cms_quotation.remarks
+				, cms_quotation.approvals
+				, cms_quotation.status_id
+				, cms_quotation.created_date
+				, cms_quotation.created_by			
+                 FROM 
+                cms_quotation
+				LEFT JOIN cms_clients
+                    ON (cms_quotation.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_quotation.created_by) AND cms_quotation.is_active in(1) ORDER BY quote_no DESC limit 0,10
+
+
+[2018-11-22 22:19:11]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-11-22 22:19:11]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-11-22 22:19:11]
+Function Details: db_query
+ Param Details: 
+SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email, cms_master_employer.employer_name  as company_name FROM cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id WHERE cms_employees.is_active = 1
+
+
+[2018-11-22 22:19:11]
+Function Details: db_query
+ Param Details: 
+SELECT template_content FROM cms_master_template WHERE id = 25
+
+
+[2018-11-22 22:19:12]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_quotation_list","data":{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-11-22 22:19:12]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 22:19:12]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 22:19:12]
+Function Details: get_quotation_list 
+ Param Details : 
+{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-11-22 22:19:12]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_quotation.quote_no
+				, cms_quotation.quote_date
+				, cms_quotation.client_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_quotation.attention_to
+				, cms_quotation.email_content
+				, cms_quotation.email
+				, cms_quotation.attachment
+				, cms_quotation.remarks
+				, cms_quotation.approvals
+				, cms_quotation.status_id
+				, cms_quotation.created_date
+				, cms_quotation.created_by			
+                 FROM 
+                cms_quotation
+				LEFT JOIN cms_clients
+                    ON (cms_quotation.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_quotation.created_by) AND cms_quotation.is_active in(1) ORDER BY quote_no DESC limit 0,10
+
+
+[2018-11-22 22:19:41]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-11-22 22:19:41]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-11-22 22:19:41]
+Function Details: db_query
+ Param Details: 
+SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email, cms_master_employer.employer_name  as company_name FROM cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id WHERE cms_employees.is_active = 1
+
+
+[2018-11-22 22:19:41]
+Function Details: db_query
+ Param Details: 
+SELECT template_content FROM cms_master_template WHERE id = 25
+
+
+[2018-11-22 22:19:41]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_quotation_list","data":{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-11-22 22:19:41]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 22:19:41]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 22:19:41]
+Function Details: get_quotation_list 
+ Param Details : 
+{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-11-22 22:19:41]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_quotation.quote_no
+				, cms_quotation.quote_date
+				, cms_quotation.client_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_quotation.attention_to
+				, cms_quotation.email_content
+				, cms_quotation.email
+				, cms_quotation.attachment
+				, cms_quotation.remarks
+				, cms_quotation.approvals
+				, cms_quotation.status_id
+				, cms_quotation.created_date
+				, cms_quotation.created_by			
+                 FROM 
+                cms_quotation
+				LEFT JOIN cms_clients
+                    ON (cms_quotation.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_quotation.created_by) AND cms_quotation.is_active in(1) ORDER BY quote_no DESC limit 0,10
+
+
+[2018-11-22 22:24:55]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-11-22 22:24:55]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-11-22 22:24:55]
+Function Details: db_query
+ Param Details: 
+SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email, cms_master_employer.employer_name  as company_name FROM cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id WHERE cms_employees.is_active = 1
+
+
+[2018-11-22 22:24:55]
+Function Details: db_query
+ Param Details: 
+SELECT template_content FROM cms_master_template WHERE id = 25
+
+
+[2018-11-22 22:24:56]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_quotation_list","data":{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-11-22 22:24:56]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 22:24:56]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 22:24:56]
+Function Details: get_quotation_list 
+ Param Details : 
+{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-11-22 22:24:56]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_quotation.quote_no
+				, cms_quotation.quote_date
+				, cms_quotation.client_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_quotation.attention_to
+				, cms_quotation.email_content
+				, cms_quotation.email
+				, cms_quotation.attachment
+				, cms_quotation.remarks
+				, cms_quotation.approvals
+				, cms_quotation.status_id
+				, cms_quotation.created_date
+				, cms_quotation.created_by			
+                 FROM 
+                cms_quotation
+				LEFT JOIN cms_clients
+                    ON (cms_quotation.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_quotation.created_by) AND cms_quotation.is_active in(1) ORDER BY quote_no DESC limit 0,10
+
+
+[2018-11-22 22:27:21]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-11-22 22:27:21]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-11-22 22:27:21]
+Function Details: db_query
+ Param Details: 
+SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email, cms_master_employer.employer_name  as company_name FROM cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id WHERE cms_employees.is_active = 1
+
+
+[2018-11-22 22:27:21]
+Function Details: db_query
+ Param Details: 
+SELECT template_content FROM cms_master_template WHERE id = 25
+
+
+[2018-11-22 22:27:22]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_quotation_list","data":{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-11-22 22:27:22]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 22:27:22]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 22:27:22]
+Function Details: get_quotation_list 
+ Param Details : 
+{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-11-22 22:27:22]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_quotation.quote_no
+				, cms_quotation.quote_date
+				, cms_quotation.client_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_quotation.attention_to
+				, cms_quotation.email_content
+				, cms_quotation.email
+				, cms_quotation.attachment
+				, cms_quotation.remarks
+				, cms_quotation.approvals
+				, cms_quotation.status_id
+				, cms_quotation.created_date
+				, cms_quotation.created_by			
+                 FROM 
+                cms_quotation
+				LEFT JOIN cms_clients
+                    ON (cms_quotation.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_quotation.created_by) AND cms_quotation.is_active in(1) ORDER BY quote_no DESC limit 0,10
+
+
+[2018-11-22 22:27:29]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-11-22 22:27:29]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-11-22 22:27:29]
+Function Details: db_query
+ Param Details: 
+SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email, cms_master_employer.employer_name  as company_name FROM cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id WHERE cms_employees.is_active = 1
+
+
+[2018-11-22 22:27:29]
+Function Details: db_query
+ Param Details: 
+SELECT template_content FROM cms_master_template WHERE id = 25
+
+
+[2018-11-22 22:27:29]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_quotation_list","data":{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-11-22 22:27:29]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 22:27:29]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 22:27:29]
+Function Details: get_quotation_list 
+ Param Details : 
+{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-11-22 22:27:29]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_quotation.quote_no
+				, cms_quotation.quote_date
+				, cms_quotation.client_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_quotation.attention_to
+				, cms_quotation.email_content
+				, cms_quotation.email
+				, cms_quotation.attachment
+				, cms_quotation.remarks
+				, cms_quotation.approvals
+				, cms_quotation.status_id
+				, cms_quotation.created_date
+				, cms_quotation.created_by			
+                 FROM 
+                cms_quotation
+				LEFT JOIN cms_clients
+                    ON (cms_quotation.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_quotation.created_by) AND cms_quotation.is_active in(1) ORDER BY quote_no DESC limit 0,10
+
+
+[2018-11-22 22:28:46]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-11-22 22:28:46]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-11-22 22:28:46]
+Function Details: db_query
+ Param Details: 
+SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email, cms_master_employer.employer_name  as company_name FROM cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id WHERE cms_employees.is_active = 1
+
+
+[2018-11-22 22:28:46]
+Function Details: db_query
+ Param Details: 
+SELECT template_content FROM cms_master_template WHERE id = 25
+
+
+[2018-11-22 22:28:47]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_quotation_list","data":{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-11-22 22:28:47]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 22:28:47]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 22:28:47]
+Function Details: get_quotation_list 
+ Param Details : 
+{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-11-22 22:28:47]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_quotation.quote_no
+				, cms_quotation.quote_date
+				, cms_quotation.client_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_quotation.attention_to
+				, cms_quotation.email_content
+				, cms_quotation.email
+				, cms_quotation.attachment
+				, cms_quotation.remarks
+				, cms_quotation.approvals
+				, cms_quotation.status_id
+				, cms_quotation.created_date
+				, cms_quotation.created_by			
+                 FROM 
+                cms_quotation
+				LEFT JOIN cms_clients
+                    ON (cms_quotation.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_quotation.created_by) AND cms_quotation.is_active in(1) ORDER BY quote_no DESC limit 0,10
+
+
+[2018-11-22 22:29:12]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_quotation_list","data":{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-11-22 22:29:12]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 22:29:12]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 22:29:12]
+Function Details: get_quotation_list 
+ Param Details : 
+{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-11-22 22:29:12]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_quotation.quote_no
+				, cms_quotation.quote_date
+				, cms_quotation.client_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_quotation.attention_to
+				, cms_quotation.email_content
+				, cms_quotation.email
+				, cms_quotation.attachment
+				, cms_quotation.remarks
+				, cms_quotation.approvals
+				, cms_quotation.status_id
+				, cms_quotation.created_date
+				, cms_quotation.created_by			
+                 FROM 
+                cms_quotation
+				LEFT JOIN cms_clients
+                    ON (cms_quotation.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_quotation.created_by) AND cms_quotation.is_active in(1) ORDER BY quote_no DESC limit 0,10
+
+
+[2018-11-22 22:29:26]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_quotation_list","data":{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-11-22 22:29:26]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 22:29:26]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 22:29:26]
+Function Details: get_quotation_list 
+ Param Details : 
+{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-11-22 22:29:26]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_quotation.quote_no
+				, cms_quotation.quote_date
+				, cms_quotation.client_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_quotation.attention_to
+				, cms_quotation.email_content
+				, cms_quotation.email
+				, cms_quotation.attachment
+				, cms_quotation.remarks
+				, cms_quotation.approvals
+				, cms_quotation.status_id
+				, cms_quotation.created_date
+				, cms_quotation.created_by			
+                 FROM 
+                cms_quotation
+				LEFT JOIN cms_clients
+                    ON (cms_quotation.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_quotation.created_by) AND cms_quotation.is_active in(1) ORDER BY quote_no DESC limit 0,10
+
+
+[2018-11-22 22:30:47]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-11-22 22:30:47]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-11-22 22:30:47]
+Function Details: db_query
+ Param Details: 
+SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email, cms_master_employer.employer_name  as company_name FROM cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id WHERE cms_employees.is_active = 1
+
+
+[2018-11-22 22:30:47]
+Function Details: db_query
+ Param Details: 
+SELECT template_content FROM cms_master_template WHERE id = 25
+
+
+[2018-11-22 22:30:48]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_quotation_list","data":{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-11-22 22:30:48]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 22:30:48]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 22:30:48]
+Function Details: get_quotation_list 
+ Param Details : 
+{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-11-22 22:30:48]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_quotation.quote_no
+				, cms_quotation.quote_date
+				, cms_quotation.client_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_quotation.attention_to
+				, cms_quotation.email_content
+				, cms_quotation.email
+				, cms_quotation.attachment
+				, cms_quotation.remarks
+				, cms_quotation.approvals
+				, cms_quotation.status_id
+				, cms_quotation.created_date
+				, cms_quotation.created_by			
+                 FROM 
+                cms_quotation
+				LEFT JOIN cms_clients
+                    ON (cms_quotation.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_quotation.created_by) AND cms_quotation.is_active in(1) ORDER BY quote_no DESC limit 0,10
+
+
+[2018-11-22 22:46:37]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_quotation_list","data":{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-11-22 22:46:37]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 22:46:37]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 22:46:37]
+Function Details: get_quotation_list 
+ Param Details : 
+{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-11-22 22:46:37]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_quotation.quote_no
+				, cms_quotation.quote_date
+				, cms_quotation.client_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_quotation.attention_to
+				, cms_quotation.email_content
+				, cms_quotation.email
+				, cms_quotation.attachment
+				, cms_quotation.remarks
+				, cms_quotation.approvals
+				, cms_quotation.status_id
+				, cms_quotation.created_date
+				, cms_quotation.created_by			
+                 FROM 
+                cms_quotation
+				LEFT JOIN cms_clients
+                    ON (cms_quotation.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_quotation.created_by) AND cms_quotation.is_active in(1) ORDER BY quote_no DESC limit 0,10
+
+
+[2018-11-22 23:53:26]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_quotation_list","data":{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-11-22 23:53:26]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 23:53:26]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 23:53:26]
+Function Details: get_quotation_list 
+ Param Details : 
+{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-11-22 23:53:26]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_quotation.quote_no
+				, cms_quotation.quote_date
+				, cms_quotation.client_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_quotation.attention_to
+				, cms_quotation.email_content
+				, cms_quotation.email
+				, cms_quotation.attachment
+				, cms_quotation.remarks
+				, cms_quotation.approvals
+				, cms_quotation.status_id
+				, cms_quotation.created_date
+				, cms_quotation.created_by			
+                 FROM 
+                cms_quotation
+				LEFT JOIN cms_clients
+                    ON (cms_quotation.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_quotation.created_by) AND cms_quotation.is_active in(1) ORDER BY quote_no DESC limit 0,10
+
+
+[2018-11-22 23:53:49]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 24
+
+
+[2018-11-22 23:53:49]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 28
+
+
+[2018-11-22 23:53:49]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_appt_pic.id,cms_appt_pic.name,cms_appt_pic.email, cms_clients.name as company_name
+				FROM cms_appt_pic INNER JOIN cms_clients ON cms_appt_pic.client = cms_clients.id
+				WHERE cms_appt_pic.created_by = 15 
+				 UNION ALL
+				SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email,
+				cms_master_employer.employer_name  as company_name
+				FROM
+				cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+				WHERE cms_employees.is_active = 1
+
+
+[2018-11-22 23:53:50]
+Function Details: db_query
+ Param Details: 
+SELECT template_content FROM cms_master_template WHERE id = 1
+
+
+[2018-11-22 23:53:51]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_appt_list_new","data":{"past_appt":0,"emp_id":"15","office_email":"jamal@msphitect.com.my"}}
+
+
+[2018-11-22 23:53:51]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 23:53:51]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 23:53:51]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_appt_list_new","data":{"past_appt":1,"emp_id":"15","office_email":"jamal@msphitect.com.my"}}
+
+
+[2018-11-22 23:53:51]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 23:53:51]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 23:53:57]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2018-11-22 23:53:57]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2018-11-22 23:53:57]
+Function Details: db_query
+ Param Details: 
+SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email, cms_master_employer.employer_name  as company_name FROM cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id WHERE cms_employees.is_active = 1
+
+
+[2018-11-22 23:53:57]
+Function Details: db_query
+ Param Details: 
+SELECT template_content FROM cms_master_template WHERE id = 25
+
+
+[2018-11-22 23:53:58]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_quotation_list","data":{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2018-11-22 23:53:58]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2018-11-22 23:53:58]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2018-11-22 23:53:58]
+Function Details: get_quotation_list 
+ Param Details : 
+{"client_id":"","created_by":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2018-11-22 23:53:58]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_quotation.quote_no
+				, cms_quotation.quote_date
+				, cms_quotation.client_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_quotation.attention_to
+				, cms_quotation.email_content
+				, cms_quotation.email
+				, cms_quotation.attachment
+				, cms_quotation.remarks
+				, cms_quotation.approvals
+				, cms_quotation.status_id
+				, cms_quotation.created_date
+				, cms_quotation.created_by			
+                 FROM 
+                cms_quotation
+				LEFT JOIN cms_clients
+                    ON (cms_quotation.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_quotation.created_by) AND cms_quotation.is_active in(1) ORDER BY quote_no DESC limit 0,10
+
+

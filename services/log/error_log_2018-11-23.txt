@@ -1,0 +1,27 @@
+[2018-11-23 07:26:08]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(156): PDO->query('SELECT cms_appt...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\public\modules\appointments\appointments.php(24): db_execute_custom_sql('SELECT cms_appt...')
+#2 {main}SQLSTATE[42S02]: Base table or view not found: 1146 Table 'msphitec_hrms.cms_appt_pic' doesn't exist
+
+
+[2018-11-23 21:45:27]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(32): PDO->query('SELECT cms_quot...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\quotation.php(68): db_query_list('cms_quotation.q...', '\r\n             ...', '15 IN (cms_quot...', 0, 10, 'quote_no', 'DESC')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(76): get_quotation_list(Object(stdClass))
+#3 {main}SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cms_quotation.created_by.created_by' in 'where clause'
+
+
+[2018-11-23 21:45:39]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(32): PDO->query('SELECT cms_quot...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\quotation.php(68): db_query_list('cms_quotation.q...', '\r\n             ...', '15 IN (cms_quot...', 0, 10, 'quote_no', 'DESC')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(76): get_quotation_list(Object(stdClass))
+#3 {main}SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cms_quotation.created_by.created_by' in 'where clause'
+
+
+[2018-11-23 21:48:24]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(32): PDO->query('SELECT cms_quot...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\quotation.php(68): db_query_list('cms_quotation.q...', '\r\n             ...', '15 IN (cms_quot...', 0, 10, 'quote_no', 'DESC')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(76): get_quotation_list(Object(stdClass))
+#3 {main}SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cms_quotation.created_by.created_by' in 'where clause'
+
+

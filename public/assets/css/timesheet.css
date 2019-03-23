@@ -1,0 +1,42 @@
+.status-row {
+    display: flex;
+    flex-direction: row;
+}
+.select2-container {
+    width: 100%;
+}
+.action-col div {
+    display: flex;
+    flex-direction: row;
+}
+.action-col div button:not(:first-child) {
+    margin-left: 5px;
+}
+.name-col {
+    color: #4f8edc;
+}
+.tp-time {
+    min-width: 75px;
+}
+.save-info {
+    display: inline;
+    float: right;
+    padding: 0 10px 0 0;
+    clear: right;
+}
+.save-info span {
+    font-style: italic;;
+    font-weight: bold;
+}
+#tbl_timesheet_list tr {
+    cursor: pointer;
+}
+span.status {
+    font-weight: bold;
+}
+/** Media queries for mobile i.e. < 768px*/
+@media (max-width: 768px) {
+    .xs-margin-top-10 {
+        margin-top: 10px;
+    }
+}

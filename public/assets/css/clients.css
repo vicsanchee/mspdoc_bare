@@ -1,0 +1,10 @@
+.td-shrink {
+    width: 0.1%;
+    white-space: nowrap;
+}
+.border-top-2px tr th {
+    border-top: 2px solid #e6e7e8 !important;
+}
+a.edit-pic {
+    cursor: pointer;
+}

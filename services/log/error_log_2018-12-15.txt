@@ -1,0 +1,64 @@
+[2018-12-15 11:01:24]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\helperfunctions.php(419): PHPMailer->AddAttachment('C:/Program File...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\document_archiving.php(404): smtpmailer('sancheev@gmail....', 'notify@msphitec...', 'MSP HITECT', 'Document Archiv...', '<!DOCTYPE HTML ...', 'sancheev@gmail....', Array)
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(146): send_email_verifier_approver_archiving(Object(stdClass))
+#3 {main}Could not access file: C:/Program Files (x86)/EasyPHP-17/eds-www/mspdoc_bare/services/files/doc_archiving/18-0000003/Doc1.docx
+
+
+[2018-12-15 11:01:57]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\helperfunctions.php(419): PHPMailer->AddAttachment('C:/Program File...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\document_archiving.php(404): smtpmailer('sancheev@gmail....', 'notify@msphitec...', 'MSP HITECT', 'Document Archiv...', '<!DOCTYPE HTML ...', 'sancheev@gmail....', Array)
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(146): send_email_verifier_approver_archiving(Object(stdClass))
+#3 {main}Could not access file: C:/Program Files (x86)/EasyPHP-17/eds-www/mspdoc_bare/services/files/doc_archiving/18-0000004/Doc1.docx
+
+
+[2018-12-15 11:02:54]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\helperfunctions.php(419): PHPMailer->AddAttachment('C:/Program File...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\document_archiving.php(404): smtpmailer('sancheev@gmail....', 'notify@msphitec...', 'MSP HITECT', 'Document Archiv...', '<!DOCTYPE HTML ...', 'sancheev@gmail....', Array)
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(146): send_email_verifier_approver_archiving(Object(stdClass))
+#3 {main}Could not access file: C:/Program Files (x86)/EasyPHP-17/eds-www/mspdoc_bare/services/files/doc_archiving/18-0000003/Doc1.docx
+
+
+[2018-12-15 11:04:07]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\helperfunctions.php(419): PHPMailer->AddAttachment('C:/Program File...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\document_archiving.php(404): smtpmailer('sancheev@gmail....', 'notify@msphitec...', 'MSP HITECT', 'Document Archiv...', '<!DOCTYPE HTML ...', 'sancheev@gmail....', Array)
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(146): send_email_verifier_approver_archiving(Object(stdClass))
+#3 {main}Could not access file: C:/Program Files (x86)/EasyPHP-17/eds-www/mspdoc_bare/services/files/doc_archiving/18-0000003/Doc1.docx
+
+
+[2018-12-15 17:05:01]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n\t\t\t\t\t\t...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\document_archiving.php(212): db_query('\r\n\t\t\t\t\t\t  doc_n...', 'cms_document_ar...', 'doc_no = '18-00...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(126): get_document_archiving_details(Object(stdClass))
+#3 {main}SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cms_outbound_document.status_id' in 'where clause'
+
+
+[2018-12-15 17:05:12]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n\t\t\t\t\t\t...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\document_archiving.php(212): db_query('\r\n\t\t\t\t\t\t  doc_n...', 'cms_document_ar...', 'doc_no = '18-00...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(126): get_document_archiving_details(Object(stdClass))
+#3 {main}SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cms_outbound_document.status_id' in 'where clause'
+
+
+[2018-12-15 17:05:53]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n\t\t\t\t\t\t...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\document_archiving.php(212): db_query('\r\n\t\t\t\t\t\t  doc_n...', 'cms_document_ar...', 'doc_no = '18-00...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(126): get_document_archiving_details(Object(stdClass))
+#3 {main}SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cms_outbound_document.status_id' in 'where clause'
+
+
+[2018-12-15 17:06:22]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT \r\n\t\t\t\t\t\t...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\document_archiving.php(212): db_query('\r\n\t\t\t\t\t\t  doc_n...', 'cms_document_ar...', 'doc_no = '18-00...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(126): get_document_archiving_details(Object(stdClass))
+#3 {main}SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cms_outbound_document.status_id' in 'where clause'
+
+
+[2018-12-15 19:35:55]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\lib\phpmailer\class.phpmailer.php(576): PHPMailer->SmtpSend('Date: Sat, 15 D...', '--b1_ba0f9dc1dc...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\helperfunctions.php(461): PHPMailer->Send()
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\document_archiving.php(410): smtpmailer('sancheev@gmail....', 'notify@msphitec...', 'MSP HITECT', 'Document Archiv...', '<!DOCTYPE HTML ...', 'sancheev@gmail....', Array)
+#3 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(146): send_email_verifier_approver_archiving(Object(stdClass))
+#4 {main}SMTP Error: Data not accepted.
+
+

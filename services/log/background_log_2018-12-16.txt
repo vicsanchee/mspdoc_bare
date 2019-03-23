@@ -1,0 +1,402 @@
+[2018-12-16 06:28:22]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","module_id":"16","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-16 08:07:57]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":null,"module_id":"16","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-16 08:08:17]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"0","module_id":"16","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-16 08:27:00]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"0","module_id":"16","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-16 09:37:32]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","module_id":"16","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-16 09:37:34]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 09:47:00]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-16 09:46:59"},"approve":{"approved":null,"approved_by":null,"approved_date":null}},"status_id":"199","module_id":"16","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-16 09:47:01]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 09:47:12]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-16 09:46:59"},"approve":{"approved":1,"approved_by":"15","approved_date":"2018-12-16 09:47:11"}},"status_id":"200","module_id":"16","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-16 09:47:13]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 10:12:52]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","status_id":"201","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-16 10:12:53]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 10:29:33]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-16 10:29:32"},"approve":{"approved":null,"approved_by":null,"approved_date":null}},"status_id":"199","module_id":"16","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-16 10:29:34]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 10:29:39]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-16 10:29:32"},"approve":{"approved":1,"approved_by":"15","approved_date":"2018-12-16 10:29:38"}},"status_id":"200","module_id":"16","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-16 10:29:39]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 10:29:52]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","status_id":"201","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-16 10:31:21]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","status_id":"201","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-16 10:31:21]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+"Send outbound Notification Email Failed"
+
+
+[2018-12-16 10:34:35]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","status_id":"201","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-16 10:34:35]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+"Send outbound Notification Email Failed"
+
+
+[2018-12-16 10:34:57]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","status_id":"201","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-16 10:34:59]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 10:44:14]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","module_id":"16","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-16 10:44:20]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 10:44:43]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-16 10:44:42"},"approve":{"approved":null,"approved_by":null,"approved_date":null}},"status_id":"199","module_id":"16","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-16 10:44:47]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 10:45:22]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-16 10:44:42"},"approve":{"approved":1,"approved_by":"15","approved_date":"2018-12-16 10:45:21"}},"status_id":"200","module_id":"16","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-16 10:45:27]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 10:48:45]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","status_id":"201","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-16 10:48:45]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+"Send outbound Notification Email Failed"
+
+
+[2018-12-16 10:49:02]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","status_id":"201","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-16 10:49:06]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 10:52:02]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-16 10:52:01"},"approve":{"approved":null,"approved_by":null,"approved_date":null}},"status_id":"199","module_id":"16","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-16 10:52:05]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 10:52:14]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-16 10:52:01"},"approve":{"approved":1,"approved_by":"15","approved_date":"2018-12-16 10:52:13"}},"status_id":"200","module_id":"16","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-16 10:52:17]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 10:52:46]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-16 10:52:45"},"approve":{"approved":null,"approved_by":null,"approved_date":null}},"status_id":"199","module_id":"16","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-16 10:52:49]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 10:52:53]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-16 10:52:45"},"approve":{"approved":1,"approved_by":"15","approved_date":"2018-12-16 10:52:52"}},"status_id":"200","module_id":"16","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-16 10:52:56]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 10:53:56]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-16 10:53:54"},"approve":{"approved":null,"approved_by":null,"approved_date":null}},"status_id":"199","module_id":"16","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-16 10:53:59]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 10:54:02]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-16 10:53:54"},"approve":{"approved":1,"approved_by":"15","approved_date":"2018-12-16 10:54:00"}},"status_id":"200","module_id":"16","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-16 10:54:05]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 10:55:22]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-16 10:55:21"},"approve":{"approved":null,"approved_by":null,"approved_date":null}},"status_id":"199","module_id":"16","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-16 10:55:25]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 10:55:28]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-16 10:55:21"},"approve":{"approved":1,"approved_by":"15","approved_date":"2018-12-16 10:55:27"}},"status_id":"200","module_id":"16","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-16 10:55:31]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 10:57:37]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-16 10:57:36"},"approve":{"approved":null,"approved_by":null,"approved_date":null}},"status_id":"199","module_id":"16","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-16 10:57:41]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 10:57:52]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-16 10:57:36"},"approve":{"approved":1,"approved_by":"15","approved_date":"2018-12-16 10:57:51"}},"status_id":"200","module_id":"16","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-16 10:57:55]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 10:58:01]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"18-0000001","status_id":"201","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-16 10:58:05]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 11:02:53]
+Function Details: send_email_verifier_approver_archiving 
+ Param Details : 
+{"document_no":"18-0000001","module_id":"17","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-16 11:02:58]
+Function Details: send_email_verifier_approver_archiving 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 11:03:35]
+Function Details: send_email_verifier_approver_archiving 
+ Param Details : 
+{"document_no":"18-0000001","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-16 11:03:34"},"approve":{"approved":null,"approved_by":null,"approved_date":null}},"status_id":"210","module_id":"17","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-16 11:03:39]
+Function Details: send_email_verifier_approver_archiving 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 11:04:06]
+Function Details: send_email_verifier_approver_archiving 
+ Param Details : 
+{"document_no":"18-0000001","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-16 11:03:34"},"approve":{"approved":1,"approved_by":"15","approved_date":"2018-12-16 11:04:05"}},"status_id":"205","module_id":"17","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-16 11:04:10]
+Function Details: send_email_verifier_approver_archiving 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 11:06:36]
+Function Details: send_email_verifier_approver_archiving 
+ Param Details : 
+{"document_no":"18-0000001","module_id":"17","emp_id":"15","email":"sancheev@gmail.com"}
+
+
+[2018-12-16 11:06:41]
+Function Details: send_email_verifier_approver_archiving 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 11:06:50]
+Function Details: send_email_verifier_approver_archiving 
+ Param Details : 
+{"document_no":"18-0000001","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-16 11:06:49"},"approve":{"approved":null,"approved_by":null,"approved_date":null}},"status_id":"210","module_id":"17","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-16 11:06:53]
+Function Details: send_email_verifier_approver_archiving 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-16 11:07:05]
+Function Details: send_email_verifier_approver_archiving 
+ Param Details : 
+{"document_no":"18-0000001","approvals":{"verify":{"verified":1,"verified_by":"15","verified_date":"2018-12-16 11:06:49"},"approve":{"approved":1,"approved_by":"15","approved_date":"2018-12-16 11:07:04"}},"status_id":"205","module_id":"17","emp_id":"15","email":"sancheev@gmail.com","action":"edit"}
+
+
+[2018-12-16 11:07:08]
+Function Details: send_email_verifier_approver_archiving 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+

@@ -1,0 +1,228 @@
+[2018-12-23 09:54:36]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"MSP18-00002","module_id":"16","emp_id":"16","email":"sancheev@msphitect.com.my"}
+
+
+[2018-12-23 09:54:39]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-23 10:19:56]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"MSP18-00002","module_id":"16","emp_id":"16","email":"vicsanchee@yahoo.com"}
+
+
+[2018-12-23 10:19:59]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-23 10:24:57]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"MSP18-00002","module_id":"16","emp_id":"16","email":"vicsanchee@yahoo.com"}
+
+
+[2018-12-23 10:24:59]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-23 10:27:52]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"MSP18-00002","module_id":"16","emp_id":"16","email":"vicsanchee@yahoo.com"}
+
+
+[2018-12-23 10:27:54]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-23 10:28:25]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"MSP18-00002","module_id":"16","emp_id":"16","email":"vicsanchee@yahoo.com"}
+
+
+[2018-12-23 10:28:26]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-23 10:29:00]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"MSP18-00002","module_id":"16","emp_id":"16","email":"vicsanchee@yahoo.com"}
+
+
+[2018-12-23 10:29:02]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-23 10:30:04]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"MSP18-00002","module_id":"16","emp_id":"16","email":"psilan@hotmail.com"}
+
+
+[2018-12-23 10:30:06]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-23 10:56:25]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"MSP18-00002","module_id":"16","emp_id":"16"}
+
+
+[2018-12-23 10:56:27]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-23 10:57:51]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"MSP18-00002","module_id":"16","emp_id":"16"}
+
+
+[2018-12-23 10:57:53]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-23 10:58:30]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"MSP18-00002","approvals":{"verify":{"verified":1,"verified_by":"16","verified_date":"2018-12-23 10:58:29"},"approve":{"approved":null,"approved_by":null,"approved_date":null}},"status_id":"199","module_id":"16","emp_id":"16","email":"psilan@hotmail.com","action":"edit"}
+
+
+[2018-12-23 10:58:31]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-23 10:58:34]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"MSP18-00002","approvals":{"verify":{"verified":1,"verified_by":"16","verified_date":"2018-12-23 10:58:29"},"approve":{"approved":1,"approved_by":"16","approved_date":"2018-12-23 10:58:32"}},"status_id":"200","module_id":"16","emp_id":"16","email":"psilan@hotmail.com","action":"edit"}
+
+
+[2018-12-23 10:58:34]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-23 10:58:41]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"MSP18-00002","status_id":"201","emp_id":"16"}
+
+
+[2018-12-23 10:58:42]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-23 11:03:58]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"MSP18-00003","module_id":"16","emp_id":"16"}
+
+
+[2018-12-23 11:04:01]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-23 11:04:10]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"MSP18-00003","approvals":{"verify":{"verified":1,"verified_by":"16","verified_date":"2018-12-23 11:04:09"},"approve":{"approved":null,"approved_by":null,"approved_date":null}},"status_id":"199","module_id":"16","emp_id":"16","action":"edit"}
+
+
+[2018-12-23 11:04:11]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-23 11:04:14]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+{"outbound_no":"MSP18-00003","approvals":{"verify":{"verified":1,"verified_by":"16","verified_date":"2018-12-23 11:04:09"},"approve":{"approved":1,"approved_by":"16","approved_date":"2018-12-23 11:04:13"}},"status_id":"200","module_id":"16","emp_id":"16","action":"edit"}
+
+
+[2018-12-23 11:04:15]
+Function Details: send_email_verifier_approver_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-23 11:04:22]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+{"outbound_no":"MSP18-00003","status_id":"201","emp_id":"16"}
+
+
+[2018-12-23 11:04:23]
+Function Details: send_email_notification_outbound 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-23 11:11:37]
+Function Details: send_email_verifier_approver_archiving 
+ Param Details : 
+{"document_no":"MSP18-00002","module_id":"17","emp_id":"16"}
+
+
+[2018-12-23 11:11:38]
+Function Details: send_email_verifier_approver_archiving 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-23 11:11:53]
+Function Details: send_email_verifier_approver_archiving 
+ Param Details : 
+{"document_no":"MSP18-00002","approvals":{"verify":{"verified":1,"verified_by":"16","verified_date":"2018-12-23 11:11:52"},"approve":{"approved":null,"approved_by":null,"approved_date":null}},"status_id":"213","module_id":"17","emp_id":"16","action":"edit"}
+
+
+[2018-12-23 11:11:54]
+Function Details: send_email_verifier_approver_archiving 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+
+[2018-12-23 11:12:00]
+Function Details: send_email_verifier_approver_archiving 
+ Param Details : 
+{"document_no":"MSP18-00002","approvals":{"verify":{"verified":1,"verified_by":"16","verified_date":"2018-12-23 11:11:52"},"approve":{"approved":1,"approved_by":"16","approved_date":"2018-12-23 11:11:59"}},"status_id":"205","module_id":"17","emp_id":"16","action":"edit"}
+
+
+[2018-12-23 11:12:00]
+Function Details: send_email_verifier_approver_archiving 
+ Param Details : 
+"Send outbound Notification Email Success"
+
+

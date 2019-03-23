@@ -1,0 +1,58 @@
+/**
+ * Stylesheet for tasks module
+ * @author: Darus
+ */
+.task-item {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.task-item:hover {
+    background-color: #edeef0;
+}
+.task-title {
+    font-size: 18px;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+.task-created {
+    font-size: 12px;
+    font-style: italic;
+    color: darkgrey;
+}
+.panel-heading .options > a {
+    opacity: 0.8;
+    text-decoration: none;
+}
+.panel-heading .options > a:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+.dropdown-menu-left {
+    left: 0 !important;
+    right: auto !important;
+}
+
+/*--- taskReport styles ------------------------------------------------------*/
+.white-bg {
+    background-color: #fff;
+}
+
+/*--- OVERRIDES --------------------------------------------------------------*/
+.select2-container {
+    width: 100% !important;
+}
+
+/*--- Media queries for mobile i.e. < 768px ----------------------------------*/
+@media (max-width: 767px) {
+    .xs-margin-btm-10 {
+        margin-bottom: 10px;
+    }
+}
+
+/*--- Media queries for small device i.e. >= 768px ---------------------------*/
+@media (min-width: 768px) {
+    .sm-margin-btm-20 {
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,233 @@
+[2019-01-13 00:06:22]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(289): PDOStatement->execute(Array)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(228): db_update(Array, 'cms_service_req...', 'service_no')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[22032]: <<Unknown error>>: 3140 Invalid JSON text: "Invalid value." at position 0 in value for column 'cms_service_request.sr_data'.
+
+
+[2019-01-13 00:09:37]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(289): PDOStatement->execute(Array)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(228): db_update(Array, 'cms_service_req...', 'service_no')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[22032]: <<Unknown error>>: 3140 Invalid JSON text: "Invalid value." at position 0 in value for column 'cms_service_request.sr_data'.
+
+
+[2019-01-13 00:13:53]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(289): PDOStatement->execute(Array)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(228): db_update(Array, 'cms_service_req...', 'service_no')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[22032]: <<Unknown error>>: 3140 Invalid JSON text: "Invalid value." at position 0 in value for column 'cms_service_request.sr_data'.
+
+
+[2019-01-13 00:18:35]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(289): PDOStatement->execute(Array)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(228): db_update(Array, 'cms_service_req...', 'service_no')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[22032]: <<Unknown error>>: 3140 Invalid JSON text: "Invalid value." at position 0 in value for column 'cms_service_request.sr_data'.
+
+
+[2019-01-13 00:19:55]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(289): PDOStatement->execute(Array)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(228): db_update(Array, 'cms_service_req...', 'service_no')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[22032]: <<Unknown error>>: 3140 Invalid JSON text: "Invalid value." at position 0 in value for column 'cms_service_request.sr_data'.
+
+
+[2019-01-13 00:21:08]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(289): PDOStatement->execute(Array)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(228): db_update(Array, 'cms_service_req...', 'service_no')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[22032]: <<Unknown error>>: 3140 Invalid JSON text: "Invalid value." at position 0 in value for column 'cms_service_request.sr_data'.
+
+
+[2019-01-13 00:26:14]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(290): PDOStatement->execute(Array)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(228): db_update(Array, 'cms_service_req...', 'service_no')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[22032]: <<Unknown error>>: 3140 Invalid JSON text: "Invalid value." at position 0 in value for column 'cms_service_request.sr_data'.
+
+
+[2019-01-13 00:28:24]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(289): PDOStatement->execute(Array)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(228): db_update(Array, 'cms_service_req...', 'service_no')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0 = 0, service_no = 'MSP19-00002', updated_by = '15', updated_date = '2019-01-13' at line 1
+
+
+[2019-01-13 00:28:44]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(289): PDOStatement->execute(Array)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(228): db_update(Array, 'cms_service_req...', 'service_no')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0 = 0, service_no = 'MSP19-00002', updated_by = '15', updated_date = '2019-01-13' at line 1
+
+
+[2019-01-13 00:29:29]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(289): PDOStatement->execute(Array)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(228): db_update(Array, 'cms_service_req...', 'service_no')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0 = 0, service_no = 'MSP19-00002', updated_by = '15', updated_date = '2019-01-13' at line 1
+
+
+[2019-01-13 00:30:09]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(289): PDOStatement->execute(Array)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(228): db_update(Array, 'cms_service_req...', 'service_no')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0 = 0, service_no = 'MSP19-00002', updated_by = '15', updated_date = '2019-01-13' at line 1
+
+
+[2019-01-13 00:30:25]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(289): PDOStatement->execute(Array)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(228): db_update(Array, 'cms_service_req...', 'service_no')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0 = 0, service_no = 'MSP19-00002', updated_by = '15', updated_date = '2019-01-13' at line 1
+
+
+[2019-01-13 01:48:31]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(156): PDO->query('UPDATE cms_serv...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(229): db_execute_custom_sql('UPDATE cms_serv...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[42S22]: Column not found: 1054 Unknown column 'MSP19' in 'where clause'
+
+
+[2019-01-13 01:53:09]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(156): PDO->query('UPDATE cms_serv...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(229): db_execute_custom_sql('UPDATE cms_serv...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[42S22]: Column not found: 1054 Unknown column 'MSP19' in 'where clause'
+
+
+[2019-01-13 01:53:58]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(156): PDO->query('UPDATE cms_serv...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(229): db_execute_custom_sql('UPDATE cms_serv...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[42S22]: Column not found: 1054 Unknown column 'MSP19' in 'where clause'
+
+
+[2019-01-13 01:55:09]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(156): PDO->query('UPDATE cms_serv...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(231): db_execute_custom_sql('UPDATE cms_serv...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[{"remarks":"tet","created_by":"Jamal Ali","created_date":"2019-01-13 01:55:08"}' at line 1
+
+
+[2019-01-13 01:56:24]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(156): PDO->query('UPDATE cms_serv...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(231): db_execute_custom_sql('UPDATE cms_serv...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[{"remarks":"test","created_by":"Jamal Ali","created_date":"2019-01-13 01:56:23"' at line 1
+
+
+[2019-01-13 01:58:21]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(156): PDO->query('UPDATE cms_serv...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(231): db_execute_custom_sql('UPDATE cms_serv...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[{"remarks":"test","created_by":"Jamal Ali","created_date":"2019-01-13 01:58:20"' at line 1
+
+
+[2019-01-13 02:10:55]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(157): PDOStatement->fetchAll(2)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(231): db_execute_custom_sql('UPDATE cms_serv...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[HY000]: General error
+
+
+[2019-01-13 02:19:13]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(289): PDOStatement->execute(Array)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(121): db_update(Array, 'cms_service_req...', 'service_no')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(158): add_edit_service_request(Object(stdClass))
+#3 {main}SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[2019-01-13 02:19:33]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(289): PDOStatement->execute(Array)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(121): db_update(Array, 'cms_service_req...', 'service_no')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(158): add_edit_service_request(Object(stdClass))
+#3 {main}SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[2019-01-13 02:23:34]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(157): PDOStatement->fetchAll(2)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(231): db_execute_custom_sql('UPDATE cms_serv...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[HY000]: General error
+
+
+[2019-01-13 02:53:31]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(157): PDOStatement->fetchAll(2)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(231): db_execute_custom_sql('UPDATE cms_serv...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[HY000]: General error
+
+
+[2019-01-13 02:53:45]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(157): PDOStatement->fetchAll(2)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(231): db_execute_custom_sql('UPDATE cms_serv...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[HY000]: General error
+
+
+[2019-01-13 07:18:58]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(157): PDOStatement->fetchAll(2)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(231): db_execute_custom_sql('UPDATE cms_serv...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[HY000]: General error
+
+
+[2019-01-13 07:26:53]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(157): PDOStatement->fetchAll(2)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(231): db_execute_custom_sql('UPDATE cms_serv...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[HY000]: General error
+
+
+[2019-01-13 07:39:54]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(157): PDOStatement->fetchAll(2)
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(231): db_execute_custom_sql('UPDATE cms_serv...')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(178): service_request_add_edit_remark(Object(stdClass))
+#3 {main}SQLSTATE[HY000]: General error
+
+
+[2019-01-13 14:13:11]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT prefix,s...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\helperfunctions.php(1130): db_query('prefix,sequence...', 'cms_master_empl...', 'id = ')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(103): get_doc_primary_no('service_no', 'cms_service_req...', '')
+#3 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(158): add_edit_service_request(Object(stdClass))
+#4 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+
+
+[2019-01-13 17:18:27]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT id,name,...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\public\modules\contract\contracts.php(42): db_query('id,name,descr', 'cms_upload_doc', 'is_active = 1')
+#2 {main}SQLSTATE[42S02]: Base table or view not found: 1146 Table 'msphitec_hrms.cms_upload_doc' doesn't exist
+
+
+[2019-01-13 17:18:27]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT id,ref_n...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\public\modules\contract\contracts.php(47): db_query('id,ref_name,per...', 'cms_master_refe...', 'ref_type = 0 an...')
+#2 {main}SQLSTATE[42S02]: Base table or view not found: 1146 Table 'msphitec_hrms.cms_master_referral' doesn't exist
+
+
+[2019-01-13 17:18:27]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT id,ref_n...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\public\modules\contract\contracts.php(48): db_query('id,ref_name,per...', 'cms_master_refe...', 'ref_type = 1 an...')
+#2 {main}SQLSTATE[42S02]: Base table or view not found: 1146 Table 'msphitec_hrms.cms_master_referral' doesn't exist
+
+
+[2019-01-13 17:30:31]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT id,name,...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\public\modules\contract\contracts.php(42): db_query('id,name,descr', 'cms_upload_doc', 'is_active = 1')
+#2 {main}SQLSTATE[42S02]: Base table or view not found: 1146 Table 'msphitec_hrms.cms_upload_doc' doesn't exist
+
+
+[2019-01-13 17:30:31]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT id,ref_n...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\public\modules\contract\contracts.php(47): db_query('id,ref_name,per...', 'cms_master_refe...', 'ref_type = 0 an...')
+#2 {main}SQLSTATE[42S02]: Base table or view not found: 1146 Table 'msphitec_hrms.cms_master_referral' doesn't exist
+
+
+[2019-01-13 17:30:31]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT id,ref_n...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\public\modules\contract\contracts.php(48): db_query('id,ref_name,per...', 'cms_master_refe...', 'ref_type = 1 an...')
+#2 {main}SQLSTATE[42S02]: Base table or view not found: 1146 Table 'msphitec_hrms.cms_master_referral' doesn't exist
+
+

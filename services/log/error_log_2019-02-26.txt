@@ -1,0 +1,38 @@
+[2019-02-26 22:05:13]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT LPAD(  S...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\helperfunctions.php(1142): db_query('LPAD(  SUBSTRIN...', 'cms_service_req...', 'YEAR(created_da...', '1', '0', 'service_no', 'desc')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(103): get_doc_primary_no('service_no', 'cms_service_req...', '1')
+#3 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(158): add_edit_service_request(Object(stdClass))
+#4 {main}SQLSTATE[42000]: Syntax error or access violation: 1582 Incorrect parameter count in the call to native function 'LPAD'
+
+
+[2019-02-26 22:06:17]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT LPAD(  S...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\helperfunctions.php(1142): db_query('LPAD(  SUBSTRIN...', 'cms_service_req...', 'YEAR(created_da...', '1', '0', 'service_no', 'desc')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(103): get_doc_primary_no('service_no', 'cms_service_req...', '1')
+#3 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(158): add_edit_service_request(Object(stdClass))
+#4 {main}SQLSTATE[42000]: Syntax error or access violation: 1582 Incorrect parameter count in the call to native function 'LPAD'
+
+
+[2019-02-26 22:07:56]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT LPAD(  S...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\helperfunctions.php(1142): db_query('LPAD(  SUBSTRIN...', 'cms_service_req...', 'YEAR(created_da...', '1', '0', 'service_no', 'desc')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(103): get_doc_primary_no('service_no', 'cms_service_req...', '1')
+#3 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(158): add_edit_service_request(Object(stdClass))
+#4 {main}SQLSTATE[42000]: Syntax error or access violation: 1582 Incorrect parameter count in the call to native function 'LPAD'
+
+
+[2019-02-26 22:10:06]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT IFNULL( ...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\helperfunctions.php(1142): db_query('IFNULL( LPAD(  ...', 'cms_service_req...', 'YEAR(created_da...', '1', '0', 'service_no', 'desc')
+#2 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\modules\service_request.php(103): get_doc_primary_no('service_no', 'cms_service_req...', '1')
+#3 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\services.php(158): add_edit_service_request(Object(stdClass))
+#4 {main}SQLSTATE[42000]: Syntax error or access violation: 1582 Incorrect parameter count in the call to native function 'IFNULL'
+
+
+[2019-02-26 23:57:16]
+#0 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\services\shared\dbfunctions.php(92): PDO->query('SELECT id,name,...')
+#1 C:\Program Files (x86)\EasyPHP-17\eds-www\mspdoc_bare\public\modules\service_request\service_request.php(14): db_query('id,name,office_...', 'cms_employees', 'id = AND is_act...')
+#2 {main}SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND is_active = 1' at line 1
+
+

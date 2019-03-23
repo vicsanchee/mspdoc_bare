@@ -1,0 +1,2243 @@
+[2019-02-27 09:59:26]
+Function Details: check_login 
+ Param Details : 
+{"username":"jamal","password":"74f56399c89f4bd03ff5e85b6bf4e85f"}
+
+
+[2019-02-27 09:59:26]
+Function Details: db_query
+ Param Details: 
+SELECT id as emp_id, name, email,office_email, username
+						, is_admin, initial_pswd
+						, (select id from cms_master_list where cms_master_list.id = cms_employees.access_level) as access_level
+						
+						, cms_emp_login_sessions.token
+		                , accessible_ctg
+						, malaysia_phone
+						, concat('http://127.0.0.1:8000/mspdoc_bare/services/files/', 'photos/',id,'.jpeg') as profile_pic
+		                , super_admin  FROM cms_employees
+						LEFT join cms_emp_login_sessions ON
+						 	cms_employees.id = cms_emp_login_sessions.emp_id WHERE cms_employees.username	= 'jamal' AND cms_employees.pswd = '74f56399c89f4bd03ff5e85b6bf4e85f' AND cms_employees.is_active = 1
+
+
+[2019-02-27 09:59:26]
+Function Details: is_login_token_valid 
+ Param Details : 
+{"username":"jamal","password":"74f56399c89f4bd03ff5e85b6bf4e85f","emp_id":"15","token":"03293db0a67871ad036730841905cf98"}
+
+
+[2019-02-27 09:59:26]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 09:59:26]
+Function Details: update_session 
+ Param Details : 
+{"username":"jamal","password":"74f56399c89f4bd03ff5e85b6bf4e85f","emp_id":"15","token":"03293db0a67871ad036730841905cf98"}
+
+
+[2019-02-27 09:59:26]
+Function Details: db_update
+ Param Details: 
+   		UPDATE cms_emp_login_sessions SET token = :token, emp_id = :emp_id, last_active = :last_active, client_ip = :client_ip WHERE token = :token 
+
+
+[2019-02-27 09:59:27]
+Function Details: db_update
+ Param Details: 
+ Array
+(
+    [:token] => 03293db0a67871ad036730841905cf98
+    [:emp_id] => 15
+    [:last_active] => 2019-02-27 09:59:26
+    [:client_ip] => 127.0.0.1
+)
+ 
+ Result 1
+
+
+[2019-02-27 09:59:27]
+Function Details: db_query
+ Param Details: 
+SELECT cms_modules.descr, cms_employees_access.* FROM cms_employees_access INNER JOIN cms_modules ON cms_employees_access.module_id = cms_modules.id WHERE cms_employees_access.emp_id	= 15
+
+
+[2019-02-27 09:59:27]
+Function Details: arrange_accessibilty 
+ Param Details : 
+[{"descr":"Claims","id":"8","module_id":"1","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Timesheets","id":"9","module_id":"2","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Leaves","id":"10","module_id":"3","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Appointments","id":"11","module_id":"4","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Task","id":"12","module_id":"5","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Onboarding","id":"13","module_id":"7","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"FAQ","id":"14","module_id":"9","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"0","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Communication","id":"15","module_id":"10","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Settings","id":"252","module_id":"8","emp_id":"15","view_it":"0","view_it_all":"0","create_it":"0","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Job Posting","id":"253","module_id":"11","emp_id":"15","view_it":"0","view_it_all":"0","create_it":"0","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Clients","id":"348","module_id":"12","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Attendance","id":"384","module_id":"14","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Employees","id":"394","module_id":"6","emp_id":"15","view_it":"0","view_it_all":"0","create_it":"0","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Emails","id":"395","module_id":"13","emp_id":"15","view_it":"0","view_it_all":"0","create_it":"0","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Test","id":"396","module_id":"15","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"1","delete_it":"1","print_it":"0","verify_it":"1","approve_it":"1","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":null,"created_date":null,"update_by":null,"updated_date":null},{"descr":"Outbound Document","id":"397","module_id":"16","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"1","delete_it":"1","print_it":"0","verify_it":"1","approve_it":"1","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":null,"created_date":null,"update_by":null,"updated_date":null},{"descr":"Document Archiving","id":"398","module_id":"17","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"1","delete_it":"1","print_it":"0","verify_it":"1","approve_it":"1","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":null,"created_date":null,"update_by":null,"updated_date":null},{"descr":"Service Request","id":"401","module_id":"18","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"1","delete_it":"1","print_it":"0","verify_it":"1","approve_it":"1","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-12-29 00:00:00","update_by":null,"updated_date":null}]
+
+
+[2019-02-27 09:59:27]
+Function Details: db_query
+ Param Details: 
+SELECT id FROM cms_employees WHERE reporting_to_id = 15
+
+
+[2019-02-27 09:59:27]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_employees 
+
+
+[2019-02-27 09:59:27]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 1
+
+
+[2019-02-27 09:59:27]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 2
+
+
+[2019-02-27 09:59:27]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 8
+
+
+[2019-02-27 09:59:27]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr,no_of_days FROM cms_master_list WHERE category_id = 16
+
+
+[2019-02-27 09:59:27]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer 
+
+
+[2019-02-27 09:59:27]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 17
+
+
+[2019-02-27 09:59:27]
+Function Details: db_query
+ Param Details: 
+SELECT id,skills_name FROM cms_skills WHERE type_id = 67
+
+
+[2019-02-27 09:59:27]
+Function Details: db_query
+ Param Details: 
+SELECT id,skills_name FROM cms_skills WHERE type_id = 68
+
+
+[2019-02-27 09:59:28]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_employees_details","data":{"id":"15"}}
+
+
+[2019-02-27 09:59:28]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 09:59:28]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 09:59:28]
+Function Details: get_employees_details 
+ Param Details : 
+{"id":"15"}
+
+
+[2019-02-27 09:59:28]
+Function Details: db_query
+ Param Details: 
+SELECT 
+        id
+        , employee_no
+        , name
+        , photoname
+		, ic_passport
+		, sex_id
+		, age
+		, date_format(dob,'%d-%m-%Y') as dob
+		, nationality
+		, birth_place
+		, religion
+		, race
+		, designation
+        , employer_id
+		, home_phone
+		, malaysia_phone
+		, office_phone
+		, local_address
+        , home_address
+        , home_country
+		, email
+		, office_email
+		, username
+        , pswd
+		, is_admin
+        , access_level
+		, chat_id
+		, dept_id
+		, reporting_to_id
+		, allow_add
+        , allow_approve
+        , allow_verify
+        , allow_contract_approve
+		, allow_contract_create
+		, allow_contract_view_all
+		, allow_contract_access
+		, general_skills
+        , specific_skills
+        , date_format(work_start_date,'%d-%m-%Y') as work_start_date
+        , date_format(work_end_date,'%d-%m-%Y') as work_end_date
+        , salary
+        , date_format(ep_valid_till,'%d-%m-%Y') as ep_valid_till
+        , notice_period_id
+		, spouse_name
+		, spouse_occupation
+		, date_format(marriage_date,'%d-%m-%Y') as marriage_date
+		, spouse_ic
+		, spouse_company
+		, spouse_company_address
+		, no_of_children
+		, emergency_person
+		, emergency_relation
+		, emergency_address
+		, emergency_phone
+		, bank_acc_name
+		, bank_acc_ic
+		, bank_name
+		, bank_account_no
+		, accessible_ctg
+		, super_admin
+		, is_active
+		, concat('http://127.0.0.1:8000/mspdoc_bare/services/files/', 'photos/',id,'.jpeg') as profile_pic
+		, date_format(leaving_date,'%d-%m-%Y') as leaving_date
+		, leaving_reason
+		, created_by
+        , (select employer_name from cms_master_employer where cms_master_employer.id = cms_employees.employer_id) as employer_name
+        , (select descr from cms_master_list where cms_master_list.id = cms_employees.dept_id) as dept_name
+        , (select descr from cms_master_list where cms_master_list.id = cms_employees.notice_period_id) as notice_period
+        , (select descr from cms_master_list where cms_master_list.id = cms_employees.access_level) as access_level_name
+         FROM cms_employees WHERE id = 15
+
+
+[2019-02-27 09:59:28]
+Function Details: db_query
+ Param Details: 
+SELECT skills_name FROM cms_skills WHERE id=0
+
+
+[2019-02-27 09:59:28]
+Function Details: db_query
+ Param Details: 
+SELECT skills_name FROM cms_skills WHERE id=0
+
+
+[2019-02-27 09:59:28]
+Function Details: db_query
+ Param Details: 
+SELECT module_id,view_it ,view_it_all ,create_it ,edit_it ,delete_it ,print_it ,verify_it ,approve_it,revoke_verify,revoke_approval FROM cms_employees_access WHERE emp_id = 15
+
+
+[2019-02-27 09:59:33]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2019-02-27 09:59:33]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 39
+
+
+[2019-02-27 09:59:33]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer WHERE is_active = 1
+
+
+[2019-02-27 09:59:33]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2019-02-27 09:59:33]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 40
+
+
+[2019-02-27 09:59:33]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 5
+
+
+[2019-02-27 09:59:33]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 20
+
+
+[2019-02-27 09:59:34]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_service_request_list","data":{"category_id":"","created_by":"","company_id":"","status_id":"","complete_status_id":"224","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2019-02-27 09:59:34]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 09:59:34]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 09:59:34]
+Function Details: get_service_request_list 
+ Param Details : 
+{"category_id":"","created_by":"","company_id":"","status_id":"","complete_status_id":"224","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2019-02-27 09:59:34]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_service_request.service_no
+				, cms_service_request.sr_data
+				, cms_service_request.created_date
+				, cms_employees.name as created_by
+				, (select descr from cms_master_list list where list.id = JSON_UNQUOTE(cms_service_request.sr_data->'$.category_id')) as category_name
+				, (select descr from cms_master_list list where list.id = JSON_UNQUOTE(cms_service_request.sr_data->'$.status_id')) as status_name
+				, (select descr from cms_master_list list where list.id = 224) as complete_status_name			
+                 FROM 
+                cms_service_request
+				LEFT JOIN cms_employees
+                    ON (cms_service_request.created_by = cms_employees.id)
+                 WHERE 15 IN (cms_service_request.created_by) AND cms_service_request.is_active in(1) ORDER BY service_no DESC limit 0,10
+
+
+[2019-02-27 10:00:06]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"add_edit_service_request","data":{"service_no":"","service_data":{"category_id":"218","employer_id":"1","description":"33","unit_price":"3","qty":"3","amount":"9.00","sst":"0","total_amount":"9.00","bank_account_details":"3","date_required":"","status_id":"222","raise_invoice":{"client_id":"1","contact_person":"33","payment_terms":"225"},"payment":{"payable_to":""},"advance_loan":{"number_of_repayment":"","each_repayment_amount":"","advance_or_loan":"","current_balance_advance_or_loan":""},"assets":{"type_of_assets":"","duration":"","remarks":""},"attachment":[],"approval_verify":null,"remark_list":null},"emp_id":"15"}}
+
+
+[2019-02-27 10:00:06]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 10:00:06]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 10:00:06]
+Function Details: add_edit_service_request 
+ Param Details : 
+{"service_no":"","service_data":{"category_id":"218","employer_id":"1","description":"33","unit_price":"3","qty":"3","amount":"9.00","sst":"0","total_amount":"9.00","bank_account_details":"3","date_required":"","status_id":"222","raise_invoice":{"client_id":"1","contact_person":"33","payment_terms":"225"},"payment":{"payable_to":""},"advance_loan":{"number_of_repayment":"","each_repayment_amount":"","advance_or_loan":"","current_balance_advance_or_loan":""},"assets":{"type_of_assets":"","duration":"","remarks":""},"attachment":[],"approval_verify":null,"remark_list":null},"emp_id":"15"}
+
+
+[2019-02-27 10:00:06]
+Function Details: get_doc_primary_no 
+ Param Details : 
+"service_no cms_service_request"
+
+
+[2019-02-27 10:00:06]
+Function Details: db_query
+ Param Details: 
+SELECT prefix,sequence_digit FROM cms_master_employer WHERE id = 1
+
+
+[2019-02-27 10:00:06]
+Function Details: db_query
+ Param Details: 
+SELECT IFNULL( CONCAT( RIGHT(YEAR(NOW()),2),'-',  LPAD(  SUBSTRING_INDEX(service_no,'-',-1) + 1 ,5,REPEAT('0', 5))), CONCAT( RIGHT(YEAR(NOW()),2),'-',  CONCAT( REPEAT('0', 5-1),'1')    )) AS service_no  FROM cms_service_request WHERE YEAR(created_date) = YEAR(NOW()) AND created_date = (SELECT MAX(created_date) FROM cms_service_request) ORDER BY service_no desc limit 0,1
+
+
+[2019-02-27 10:00:06]
+Function Details: is_data_exist 
+ Param Details : 
+"cms_service_request service_no MSP19-00015"
+
+
+[2019-02-27 10:00:06]
+Function Details: db_query
+ Param Details: 
+SELECT count(*) as id_count FROM cms_service_request WHERE service_no = 'MSP19-00015'
+
+
+[2019-02-27 10:00:07]
+Function Details: db_add
+ Param Details: 
+ Array
+(
+    [:service_no] => MSP19-00015
+    [:sr_data] => {"category_id":"218","employer_id":"1","description":"33","unit_price":"3","qty":"3","amount":"9.00","sst":"0","total_amount":"9.00","bank_account_details":"3","date_required":"","status_id":"222","raise_invoice":{"client_id":"1","contact_person":"33","payment_terms":"225"},"payment":{"payable_to":""},"advance_loan":{"number_of_repayment":"","each_repayment_amount":"","advance_or_loan":"","current_balance_advance_or_loan":""},"assets":{"type_of_assets":"","duration":"","remarks":""},"attachment":[],"approval_verify":null,"remark_list":null}
+    [:created_by] => 15
+    [:created_date] => 2019-02-27 10:00:06
+)
+ 
+ Result 1
+
+
+[2019-02-27 10:00:10]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"add_edit_service_request","data":{"service_no":"MSP19-00015","service_data":{"category_id":"218","employer_id":"1","description":"33","unit_price":"3","qty":"3","amount":"9.00","sst":"0","total_amount":"9.00","bank_account_details":"3","date_required":"","status_id":"222","raise_invoice":{"client_id":"1","contact_person":"33","payment_terms":"225"},"payment":{"payable_to":""},"advance_loan":{"number_of_repayment":"","each_repayment_amount":"","advance_or_loan":"","current_balance_advance_or_loan":""},"assets":{"type_of_assets":"","duration":"","remarks":""},"attachment":[],"approval_verify":null,"remark_list":null},"emp_id":"15"}}
+
+
+[2019-02-27 10:00:10]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 10:00:10]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 10:00:10]
+Function Details: add_edit_service_request 
+ Param Details : 
+{"service_no":"MSP19-00015","service_data":{"category_id":"218","employer_id":"1","description":"33","unit_price":"3","qty":"3","amount":"9.00","sst":"0","total_amount":"9.00","bank_account_details":"3","date_required":"","status_id":"222","raise_invoice":{"client_id":"1","contact_person":"33","payment_terms":"225"},"payment":{"payable_to":""},"advance_loan":{"number_of_repayment":"","each_repayment_amount":"","advance_or_loan":"","current_balance_advance_or_loan":""},"assets":{"type_of_assets":"","duration":"","remarks":""},"attachment":[],"approval_verify":null,"remark_list":null},"emp_id":"15"}
+
+
+[2019-02-27 10:00:10]
+Function Details: is_data_exist 
+ Param Details : 
+"cms_service_request service_no MSP19-00015"
+
+
+[2019-02-27 10:00:10]
+Function Details: db_query
+ Param Details: 
+SELECT count(*) as id_count FROM cms_service_request WHERE service_no = 'MSP19-00015'
+
+
+[2019-02-27 10:00:10]
+Function Details: db_update
+ Param Details: 
+   		UPDATE cms_service_request SET service_no = :service_no, sr_data = :sr_data, updated_by = :updated_by, updated_date = :updated_date WHERE service_no = :service_no 
+
+
+[2019-02-27 10:00:11]
+Function Details: db_update
+ Param Details: 
+ Array
+(
+    [:service_no] => MSP19-00015
+    [:sr_data] => {"category_id":"218","employer_id":"1","description":"33","unit_price":"3","qty":"3","amount":"9.00","sst":"0","total_amount":"9.00","bank_account_details":"3","date_required":"","status_id":"222","raise_invoice":{"client_id":"1","contact_person":"33","payment_terms":"225"},"payment":{"payable_to":""},"advance_loan":{"number_of_repayment":"","each_repayment_amount":"","advance_or_loan":"","current_balance_advance_or_loan":""},"assets":{"type_of_assets":"","duration":"","remarks":""},"attachment":[],"approval_verify":null,"remark_list":null}
+    [:updated_by] => 15
+    [:updated_date] => 2019-02-27 10:00:10
+)
+ 
+ Result 1
+
+
+[2019-02-27 10:00:23]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_service_request_list","data":{"category_id":"","created_by":"","company_id":"","status_id":"","complete_status_id":"224","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2019-02-27 10:00:23]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 10:00:23]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 10:00:23]
+Function Details: get_service_request_list 
+ Param Details : 
+{"category_id":"","created_by":"","company_id":"","status_id":"","complete_status_id":"224","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2019-02-27 10:00:23]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_service_request.service_no
+				, cms_service_request.sr_data
+				, cms_service_request.created_date
+				, cms_employees.name as created_by
+				, (select descr from cms_master_list list where list.id = JSON_UNQUOTE(cms_service_request.sr_data->'$.category_id')) as category_name
+				, (select descr from cms_master_list list where list.id = JSON_UNQUOTE(cms_service_request.sr_data->'$.status_id')) as status_name
+				, (select descr from cms_master_list list where list.id = 224) as complete_status_name			
+                 FROM 
+                cms_service_request
+				LEFT JOIN cms_employees
+                    ON (cms_service_request.created_by = cms_employees.id)
+                 WHERE 15 IN (cms_service_request.created_by) AND cms_service_request.is_active in(1) ORDER BY service_no DESC limit 0,10
+
+
+[2019-02-27 10:00:36]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"add_edit_service_request","data":{"service_no":"","service_data":{"category_id":"218","employer_id":"1","description":"3","unit_price":"3","qty":"3","amount":"9.00","sst":"6","total_amount":"9.54","bank_account_details":"3","date_required":"","status_id":"222","raise_invoice":{"client_id":"1","contact_person":"3","payment_terms":"225"},"payment":{"payable_to":""},"advance_loan":{"number_of_repayment":"","each_repayment_amount":"","advance_or_loan":"","current_balance_advance_or_loan":""},"assets":{"type_of_assets":"","duration":"","remarks":""},"attachment":[],"approval_verify":null,"remark_list":null},"emp_id":"15"}}
+
+
+[2019-02-27 10:00:36]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 10:00:36]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 10:00:36]
+Function Details: add_edit_service_request 
+ Param Details : 
+{"service_no":"","service_data":{"category_id":"218","employer_id":"1","description":"3","unit_price":"3","qty":"3","amount":"9.00","sst":"6","total_amount":"9.54","bank_account_details":"3","date_required":"","status_id":"222","raise_invoice":{"client_id":"1","contact_person":"3","payment_terms":"225"},"payment":{"payable_to":""},"advance_loan":{"number_of_repayment":"","each_repayment_amount":"","advance_or_loan":"","current_balance_advance_or_loan":""},"assets":{"type_of_assets":"","duration":"","remarks":""},"attachment":[],"approval_verify":null,"remark_list":null},"emp_id":"15"}
+
+
+[2019-02-27 10:00:36]
+Function Details: get_doc_primary_no 
+ Param Details : 
+"service_no cms_service_request"
+
+
+[2019-02-27 10:00:36]
+Function Details: db_query
+ Param Details: 
+SELECT prefix,sequence_digit FROM cms_master_employer WHERE id = 1
+
+
+[2019-02-27 10:00:36]
+Function Details: db_query
+ Param Details: 
+SELECT IFNULL( CONCAT( RIGHT(YEAR(NOW()),2),'-',  LPAD(  SUBSTRING_INDEX(service_no,'-',-1) + 1 ,5,REPEAT('0', 5))), CONCAT( RIGHT(YEAR(NOW()),2),'-',  CONCAT( REPEAT('0', 5-1),'1')    )) AS service_no  FROM cms_service_request WHERE YEAR(created_date) = YEAR(NOW()) AND created_date = (SELECT MAX(created_date) FROM cms_service_request) ORDER BY service_no desc limit 0,1
+
+
+[2019-02-27 10:00:36]
+Function Details: is_data_exist 
+ Param Details : 
+"cms_service_request service_no MSP19-00016"
+
+
+[2019-02-27 10:00:36]
+Function Details: db_query
+ Param Details: 
+SELECT count(*) as id_count FROM cms_service_request WHERE service_no = 'MSP19-00016'
+
+
+[2019-02-27 10:00:37]
+Function Details: db_add
+ Param Details: 
+ Array
+(
+    [:service_no] => MSP19-00016
+    [:sr_data] => {"category_id":"218","employer_id":"1","description":"3","unit_price":"3","qty":"3","amount":"9.00","sst":"6","total_amount":"9.54","bank_account_details":"3","date_required":"","status_id":"222","raise_invoice":{"client_id":"1","contact_person":"3","payment_terms":"225"},"payment":{"payable_to":""},"advance_loan":{"number_of_repayment":"","each_repayment_amount":"","advance_or_loan":"","current_balance_advance_or_loan":""},"assets":{"type_of_assets":"","duration":"","remarks":""},"attachment":[],"approval_verify":null,"remark_list":null}
+    [:created_by] => 15
+    [:created_date] => 2019-02-27 10:00:36
+)
+ 
+ Result 1
+
+
+[2019-02-27 10:00:45]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_service_request_list","data":{"category_id":"","created_by":"","company_id":"","status_id":"","complete_status_id":"224","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2019-02-27 10:00:45]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 10:00:45]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 10:00:45]
+Function Details: get_service_request_list 
+ Param Details : 
+{"category_id":"","created_by":"","company_id":"","status_id":"","complete_status_id":"224","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2019-02-27 10:00:45]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_service_request.service_no
+				, cms_service_request.sr_data
+				, cms_service_request.created_date
+				, cms_employees.name as created_by
+				, (select descr from cms_master_list list where list.id = JSON_UNQUOTE(cms_service_request.sr_data->'$.category_id')) as category_name
+				, (select descr from cms_master_list list where list.id = JSON_UNQUOTE(cms_service_request.sr_data->'$.status_id')) as status_name
+				, (select descr from cms_master_list list where list.id = 224) as complete_status_name			
+                 FROM 
+                cms_service_request
+				LEFT JOIN cms_employees
+                    ON (cms_service_request.created_by = cms_employees.id)
+                 WHERE 15 IN (cms_service_request.created_by) AND cms_service_request.is_active in(1) ORDER BY service_no DESC limit 0,10
+
+
+[2019-02-27 10:01:00]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"add_edit_service_request","data":{"service_no":"","service_data":{"category_id":"219","employer_id":"2","description":"3","unit_price":"3","qty":"3","amount":"9.00","sst":"0","total_amount":"9.00","bank_account_details":"3","date_required":"","status_id":"222","raise_invoice":{"client_id":"","contact_person":"","payment_terms":""},"payment":{"payable_to":"3"},"advance_loan":{"number_of_repayment":"","each_repayment_amount":"","advance_or_loan":"","current_balance_advance_or_loan":""},"assets":{"type_of_assets":"","duration":"","remarks":""},"attachment":[],"approval_verify":null,"remark_list":null},"emp_id":"15"}}
+
+
+[2019-02-27 10:01:00]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 10:01:00]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 10:01:00]
+Function Details: add_edit_service_request 
+ Param Details : 
+{"service_no":"","service_data":{"category_id":"219","employer_id":"2","description":"3","unit_price":"3","qty":"3","amount":"9.00","sst":"0","total_amount":"9.00","bank_account_details":"3","date_required":"","status_id":"222","raise_invoice":{"client_id":"","contact_person":"","payment_terms":""},"payment":{"payable_to":"3"},"advance_loan":{"number_of_repayment":"","each_repayment_amount":"","advance_or_loan":"","current_balance_advance_or_loan":""},"assets":{"type_of_assets":"","duration":"","remarks":""},"attachment":[],"approval_verify":null,"remark_list":null},"emp_id":"15"}
+
+
+[2019-02-27 10:01:00]
+Function Details: get_doc_primary_no 
+ Param Details : 
+"service_no cms_service_request"
+
+
+[2019-02-27 10:01:00]
+Function Details: db_query
+ Param Details: 
+SELECT prefix,sequence_digit FROM cms_master_employer WHERE id = 2
+
+
+[2019-02-27 10:01:00]
+Function Details: db_query
+ Param Details: 
+SELECT IFNULL( CONCAT( RIGHT(YEAR(NOW()),2),'-',  LPAD(  SUBSTRING_INDEX(service_no,'-',-1) + 1 ,5,REPEAT('0', 5))), CONCAT( RIGHT(YEAR(NOW()),2),'-',  CONCAT( REPEAT('0', 5-1),'1')    )) AS service_no  FROM cms_service_request WHERE YEAR(created_date) = YEAR(NOW()) AND created_date = (SELECT MAX(created_date) FROM cms_service_request) ORDER BY service_no desc limit 0,1
+
+
+[2019-02-27 10:01:00]
+Function Details: is_data_exist 
+ Param Details : 
+"cms_service_request service_no MSPOS19-00017"
+
+
+[2019-02-27 10:01:00]
+Function Details: db_query
+ Param Details: 
+SELECT count(*) as id_count FROM cms_service_request WHERE service_no = 'MSPOS19-00017'
+
+
+[2019-02-27 10:01:01]
+Function Details: db_add
+ Param Details: 
+ Array
+(
+    [:service_no] => MSPOS19-00017
+    [:sr_data] => {"category_id":"219","employer_id":"2","description":"3","unit_price":"3","qty":"3","amount":"9.00","sst":"0","total_amount":"9.00","bank_account_details":"3","date_required":"","status_id":"222","raise_invoice":{"client_id":"","contact_person":"","payment_terms":""},"payment":{"payable_to":"3"},"advance_loan":{"number_of_repayment":"","each_repayment_amount":"","advance_or_loan":"","current_balance_advance_or_loan":""},"assets":{"type_of_assets":"","duration":"","remarks":""},"attachment":[],"approval_verify":null,"remark_list":null}
+    [:created_by] => 15
+    [:created_date] => 2019-02-27 10:01:00
+)
+ 
+ Result 1
+
+
+[2019-02-27 20:21:13]
+Function Details: check_login 
+ Param Details : 
+{"username":"jamal","password":"74f56399c89f4bd03ff5e85b6bf4e85f"}
+
+
+[2019-02-27 20:21:13]
+Function Details: db_query
+ Param Details: 
+SELECT id as emp_id, name, email,office_email, username
+						, is_admin, initial_pswd
+						, (select id from cms_master_list where cms_master_list.id = cms_employees.access_level) as access_level
+						
+						, cms_emp_login_sessions.token
+		                , accessible_ctg
+						, malaysia_phone
+						, concat('http://127.0.0.1:8000/mspdoc_bare/services/files/', 'photos/',id,'.jpeg') as profile_pic
+		                , super_admin  FROM cms_employees
+						LEFT join cms_emp_login_sessions ON
+						 	cms_employees.id = cms_emp_login_sessions.emp_id WHERE cms_employees.username	= 'jamal' AND cms_employees.pswd = '74f56399c89f4bd03ff5e85b6bf4e85f' AND cms_employees.is_active = 1
+
+
+[2019-02-27 20:21:14]
+Function Details: is_login_token_valid 
+ Param Details : 
+{"username":"jamal","password":"74f56399c89f4bd03ff5e85b6bf4e85f","emp_id":"15","token":"03293db0a67871ad036730841905cf98"}
+
+
+[2019-02-27 20:21:14]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 20:21:14]
+Function Details: update_session 
+ Param Details : 
+{"username":"jamal","password":"74f56399c89f4bd03ff5e85b6bf4e85f","emp_id":"15","token":"03293db0a67871ad036730841905cf98"}
+
+
+[2019-02-27 20:21:14]
+Function Details: db_update
+ Param Details: 
+   		UPDATE cms_emp_login_sessions SET token = :token, emp_id = :emp_id, last_active = :last_active, client_ip = :client_ip WHERE token = :token 
+
+
+[2019-02-27 20:21:15]
+Function Details: db_update
+ Param Details: 
+ Array
+(
+    [:token] => 03293db0a67871ad036730841905cf98
+    [:emp_id] => 15
+    [:last_active] => 2019-02-27 20:21:14
+    [:client_ip] => 127.0.0.1
+)
+ 
+ Result 1
+
+
+[2019-02-27 20:21:15]
+Function Details: db_query
+ Param Details: 
+SELECT cms_modules.descr, cms_employees_access.* FROM cms_employees_access INNER JOIN cms_modules ON cms_employees_access.module_id = cms_modules.id WHERE cms_employees_access.emp_id	= 15
+
+
+[2019-02-27 20:21:15]
+Function Details: arrange_accessibilty 
+ Param Details : 
+[{"descr":"Claims","id":"8","module_id":"1","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Timesheets","id":"9","module_id":"2","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Leaves","id":"10","module_id":"3","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Appointments","id":"11","module_id":"4","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Task","id":"12","module_id":"5","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Onboarding","id":"13","module_id":"7","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"FAQ","id":"14","module_id":"9","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"0","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Communication","id":"15","module_id":"10","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Settings","id":"252","module_id":"8","emp_id":"15","view_it":"0","view_it_all":"0","create_it":"0","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Job Posting","id":"253","module_id":"11","emp_id":"15","view_it":"0","view_it_all":"0","create_it":"0","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Clients","id":"348","module_id":"12","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Attendance","id":"384","module_id":"14","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Employees","id":"394","module_id":"6","emp_id":"15","view_it":"0","view_it_all":"0","create_it":"0","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Emails","id":"395","module_id":"13","emp_id":"15","view_it":"0","view_it_all":"0","create_it":"0","edit_it":"0","delete_it":"0","print_it":"0","verify_it":"0","approve_it":"0","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-11-10 13:34:13","update_by":null,"updated_date":null},{"descr":"Test","id":"396","module_id":"15","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"1","delete_it":"1","print_it":"0","verify_it":"1","approve_it":"1","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":null,"created_date":null,"update_by":null,"updated_date":null},{"descr":"Outbound Document","id":"397","module_id":"16","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"1","delete_it":"1","print_it":"0","verify_it":"1","approve_it":"1","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":null,"created_date":null,"update_by":null,"updated_date":null},{"descr":"Document Archiving","id":"398","module_id":"17","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"1","delete_it":"1","print_it":"0","verify_it":"1","approve_it":"1","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":null,"created_date":null,"update_by":null,"updated_date":null},{"descr":"Service Request","id":"401","module_id":"18","emp_id":"15","view_it":"1","view_it_all":"0","create_it":"1","edit_it":"1","delete_it":"1","print_it":"0","verify_it":"1","approve_it":"1","notify_email":"0","notify_sms":"0","revoke_verify":"0","revoke_approval":"0","notify_create":"0","notify_edit":"0","notify_delete":"0","notify_verify":"0","notify_approve":"0","is_active":"1","created_by":"16","created_date":"2018-12-29 00:00:00","update_by":null,"updated_date":null}]
+
+
+[2019-02-27 20:21:15]
+Function Details: db_query
+ Param Details: 
+SELECT id FROM cms_employees WHERE reporting_to_id = 15
+
+
+[2019-02-27 20:21:15]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_employees 
+
+
+[2019-02-27 20:21:15]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 1
+
+
+[2019-02-27 20:21:15]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 2
+
+
+[2019-02-27 20:21:15]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 8
+
+
+[2019-02-27 20:21:15]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr,no_of_days FROM cms_master_list WHERE category_id = 16
+
+
+[2019-02-27 20:21:15]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer 
+
+
+[2019-02-27 20:21:15]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 17
+
+
+[2019-02-27 20:21:15]
+Function Details: db_query
+ Param Details: 
+SELECT id,skills_name FROM cms_skills WHERE type_id = 67
+
+
+[2019-02-27 20:21:15]
+Function Details: db_query
+ Param Details: 
+SELECT id,skills_name FROM cms_skills WHERE type_id = 68
+
+
+[2019-02-27 20:21:16]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_employees_details","data":{"id":"15"}}
+
+
+[2019-02-27 20:21:16]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 20:21:16]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 20:21:16]
+Function Details: get_employees_details 
+ Param Details : 
+{"id":"15"}
+
+
+[2019-02-27 20:21:16]
+Function Details: db_query
+ Param Details: 
+SELECT 
+        id
+        , employee_no
+        , name
+        , photoname
+		, ic_passport
+		, sex_id
+		, age
+		, date_format(dob,'%d-%m-%Y') as dob
+		, nationality
+		, birth_place
+		, religion
+		, race
+		, designation
+        , employer_id
+		, home_phone
+		, malaysia_phone
+		, office_phone
+		, local_address
+        , home_address
+        , home_country
+		, email
+		, office_email
+		, username
+        , pswd
+		, is_admin
+        , access_level
+		, chat_id
+		, dept_id
+		, reporting_to_id
+		, allow_add
+        , allow_approve
+        , allow_verify
+        , allow_contract_approve
+		, allow_contract_create
+		, allow_contract_view_all
+		, allow_contract_access
+		, general_skills
+        , specific_skills
+        , date_format(work_start_date,'%d-%m-%Y') as work_start_date
+        , date_format(work_end_date,'%d-%m-%Y') as work_end_date
+        , salary
+        , date_format(ep_valid_till,'%d-%m-%Y') as ep_valid_till
+        , notice_period_id
+		, spouse_name
+		, spouse_occupation
+		, date_format(marriage_date,'%d-%m-%Y') as marriage_date
+		, spouse_ic
+		, spouse_company
+		, spouse_company_address
+		, no_of_children
+		, emergency_person
+		, emergency_relation
+		, emergency_address
+		, emergency_phone
+		, bank_acc_name
+		, bank_acc_ic
+		, bank_name
+		, bank_account_no
+		, accessible_ctg
+		, super_admin
+		, is_active
+		, concat('http://127.0.0.1:8000/mspdoc_bare/services/files/', 'photos/',id,'.jpeg') as profile_pic
+		, date_format(leaving_date,'%d-%m-%Y') as leaving_date
+		, leaving_reason
+		, created_by
+        , (select employer_name from cms_master_employer where cms_master_employer.id = cms_employees.employer_id) as employer_name
+        , (select descr from cms_master_list where cms_master_list.id = cms_employees.dept_id) as dept_name
+        , (select descr from cms_master_list where cms_master_list.id = cms_employees.notice_period_id) as notice_period
+        , (select descr from cms_master_list where cms_master_list.id = cms_employees.access_level) as access_level_name
+         FROM cms_employees WHERE id = 15
+
+
+[2019-02-27 20:21:16]
+Function Details: db_query
+ Param Details: 
+SELECT skills_name FROM cms_skills WHERE id=0
+
+
+[2019-02-27 20:21:16]
+Function Details: db_query
+ Param Details: 
+SELECT skills_name FROM cms_skills WHERE id=0
+
+
+[2019-02-27 20:21:16]
+Function Details: db_query
+ Param Details: 
+SELECT module_id,view_it ,view_it_all ,create_it ,edit_it ,delete_it ,print_it ,verify_it ,approve_it,revoke_verify,revoke_approval FROM cms_employees_access WHERE emp_id = 15
+
+
+[2019-02-27 20:22:08]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2019-02-27 20:22:08]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 39
+
+
+[2019-02-27 20:22:08]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer WHERE is_active = 1
+
+
+[2019-02-27 20:22:08]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2019-02-27 20:22:08]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 40
+
+
+[2019-02-27 20:22:08]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 5
+
+
+[2019-02-27 20:22:08]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 20
+
+
+[2019-02-27 20:22:09]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_service_request_list","data":{"category_id":"","created_by":"","company_id":"","status_id":"","complete_status_id":"224","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2019-02-27 20:22:09]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 20:22:09]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 20:22:09]
+Function Details: get_service_request_list 
+ Param Details : 
+{"category_id":"","created_by":"","company_id":"","status_id":"","complete_status_id":"224","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2019-02-27 20:22:09]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_service_request.service_no
+				, cms_service_request.sr_data
+				, cms_service_request.created_date
+				, cms_employees.name as created_by
+				, (select descr from cms_master_list list where list.id = JSON_UNQUOTE(cms_service_request.sr_data->'$.category_id')) as category_name
+				, (select descr from cms_master_list list where list.id = JSON_UNQUOTE(cms_service_request.sr_data->'$.status_id')) as status_name
+				, (select descr from cms_master_list list where list.id = 224) as complete_status_name			
+                 FROM 
+                cms_service_request
+				LEFT JOIN cms_employees
+                    ON (cms_service_request.created_by = cms_employees.id)
+                 WHERE 15 IN (cms_service_request.created_by) AND cms_service_request.is_active in(1) ORDER BY service_no DESC limit 0,10
+
+
+[2019-02-27 23:05:34]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2019-02-27 23:05:34]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 39
+
+
+[2019-02-27 23:05:34]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer WHERE is_active = 1
+
+
+[2019-02-27 23:05:34]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2019-02-27 23:05:34]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 40
+
+
+[2019-02-27 23:05:34]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 5
+
+
+[2019-02-27 23:05:34]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 20
+
+
+[2019-02-27 23:05:35]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_service_request_list","data":{"category_id":"","created_by":"","company_id":"","status_id":"","complete_status_id":"224","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2019-02-27 23:05:35]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 23:05:35]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 23:05:35]
+Function Details: get_service_request_list 
+ Param Details : 
+{"category_id":"","created_by":"","company_id":"","status_id":"","complete_status_id":"224","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2019-02-27 23:05:35]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_service_request.service_no
+				, cms_service_request.sr_data
+				, cms_service_request.created_date
+				, cms_employees.name as created_by
+				, (select descr from cms_master_list list where list.id = JSON_UNQUOTE(cms_service_request.sr_data->'$.category_id')) as category_name
+				, (select descr from cms_master_list list where list.id = JSON_UNQUOTE(cms_service_request.sr_data->'$.status_id')) as status_name
+				, (select descr from cms_master_list list where list.id = 224) as complete_status_name			
+                 FROM 
+                cms_service_request
+				LEFT JOIN cms_employees
+                    ON (cms_service_request.created_by = cms_employees.id)
+                 WHERE 15 IN (cms_service_request.created_by) AND cms_service_request.is_active in(1) ORDER BY service_no DESC limit 0,10
+
+
+[2019-02-27 23:06:02]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"add_edit_service_request","data":{"service_no":"","service_data":{"category_id":"218","employer_id":"1","description":"3","unit_price":"3","qty":"33","amount":"99.00","sst":"6","total_amount":"104.94","bank_account_details":"3","date_required":"","status_id":"222","raise_invoice":{"client_id":"1","contact_person":"ee","payment_terms":"225"},"payment":{"payable_to":""},"advance_loan":{"number_of_repayment":"","each_repayment_amount":"","advance_or_loan":"","current_balance_advance_or_loan":""},"assets":{"type_of_assets":"","duration":"","remarks":""},"attachment":[],"approval_verify":null,"remark_list":null},"emp_id":"15"}}
+
+
+[2019-02-27 23:06:02]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 23:06:02]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 23:06:02]
+Function Details: add_edit_service_request 
+ Param Details : 
+{"service_no":"","service_data":{"category_id":"218","employer_id":"1","description":"3","unit_price":"3","qty":"33","amount":"99.00","sst":"6","total_amount":"104.94","bank_account_details":"3","date_required":"","status_id":"222","raise_invoice":{"client_id":"1","contact_person":"ee","payment_terms":"225"},"payment":{"payable_to":""},"advance_loan":{"number_of_repayment":"","each_repayment_amount":"","advance_or_loan":"","current_balance_advance_or_loan":""},"assets":{"type_of_assets":"","duration":"","remarks":""},"attachment":[],"approval_verify":null,"remark_list":null},"emp_id":"15"}
+
+
+[2019-02-27 23:06:02]
+Function Details: get_doc_primary_no 
+ Param Details : 
+"service_no cms_service_request"
+
+
+[2019-02-27 23:06:02]
+Function Details: db_query
+ Param Details: 
+SELECT prefix,sequence_digit FROM cms_master_employer WHERE id = 1
+
+
+[2019-02-27 23:06:02]
+Function Details: db_query
+ Param Details: 
+SELECT IFNULL( CONCAT( RIGHT(YEAR(NOW()),2),'-',  LPAD(  SUBSTRING_INDEX(service_no,'-',-1) + 1 ,5,REPEAT('0', 5))), CONCAT( RIGHT(YEAR(NOW()),2),'-',  CONCAT( REPEAT('0', 5-1),'1')    )) AS service_no  FROM cms_service_request WHERE YEAR(created_date) = YEAR(NOW()) ORDER BY created_date desc limit 0,1
+
+
+[2019-02-27 23:06:03]
+Function Details: is_data_exist 
+ Param Details : 
+"cms_service_request service_no MSP19-00015"
+
+
+[2019-02-27 23:06:03]
+Function Details: db_query
+ Param Details: 
+SELECT count(*) as id_count FROM cms_service_request WHERE service_no = 'MSP19-00015'
+
+
+[2019-02-27 23:06:04]
+Function Details: db_add
+ Param Details: 
+ Array
+(
+    [:service_no] => MSP19-00015
+    [:sr_data] => {"category_id":"218","employer_id":"1","description":"3","unit_price":"3","qty":"33","amount":"99.00","sst":"6","total_amount":"104.94","bank_account_details":"3","date_required":"","status_id":"222","raise_invoice":{"client_id":"1","contact_person":"ee","payment_terms":"225"},"payment":{"payable_to":""},"advance_loan":{"number_of_repayment":"","each_repayment_amount":"","advance_or_loan":"","current_balance_advance_or_loan":""},"assets":{"type_of_assets":"","duration":"","remarks":""},"attachment":[],"approval_verify":null,"remark_list":null}
+    [:created_by] => 15
+    [:created_date] => 2019-02-27 23:06:03
+)
+ 
+ Result 1
+
+
+[2019-02-27 23:06:28]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_service_request_list","data":{"category_id":"","created_by":"","company_id":"","status_id":"","complete_status_id":"224","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2019-02-27 23:06:28]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 23:06:28]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 23:06:28]
+Function Details: get_service_request_list 
+ Param Details : 
+{"category_id":"","created_by":"","company_id":"","status_id":"","complete_status_id":"224","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2019-02-27 23:06:28]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_service_request.service_no
+				, cms_service_request.sr_data
+				, cms_service_request.created_date
+				, cms_employees.name as created_by
+				, (select descr from cms_master_list list where list.id = JSON_UNQUOTE(cms_service_request.sr_data->'$.category_id')) as category_name
+				, (select descr from cms_master_list list where list.id = JSON_UNQUOTE(cms_service_request.sr_data->'$.status_id')) as status_name
+				, (select descr from cms_master_list list where list.id = 224) as complete_status_name			
+                 FROM 
+                cms_service_request
+				LEFT JOIN cms_employees
+                    ON (cms_service_request.created_by = cms_employees.id)
+                 WHERE 15 IN (cms_service_request.created_by) AND cms_service_request.is_active in(1) ORDER BY service_no DESC limit 0,10
+
+
+[2019-02-27 23:06:44]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"add_edit_service_request","data":{"service_no":"","service_data":{"category_id":"218","employer_id":"2","description":"5","unit_price":"5","qty":"5","amount":"25.00","sst":"6","total_amount":"26.50","bank_account_details":"5","date_required":"","status_id":"222","raise_invoice":{"client_id":"1","contact_person":"45","payment_terms":"225"},"payment":{"payable_to":""},"advance_loan":{"number_of_repayment":"","each_repayment_amount":"","advance_or_loan":"","current_balance_advance_or_loan":""},"assets":{"type_of_assets":"","duration":"","remarks":""},"attachment":[],"approval_verify":null,"remark_list":null},"emp_id":"15"}}
+
+
+[2019-02-27 23:06:44]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 23:06:44]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 23:06:44]
+Function Details: add_edit_service_request 
+ Param Details : 
+{"service_no":"","service_data":{"category_id":"218","employer_id":"2","description":"5","unit_price":"5","qty":"5","amount":"25.00","sst":"6","total_amount":"26.50","bank_account_details":"5","date_required":"","status_id":"222","raise_invoice":{"client_id":"1","contact_person":"45","payment_terms":"225"},"payment":{"payable_to":""},"advance_loan":{"number_of_repayment":"","each_repayment_amount":"","advance_or_loan":"","current_balance_advance_or_loan":""},"assets":{"type_of_assets":"","duration":"","remarks":""},"attachment":[],"approval_verify":null,"remark_list":null},"emp_id":"15"}
+
+
+[2019-02-27 23:06:44]
+Function Details: get_doc_primary_no 
+ Param Details : 
+"service_no cms_service_request"
+
+
+[2019-02-27 23:06:44]
+Function Details: db_query
+ Param Details: 
+SELECT prefix,sequence_digit FROM cms_master_employer WHERE id = 2
+
+
+[2019-02-27 23:06:44]
+Function Details: db_query
+ Param Details: 
+SELECT IFNULL( CONCAT( RIGHT(YEAR(NOW()),2),'-',  LPAD(  SUBSTRING_INDEX(service_no,'-',-1) + 1 ,5,REPEAT('0', 5))), CONCAT( RIGHT(YEAR(NOW()),2),'-',  CONCAT( REPEAT('0', 5-1),'1')    )) AS service_no  FROM cms_service_request WHERE YEAR(created_date) = YEAR(NOW()) ORDER BY created_date desc limit 0,1
+
+
+[2019-02-27 23:06:44]
+Function Details: is_data_exist 
+ Param Details : 
+"cms_service_request service_no MSPOS19-00016"
+
+
+[2019-02-27 23:06:44]
+Function Details: db_query
+ Param Details: 
+SELECT count(*) as id_count FROM cms_service_request WHERE service_no = 'MSPOS19-00016'
+
+
+[2019-02-27 23:06:45]
+Function Details: db_add
+ Param Details: 
+ Array
+(
+    [:service_no] => MSPOS19-00016
+    [:sr_data] => {"category_id":"218","employer_id":"2","description":"5","unit_price":"5","qty":"5","amount":"25.00","sst":"6","total_amount":"26.50","bank_account_details":"5","date_required":"","status_id":"222","raise_invoice":{"client_id":"1","contact_person":"45","payment_terms":"225"},"payment":{"payable_to":""},"advance_loan":{"number_of_repayment":"","each_repayment_amount":"","advance_or_loan":"","current_balance_advance_or_loan":""},"assets":{"type_of_assets":"","duration":"","remarks":""},"attachment":[],"approval_verify":null,"remark_list":null}
+    [:created_by] => 15
+    [:created_date] => 2019-02-27 23:06:44
+)
+ 
+ Result 1
+
+
+[2019-02-27 23:07:05]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_service_request_list","data":{"category_id":"","created_by":"","company_id":"","status_id":"","complete_status_id":"224","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2019-02-27 23:07:05]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 23:07:05]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 23:07:05]
+Function Details: get_service_request_list 
+ Param Details : 
+{"category_id":"","created_by":"","company_id":"","status_id":"","complete_status_id":"224","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2019-02-27 23:07:05]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_service_request.service_no
+				, cms_service_request.sr_data
+				, cms_service_request.created_date
+				, cms_employees.name as created_by
+				, (select descr from cms_master_list list where list.id = JSON_UNQUOTE(cms_service_request.sr_data->'$.category_id')) as category_name
+				, (select descr from cms_master_list list where list.id = JSON_UNQUOTE(cms_service_request.sr_data->'$.status_id')) as status_name
+				, (select descr from cms_master_list list where list.id = 224) as complete_status_name			
+                 FROM 
+                cms_service_request
+				LEFT JOIN cms_employees
+                    ON (cms_service_request.created_by = cms_employees.id)
+                 WHERE 15 IN (cms_service_request.created_by) AND cms_service_request.is_active in(1) ORDER BY service_no DESC limit 0,10
+
+
+[2019-02-27 23:07:41]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"add_edit_service_request","data":{"service_no":"","service_data":{"category_id":"219","employer_id":"3","description":"3","unit_price":"3","qty":"3","amount":"9.00","sst":"6","total_amount":"9.54","bank_account_details":"3","date_required":"","status_id":"222","raise_invoice":{"client_id":"","contact_person":"","payment_terms":""},"payment":{"payable_to":"3"},"advance_loan":{"number_of_repayment":"","each_repayment_amount":"","advance_or_loan":"","current_balance_advance_or_loan":""},"assets":{"type_of_assets":"","duration":"","remarks":""},"attachment":[],"approval_verify":null,"remark_list":null},"emp_id":"15"}}
+
+
+[2019-02-27 23:07:41]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 23:07:41]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 23:07:41]
+Function Details: add_edit_service_request 
+ Param Details : 
+{"service_no":"","service_data":{"category_id":"219","employer_id":"3","description":"3","unit_price":"3","qty":"3","amount":"9.00","sst":"6","total_amount":"9.54","bank_account_details":"3","date_required":"","status_id":"222","raise_invoice":{"client_id":"","contact_person":"","payment_terms":""},"payment":{"payable_to":"3"},"advance_loan":{"number_of_repayment":"","each_repayment_amount":"","advance_or_loan":"","current_balance_advance_or_loan":""},"assets":{"type_of_assets":"","duration":"","remarks":""},"attachment":[],"approval_verify":null,"remark_list":null},"emp_id":"15"}
+
+
+[2019-02-27 23:07:41]
+Function Details: get_doc_primary_no 
+ Param Details : 
+"service_no cms_service_request"
+
+
+[2019-02-27 23:07:41]
+Function Details: db_query
+ Param Details: 
+SELECT prefix,sequence_digit FROM cms_master_employer WHERE id = 3
+
+
+[2019-02-27 23:07:41]
+Function Details: db_query
+ Param Details: 
+SELECT IFNULL( CONCAT( RIGHT(YEAR(NOW()),2),'-',  LPAD(  SUBSTRING_INDEX(service_no,'-',-1) + 1 ,5,REPEAT('0', 5))), CONCAT( RIGHT(YEAR(NOW()),2),'-',  CONCAT( REPEAT('0', 5-1),'1')    )) AS service_no  FROM cms_service_request WHERE YEAR(created_date) = YEAR(NOW()) ORDER BY created_date desc limit 0,1
+
+
+[2019-02-27 23:07:41]
+Function Details: is_data_exist 
+ Param Details : 
+"cms_service_request service_no APSS19-00017"
+
+
+[2019-02-27 23:07:41]
+Function Details: db_query
+ Param Details: 
+SELECT count(*) as id_count FROM cms_service_request WHERE service_no = 'APSS19-00017'
+
+
+[2019-02-27 23:07:42]
+Function Details: db_add
+ Param Details: 
+ Array
+(
+    [:service_no] => APSS19-00017
+    [:sr_data] => {"category_id":"219","employer_id":"3","description":"3","unit_price":"3","qty":"3","amount":"9.00","sst":"6","total_amount":"9.54","bank_account_details":"3","date_required":"","status_id":"222","raise_invoice":{"client_id":"","contact_person":"","payment_terms":""},"payment":{"payable_to":"3"},"advance_loan":{"number_of_repayment":"","each_repayment_amount":"","advance_or_loan":"","current_balance_advance_or_loan":""},"assets":{"type_of_assets":"","duration":"","remarks":""},"attachment":[],"approval_verify":null,"remark_list":null}
+    [:created_by] => 15
+    [:created_date] => 2019-02-27 23:07:41
+)
+ 
+ Result 1
+
+
+[2019-02-27 23:07:53]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_service_request_list","data":{"category_id":"","created_by":"","company_id":"","status_id":"","complete_status_id":"224","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2019-02-27 23:07:53]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 23:07:53]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 23:07:53]
+Function Details: get_service_request_list 
+ Param Details : 
+{"category_id":"","created_by":"","company_id":"","status_id":"","complete_status_id":"224","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2019-02-27 23:07:53]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_service_request.service_no
+				, cms_service_request.sr_data
+				, cms_service_request.created_date
+				, cms_employees.name as created_by
+				, (select descr from cms_master_list list where list.id = JSON_UNQUOTE(cms_service_request.sr_data->'$.category_id')) as category_name
+				, (select descr from cms_master_list list where list.id = JSON_UNQUOTE(cms_service_request.sr_data->'$.status_id')) as status_name
+				, (select descr from cms_master_list list where list.id = 224) as complete_status_name			
+                 FROM 
+                cms_service_request
+				LEFT JOIN cms_employees
+                    ON (cms_service_request.created_by = cms_employees.id)
+                 WHERE 15 IN (cms_service_request.created_by) AND cms_service_request.is_active in(1) ORDER BY service_no DESC limit 0,10
+
+
+[2019-02-27 23:08:35]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2019-02-27 23:08:35]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2019-02-27 23:08:35]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer WHERE is_active = 1
+
+
+[2019-02-27 23:08:35]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_appt_pic.id,cms_appt_pic.name,cms_appt_pic.email, cms_clients.name as company_name
+                        FROM cms_appt_pic INNER JOIN cms_clients ON cms_appt_pic.client = cms_clients.id
+                        WHERE cms_appt_pic.created_by = 15 
+                         UNION ALL
+                        SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email,
+                        cms_master_employer.employer_name  as company_name
+                        FROM
+                        cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+                        WHERE cms_employees.is_active = 1
+
+
+[2019-02-27 23:08:36]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 37
+
+
+[2019-02-27 23:08:36]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 36
+
+
+[2019-02-27 23:08:37]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_document_archiving_list","data":{"client_id":"","created_by":"","type_id":"","status_id":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2019-02-27 23:08:37]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 23:08:37]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 23:08:37]
+Function Details: get_document_archiving_list 
+ Param Details : 
+{"client_id":"","created_by":"","type_id":"","status_id":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2019-02-27 23:08:37]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_document_archiving.doc_no
+				, cms_document_archiving.doc_date
+				, cms_document_archiving.client_id
+				, cms_document_archiving.employer_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_document_archiving.from_date
+				, cms_document_archiving.to_date
+				, IF(cms_document_archiving.notify = 1, 'Yes','No') as notify
+				, cms_document_archiving.notify_by
+				, cms_document_archiving.notify_email
+				, cms_document_archiving.attachment
+				, cms_document_archiving.remarks
+				, cms_document_archiving.notes
+				, cms_document_archiving.approvals
+				, cms_document_archiving.status_id
+				, cms_document_archiving.created_date
+				, (select descr from cms_master_list list where list.id = cms_document_archiving.doc_type) as doc_type
+				, (select descr from cms_master_list list where list.id = cms_document_archiving.status_id) as status_name		
+				, (select name from cms_employees emp where emp.id = cms_document_archiving.created_by) as created_by		
+                 FROM 
+                cms_document_archiving
+				LEFT JOIN cms_clients
+                    ON (cms_document_archiving.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_document_archiving.created_by) AND cms_document_archiving.is_active in(1) ORDER BY doc_no DESC limit 0,10
+
+
+[2019-02-27 23:10:46]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2019-02-27 23:10:46]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 39
+
+
+[2019-02-27 23:10:46]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer WHERE is_active = 1
+
+
+[2019-02-27 23:10:46]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2019-02-27 23:10:46]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 40
+
+
+[2019-02-27 23:10:46]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 5
+
+
+[2019-02-27 23:10:46]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 20
+
+
+[2019-02-27 23:10:46]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_service_request_list","data":{"category_id":"","created_by":"","company_id":"","status_id":"","complete_status_id":"224","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2019-02-27 23:10:46]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 23:10:46]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 23:10:46]
+Function Details: get_service_request_list 
+ Param Details : 
+{"category_id":"","created_by":"","company_id":"","status_id":"","complete_status_id":"224","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2019-02-27 23:10:46]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_service_request.service_no
+				, cms_service_request.sr_data
+				, cms_service_request.created_date
+				, cms_employees.name as created_by
+				, (select descr from cms_master_list list where list.id = JSON_UNQUOTE(cms_service_request.sr_data->'$.category_id')) as category_name
+				, (select descr from cms_master_list list where list.id = JSON_UNQUOTE(cms_service_request.sr_data->'$.status_id')) as status_name
+				, (select descr from cms_master_list list where list.id = 224) as complete_status_name			
+                 FROM 
+                cms_service_request
+				LEFT JOIN cms_employees
+                    ON (cms_service_request.created_by = cms_employees.id)
+                 WHERE 15 IN (cms_service_request.created_by) AND cms_service_request.is_active in(1) ORDER BY service_no DESC limit 0,10
+
+
+[2019-02-27 23:11:50]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_service_request_list","data":{"category_id":"218","created_by":"15","company_id":"1","status_id":"223","complete_status_id":"224","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2019-02-27 23:11:50]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 23:11:50]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 23:11:50]
+Function Details: get_service_request_list 
+ Param Details : 
+{"category_id":"218","created_by":"15","company_id":"1","status_id":"223","complete_status_id":"224","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2019-02-27 23:11:50]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_service_request.service_no
+				, cms_service_request.sr_data
+				, cms_service_request.created_date
+				, cms_employees.name as created_by
+				, (select descr from cms_master_list list where list.id = JSON_UNQUOTE(cms_service_request.sr_data->'$.category_id')) as category_name
+				, (select descr from cms_master_list list where list.id = JSON_UNQUOTE(cms_service_request.sr_data->'$.status_id')) as status_name
+				, (select descr from cms_master_list list where list.id = 224) as complete_status_name			
+                 FROM 
+                cms_service_request
+				LEFT JOIN cms_employees
+                    ON (cms_service_request.created_by = cms_employees.id)
+                 WHERE 15 IN (cms_service_request.created_by) AND JSON_UNQUOTE(cms_service_request.sr_data->'$.category_id') in(218) AND cms_service_request.created_by in(15) AND JSON_UNQUOTE(cms_service_request.sr_data->'$.employer_id') in(1) AND JSON_UNQUOTE(cms_service_request.sr_data->'$.status_id') in(223) AND cms_service_request.is_active in(1) ORDER BY service_no DESC limit 0,10
+
+
+[2019-02-27 23:12:05]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_service_request_list","data":{"category_id":"218","created_by":"15","company_id":"1","status_id":"223","complete_status_id":"224","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2019-02-27 23:12:05]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 23:12:05]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 23:12:05]
+Function Details: get_service_request_list 
+ Param Details : 
+{"category_id":"218","created_by":"15","company_id":"1","status_id":"223","complete_status_id":"224","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2019-02-27 23:12:05]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_service_request.service_no
+				, cms_service_request.sr_data
+				, cms_service_request.created_date
+				, cms_employees.name as created_by
+				, (select descr from cms_master_list list where list.id = JSON_UNQUOTE(cms_service_request.sr_data->'$.category_id')) as category_name
+				, (select descr from cms_master_list list where list.id = JSON_UNQUOTE(cms_service_request.sr_data->'$.status_id')) as status_name
+				, (select descr from cms_master_list list where list.id = 224) as complete_status_name			
+                 FROM 
+                cms_service_request
+				LEFT JOIN cms_employees
+                    ON (cms_service_request.created_by = cms_employees.id)
+                 WHERE 15 IN (cms_service_request.created_by) AND JSON_UNQUOTE(cms_service_request.sr_data->'$.category_id') in(218) AND cms_service_request.created_by in(15) AND JSON_UNQUOTE(cms_service_request.sr_data->'$.employer_id') in(1) AND JSON_UNQUOTE(cms_service_request.sr_data->'$.status_id') in(223) AND cms_service_request.is_active in(1) ORDER BY service_no DESC limit 0,10
+
+
+[2019-02-27 23:12:18]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_service_request_list","data":{"category_id":"218","created_by":"15","company_id":"1","status_id":"223","complete_status_id":"224","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2019-02-27 23:12:18]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 23:12:18]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 23:12:18]
+Function Details: get_service_request_list 
+ Param Details : 
+{"category_id":"218","created_by":"15","company_id":"1","status_id":"223","complete_status_id":"224","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2019-02-27 23:12:18]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_service_request.service_no
+				, cms_service_request.sr_data
+				, cms_service_request.created_date
+				, cms_employees.name as created_by
+				, (select descr from cms_master_list list where list.id = JSON_UNQUOTE(cms_service_request.sr_data->'$.category_id')) as category_name
+				, (select descr from cms_master_list list where list.id = JSON_UNQUOTE(cms_service_request.sr_data->'$.status_id')) as status_name
+				, (select descr from cms_master_list list where list.id = 224) as complete_status_name			
+                 FROM 
+                cms_service_request
+				LEFT JOIN cms_employees
+                    ON (cms_service_request.created_by = cms_employees.id)
+                 WHERE 15 IN (cms_service_request.created_by) AND JSON_UNQUOTE(cms_service_request.sr_data->'$.category_id') in(218) AND cms_service_request.created_by in(15) AND JSON_UNQUOTE(cms_service_request.sr_data->'$.employer_id') in(1) AND JSON_UNQUOTE(cms_service_request.sr_data->'$.status_id') in(223) AND cms_service_request.is_active in(1) ORDER BY service_no DESC limit 0,10
+
+
+[2019-02-27 23:13:05]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2019-02-27 23:13:05]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2019-02-27 23:13:05]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer WHERE is_active = 1
+
+
+[2019-02-27 23:13:05]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_appt_pic.id,cms_appt_pic.name,cms_appt_pic.email, cms_clients.name as company_name
+                        FROM cms_appt_pic INNER JOIN cms_clients ON cms_appt_pic.client = cms_clients.id
+                        WHERE cms_appt_pic.created_by = 15 
+                         UNION ALL
+                        SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email,
+                        cms_master_employer.employer_name  as company_name
+                        FROM
+                        cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+                        WHERE cms_employees.is_active = 1
+
+
+[2019-02-27 23:13:06]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 37
+
+
+[2019-02-27 23:13:06]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 36
+
+
+[2019-02-27 23:13:07]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_document_archiving_list","data":{"client_id":"","created_by":"","type_id":"","status_id":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2019-02-27 23:13:07]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 23:13:07]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 23:13:07]
+Function Details: get_document_archiving_list 
+ Param Details : 
+{"client_id":"","created_by":"","type_id":"","status_id":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2019-02-27 23:13:07]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_document_archiving.doc_no
+				, cms_document_archiving.doc_date
+				, cms_document_archiving.client_id
+				, cms_document_archiving.employer_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_document_archiving.from_date
+				, cms_document_archiving.to_date
+				, IF(cms_document_archiving.notify = 1, 'Yes','No') as notify
+				, cms_document_archiving.notify_by
+				, cms_document_archiving.notify_email
+				, cms_document_archiving.attachment
+				, cms_document_archiving.remarks
+				, cms_document_archiving.notes
+				, cms_document_archiving.approvals
+				, cms_document_archiving.status_id
+				, cms_document_archiving.created_date
+				, (select descr from cms_master_list list where list.id = cms_document_archiving.doc_type) as doc_type
+				, (select descr from cms_master_list list where list.id = cms_document_archiving.status_id) as status_name		
+				, (select name from cms_employees emp where emp.id = cms_document_archiving.created_by) as created_by		
+                 FROM 
+                cms_document_archiving
+				LEFT JOIN cms_clients
+                    ON (cms_document_archiving.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_document_archiving.created_by) AND cms_document_archiving.is_active in(1) ORDER BY doc_no DESC limit 0,10
+
+
+[2019-02-27 23:13:13]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2019-02-27 23:13:13]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2019-02-27 23:13:13]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer WHERE is_active = 1
+
+
+[2019-02-27 23:13:13]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_appt_pic.id,cms_appt_pic.name,cms_appt_pic.email, cms_clients.name as company_name
+                           FROM cms_appt_pic INNER JOIN cms_clients ON cms_appt_pic.client = cms_clients.id
+                           WHERE cms_appt_pic.created_by = 15 
+                           UNION ALL
+                           SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email,
+                           cms_master_employer.employer_name  as company_name
+                           FROM
+                           cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+                           WHERE cms_employees.is_active = 1
+
+
+[2019-02-27 23:13:14]
+Function Details: db_query
+ Param Details: 
+SELECT template_content FROM cms_master_template WHERE id = 26
+
+
+[2019-02-27 23:13:14]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 34
+
+
+[2019-02-27 23:13:14]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 35
+
+
+[2019-02-27 23:13:14]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_outbound_list","data":{"client_id":"","created_by":"","category_id":"","status_id":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2019-02-27 23:13:14]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 23:13:14]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 23:13:14]
+Function Details: get_outbound_list 
+ Param Details : 
+{"client_id":"","created_by":"","category_id":"","status_id":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2019-02-27 23:13:14]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_outbound_document.outbound_no
+				, cms_outbound_document.outbound_date
+				, cms_outbound_document.client_id
+				, cms_outbound_document.employer_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_outbound_document.attention_to
+				, cms_outbound_document.email_content
+				, cms_outbound_document.email
+				, cms_outbound_document.attachment
+				, cms_outbound_document.remarks
+				, cms_outbound_document.amount
+				, cms_outbound_document.notes
+				, cms_outbound_document.approvals
+				, cms_outbound_document.status_id
+				, cms_outbound_document.created_date
+				, (select descr from cms_master_list list where list.id = cms_outbound_document.ctg_id) as category_name
+				, (select descr from cms_master_list list where list.id = cms_outbound_document.status_id) as status_name
+				, (select name from cms_employees emp where emp.id = cms_outbound_document.created_by) as created_by		
+                 FROM 
+                cms_outbound_document
+				LEFT JOIN cms_clients
+                    ON (cms_outbound_document.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_outbound_document.created_by) AND cms_outbound_document.is_active in(1) ORDER BY outbound_no DESC limit 0,10
+
+
+[2019-02-27 23:13:57]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2019-02-27 23:13:57]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2019-02-27 23:13:57]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer WHERE is_active = 1
+
+
+[2019-02-27 23:13:57]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_appt_pic.id,cms_appt_pic.name,cms_appt_pic.email, cms_clients.name as company_name
+                        FROM cms_appt_pic INNER JOIN cms_clients ON cms_appt_pic.client = cms_clients.id
+                        WHERE cms_appt_pic.created_by = 15 
+                         UNION ALL
+                        SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email,
+                        cms_master_employer.employer_name  as company_name
+                        FROM
+                        cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+                        WHERE cms_employees.is_active = 1
+
+
+[2019-02-27 23:13:58]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 37
+
+
+[2019-02-27 23:13:58]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 36
+
+
+[2019-02-27 23:13:59]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_document_archiving_list","data":{"client_id":"","created_by":"","type_id":"","status_id":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2019-02-27 23:13:59]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 23:13:59]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 23:13:59]
+Function Details: get_document_archiving_list 
+ Param Details : 
+{"client_id":"","created_by":"","type_id":"","status_id":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2019-02-27 23:13:59]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_document_archiving.doc_no
+				, cms_document_archiving.doc_date
+				, cms_document_archiving.client_id
+				, cms_document_archiving.employer_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_document_archiving.from_date
+				, cms_document_archiving.to_date
+				, IF(cms_document_archiving.notify = 1, 'Yes','No') as notify
+				, cms_document_archiving.notify_by
+				, cms_document_archiving.notify_email
+				, cms_document_archiving.attachment
+				, cms_document_archiving.remarks
+				, cms_document_archiving.notes
+				, cms_document_archiving.approvals
+				, cms_document_archiving.status_id
+				, cms_document_archiving.created_date
+				, (select descr from cms_master_list list where list.id = cms_document_archiving.doc_type) as doc_type
+				, (select descr from cms_master_list list where list.id = cms_document_archiving.status_id) as status_name		
+				, (select name from cms_employees emp where emp.id = cms_document_archiving.created_by) as created_by		
+                 FROM 
+                cms_document_archiving
+				LEFT JOIN cms_clients
+                    ON (cms_document_archiving.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_document_archiving.created_by) AND cms_document_archiving.is_active in(1) ORDER BY doc_no DESC limit 0,10
+
+
+[2019-02-27 23:15:22]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2019-02-27 23:15:22]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 39
+
+
+[2019-02-27 23:15:22]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer WHERE is_active = 1
+
+
+[2019-02-27 23:15:22]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2019-02-27 23:15:22]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 40
+
+
+[2019-02-27 23:15:22]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 5
+
+
+[2019-02-27 23:15:22]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 20
+
+
+[2019-02-27 23:15:22]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_service_request_list","data":{"category_id":"","created_by":"","company_id":"","status_id":"","complete_status_id":"224","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2019-02-27 23:15:22]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 23:15:22]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 23:15:22]
+Function Details: get_service_request_list 
+ Param Details : 
+{"category_id":"","created_by":"","company_id":"","status_id":"","complete_status_id":"224","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2019-02-27 23:15:22]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_service_request.service_no
+				, cms_service_request.sr_data
+				, cms_service_request.created_date
+				, cms_employees.name as created_by
+				, (select descr from cms_master_list list where list.id = JSON_UNQUOTE(cms_service_request.sr_data->'$.category_id')) as category_name
+				, (select descr from cms_master_list list where list.id = JSON_UNQUOTE(cms_service_request.sr_data->'$.status_id')) as status_name
+				, (select descr from cms_master_list list where list.id = 224) as complete_status_name			
+                 FROM 
+                cms_service_request
+				LEFT JOIN cms_employees
+                    ON (cms_service_request.created_by = cms_employees.id)
+                 WHERE 15 IN (cms_service_request.created_by) AND cms_service_request.is_active in(1) ORDER BY service_no DESC limit 0,10
+
+
+[2019-02-27 23:15:33]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2019-02-27 23:15:33]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2019-02-27 23:15:33]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer WHERE is_active = 1
+
+
+[2019-02-27 23:15:33]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_appt_pic.id,cms_appt_pic.name,cms_appt_pic.email, cms_clients.name as company_name
+                           FROM cms_appt_pic INNER JOIN cms_clients ON cms_appt_pic.client = cms_clients.id
+                           WHERE cms_appt_pic.created_by = 15 
+                           UNION ALL
+                           SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email,
+                           cms_master_employer.employer_name  as company_name
+                           FROM
+                           cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+                           WHERE cms_employees.is_active = 1
+
+
+[2019-02-27 23:15:34]
+Function Details: db_query
+ Param Details: 
+SELECT template_content FROM cms_master_template WHERE id = 26
+
+
+[2019-02-27 23:15:34]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 34
+
+
+[2019-02-27 23:15:34]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 35
+
+
+[2019-02-27 23:15:34]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_outbound_list","data":{"client_id":"","created_by":"","category_id":"","status_id":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2019-02-27 23:15:34]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 23:15:34]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 23:15:34]
+Function Details: get_outbound_list 
+ Param Details : 
+{"client_id":"","created_by":"","category_id":"","status_id":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2019-02-27 23:15:34]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_outbound_document.outbound_no
+				, cms_outbound_document.outbound_date
+				, cms_outbound_document.client_id
+				, cms_outbound_document.employer_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_outbound_document.attention_to
+				, cms_outbound_document.email_content
+				, cms_outbound_document.email
+				, cms_outbound_document.attachment
+				, cms_outbound_document.remarks
+				, cms_outbound_document.amount
+				, cms_outbound_document.notes
+				, cms_outbound_document.approvals
+				, cms_outbound_document.status_id
+				, cms_outbound_document.created_date
+				, (select descr from cms_master_list list where list.id = cms_outbound_document.ctg_id) as category_name
+				, (select descr from cms_master_list list where list.id = cms_outbound_document.status_id) as status_name
+				, (select name from cms_employees emp where emp.id = cms_outbound_document.created_by) as created_by		
+                 FROM 
+                cms_outbound_document
+				LEFT JOIN cms_clients
+                    ON (cms_outbound_document.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_outbound_document.created_by) AND cms_outbound_document.is_active in(1) ORDER BY outbound_no DESC limit 0,10
+
+
+[2019-02-27 23:15:36]
+Function Details: db_query
+ Param Details: 
+SELECT id,name,office_email FROM cms_employees WHERE id =15 AND is_active = 1
+
+
+[2019-02-27 23:15:36]
+Function Details: db_query
+ Param Details: 
+SELECT id,name FROM cms_clients WHERE is_active = 1
+
+
+[2019-02-27 23:15:36]
+Function Details: db_query
+ Param Details: 
+SELECT id,employer_name FROM cms_master_employer WHERE is_active = 1
+
+
+[2019-02-27 23:15:36]
+Function Details: db_execute_custom_sql
+ Param Details: 
+SELECT cms_appt_pic.id,cms_appt_pic.name,cms_appt_pic.email, cms_clients.name as company_name
+                        FROM cms_appt_pic INNER JOIN cms_clients ON cms_appt_pic.client = cms_clients.id
+                        WHERE cms_appt_pic.created_by = 15 
+                         UNION ALL
+                        SELECT cms_employees.id, cms_employees.name, cms_employees.office_email as email,
+                        cms_master_employer.employer_name  as company_name
+                        FROM
+                        cms_employees INNER JOIN cms_master_employer ON cms_employees.employer_id = cms_master_employer.id
+                        WHERE cms_employees.is_active = 1
+
+
+[2019-02-27 23:15:37]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 37
+
+
+[2019-02-27 23:15:37]
+Function Details: db_query
+ Param Details: 
+SELECT id,descr FROM cms_master_list WHERE category_id = 36
+
+
+[2019-02-27 23:15:37]
+Business Layer: {"token":"03293db0a67871ad036730841905cf98","method":"get_document_archiving_list","data":{"client_id":"","created_by":"","type_id":"","status_id":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}}
+
+
+[2019-02-27 23:15:37]
+Function Details: is_token_valid 
+ Param Details : 
+"03293db0a67871ad036730841905cf98"
+
+
+[2019-02-27 23:15:37]
+Function Details: db_query
+ Param Details: 
+SELECT count(token) as token_count  FROM cms_emp_login_sessions WHERE token	= '03293db0a67871ad036730841905cf98'
+
+
+[2019-02-27 23:15:37]
+Function Details: get_document_archiving_list 
+ Param Details : 
+{"client_id":"","created_by":"","type_id":"","status_id":"","view_all":"0","start_index":0,"limit":10,"is_admin":"0","emp_id":"15"}
+
+
+[2019-02-27 23:15:37]
+Function Details: db_query_list
+ Param Details: 
+SELECT cms_document_archiving.doc_no
+				, cms_document_archiving.doc_date
+				, cms_document_archiving.client_id
+				, cms_document_archiving.employer_id
+				, IFNULL(cms_clients.name,'') as client_name
+				, cms_document_archiving.from_date
+				, cms_document_archiving.to_date
+				, IF(cms_document_archiving.notify = 1, 'Yes','No') as notify
+				, cms_document_archiving.notify_by
+				, cms_document_archiving.notify_email
+				, cms_document_archiving.attachment
+				, cms_document_archiving.remarks
+				, cms_document_archiving.notes
+				, cms_document_archiving.approvals
+				, cms_document_archiving.status_id
+				, cms_document_archiving.created_date
+				, (select descr from cms_master_list list where list.id = cms_document_archiving.doc_type) as doc_type
+				, (select descr from cms_master_list list where list.id = cms_document_archiving.status_id) as status_name		
+				, (select name from cms_employees emp where emp.id = cms_document_archiving.created_by) as created_by		
+                 FROM 
+                cms_document_archiving
+				LEFT JOIN cms_clients
+                    ON (cms_document_archiving.client_id = cms_clients.id)
+                 WHERE 15 IN (cms_document_archiving.created_by) AND cms_document_archiving.is_active in(1) ORDER BY doc_no DESC limit 0,10
+
+
