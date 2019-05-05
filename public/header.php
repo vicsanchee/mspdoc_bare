@@ -92,7 +92,7 @@ elseif($page_name == 'contracts.php' || $page_name == 'contracts.php')
 	echo include_css_files($current_path . 'assets/css/appointments.css');
 	$module_id = 7;
 }
-elseif($page_name == 'outbound_document.php')
+elseif($page_name == 'inout_documents.php')
 {
     echo include_css_files($current_path . 'assets/plugins/select2-4.0.6-rc.1/dist/css/select2.min.css');
     echo include_css_files($current_path . 'assets/css/appointments.css');
@@ -109,6 +109,12 @@ elseif($page_name == 'service_request.php')
     echo include_css_files($current_path . 'assets/plugins/select2-4.0.6-rc.1/dist/css/select2.min.css');
     echo include_css_files($current_path . 'assets/css/appointments.css');
     $module_id = 18;
+}
+elseif($page_name == 'leave.php' || $page_name == 'leaveInfo.php' || $page_name == 'leaveReport.php')
+{
+    echo include_css_files($current_path . 'assets/plugins/select2-4.0.6-rc.1/dist/css/select2.min.css');
+    echo include_css_files($current_path . 'assets/css/appointments.css');
+    $module_id = 19;
 }
 $profile_default 	= $current_path.'assets/img/profile_default.jpg';
 $profile_image 		= $_SESSION['profile_pic'];
@@ -197,9 +203,17 @@ $profile_image 		= $_SESSION['profile_pic'];
                     	<li><a href="<?php echo $current_path ?>modules/contract/contracts.php"><span>OnBoarding</span></a></li>
                   	</ul>
               	</li>
+                <li><a href="javascript:;"><i class="fa fa-tasks"></i> <span>Leaves</span>
+                    </a>
+                    <ul class="acc-menu">
+                        <li><a href="<?php echo $current_path ?>modules/leave/leave.php"><span>Application</span></a></li>
+                        <li><a href="<?php echo $current_path ?>modules/leave/leaveInfo.php"><span>Approval</span></a></li>
+                        <li><a href="<?php echo $current_path ?>modules/leave/leaveReport.php"><span>Report</span></a></li>
+                    </ul>
+                </li>
                 <li><a href="javascript:;" id="menu_others" data-val="7"><i class="fa fa-cubes"></i> <span>Others</span></a>
                     <ul class="acc-menu">
-                        <li><a href="<?php echo $current_path ?>modules/outbound_document/outbound_document.php"><span>Outbound Document</span></a></li>
+                        <li><a href="<?php echo $current_path ?>modules/inout_documents/inout_documents.php"><span>Outbound Document</span></a></li>
                         <li><a href="<?php echo $current_path ?>modules/document_archiving/document_archiving.php"><span>Document Archiving</span></a></li>
                         <li><a href="<?php echo $current_path ?>modules/service_request/service_request.php"><span>Service Request</span></a></li>
                     </ul>

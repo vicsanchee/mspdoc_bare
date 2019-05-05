@@ -70,45 +70,45 @@ if(isset($_SERVER['REQUEST_METHOD']))
         	require_once constant('MODULES_DIR') 	. '/faq.php';
         	echo delete_faq_details($param->data);
         }
-        else if($param->method === 'get_outbound_list')
+        else if($param->method === 'get_inout_list')
         {
-            require_once constant('MODULES_DIR') 	. '/outbound_document.php';
-            echo get_outbound_list($param->data);
+            require_once constant('MODULES_DIR') 	. '/inout_documents.php';
+            echo get_inout_list($param->data);
         }
-        else if($param->method === 'add_edit_outbound')
+        else if($param->method === 'add_edit_inout')
         {
-            require_once constant('MODULES_DIR') 	. '/outbound_document.php';
-            echo add_edit_outbound($param->data);
+            require_once constant('MODULES_DIR') 	. '/inout_documents.php';
+            echo add_edit_inout($param->data);
         }
-        else if($param->method === 'get_outbound_details')
+        else if($param->method === 'get_inout_details')
         {
-            require_once constant('MODULES_DIR') 	. '/outbound_document.php';
-            echo get_outbound_details($param->data);
+            require_once constant('MODULES_DIR') 	. '/inout_documents.php';
+            echo get_inout_details($param->data);
         }
-        else if($param->method === 'delete_outbound')
+        else if($param->method === 'delete_inout')
         {
-            require_once constant('MODULES_DIR') 	. '/outbound_document.php';
-            echo delete_outbound($param->data);
+            require_once constant('MODULES_DIR') 	. '/inout_documents.php';
+            echo delete_inout($param->data);
         }
-        else if($param->method === 'outbound_verify_approval')
+        else if($param->method === 'inout_verify_approval')
         {
-            require_once constant('MODULES_DIR') 	. '/outbound_document.php';
-            echo outbound_verify_approval($param->data);
+            require_once constant('MODULES_DIR') 	. '/inout_documents.php';
+            echo inout_verify_approval($param->data);
         }
-        else if($param->method === 'outbound_add_edit_remark')
+        else if($param->method === 'inout_add_edit_remark')
         {
-            require_once constant('MODULES_DIR') 	. '/outbound_document.php';
-            echo outbound_add_edit_remark($param->data);
+            require_once constant('MODULES_DIR') 	. '/inout_documents.php';
+            echo inout_add_edit_remark($param->data);
         }
-        else if($param->method === 'send_email_verifier_approver_outbound')
+        else if($param->method === 'send_email_verifier_approver_inout')
         {
-            require_once constant('MODULES_DIR') 	. '/outbound_document.php';
-            echo send_email_verifier_approver_outbound($param->data);
+            require_once constant('MODULES_DIR') 	. '/inout_documents.php';
+            echo send_email_verifier_approver_inout($param->data);
         }
-        else if($param->method === 'send_email_notification_outbound')
+        else if($param->method === 'send_email_notification_inout')
         {
-            require_once constant('MODULES_DIR') 	. '/outbound_document.php';
-            echo send_email_notification_outbound($param->data);
+            require_once constant('MODULES_DIR') 	. '/inout_documents.php';
+            echo send_email_notification_inout($param->data);
         }
         else if($param->method === 'get_document_archiving_list')
         {
@@ -172,7 +172,7 @@ if(isset($_SERVER['REQUEST_METHOD']))
             require_once constant('MODULES_DIR') 	. '/service_request.php';
             echo delete_service_request($param->data);
         }
-        /*else if($param->method === 'service_request_add_edit_remark')
+        else if($param->method === 'service_request_add_edit_remark')
         {
             require_once constant('MODULES_DIR') 	. '/service_request.php';
             echo service_request_add_edit_remark($param->data);
@@ -181,7 +181,104 @@ if(isset($_SERVER['REQUEST_METHOD']))
         {
             require_once constant('MODULES_DIR') 	. '/service_request.php';
             echo service_request_verify_approval($param->data);
-        }*/
+        }
+
+
+        else if($param->method === 'add_edit_leave')
+        {
+            require_once constant('MODULES_DIR') . '/leave.php';
+            echo add_edit_leave($param->data);
+        }
+        else if($param->method === 'upload_edit_leave')
+        {
+            require_once constant('MODULES_DIR') . '/leave.php';
+            echo upload_edit_leave($param->data);
+        }
+        else if($param->method === 'get_leave_list')
+        {
+            require_once constant('MODULES_DIR') . '/leave.php';
+            echo get_leave_list($param->data);
+        }
+        else if($param->method === 'get_balance_leave')
+        {
+            require_once constant('MODULES_DIR') . '/leave.php';
+            echo get_balance_leave($param->data);
+        }
+        else if($param->method === 'get_leave_details')
+        {
+            require_once constant('MODULES_DIR') . '/leave.php';
+            echo get_leave_details($param->data);
+        }
+        else if($param->method === 'get_holidays')
+        {
+            require_once constant('MODULES_DIR') . '/leave.php';
+            echo get_holidays($param->data);
+        }
+        else if($param->method === 'delete_leave_details')
+        {
+            require_once constant('MODULES_DIR') . '/leave.php';
+            echo delete_leave_details($param->data);
+        }
+        else if($param->method === 'get_leave_by_day')
+        {
+            require_once constant('MODULES_DIR') . '/leave.php';
+            echo get_leave_by_day($param->data);
+        }
+        else if($param->method === 'get_leave_report')
+        {
+            require_once constant('MODULES_DIR') 	. '/leave.php';
+            echo get_leave_report($param->data);
+        }
+        else if($param->method === 'get_leave_dashboard_list')
+        {
+            require_once constant('MODULES_DIR') 	. '/leave.php';
+            echo get_leave_dashboard_list($param->data);
+        }
+        else if($param->method === 'update_leave_attachment_filename')
+        {
+            require_once constant('MODULES_DIR') 	. '/leave.php';
+            echo update_leave_attachment_filename($param->data);
+        }
+        else if($param->method === 'get_leave_info_list')
+        {
+            require_once constant('MODULES_DIR') . '/leaveInfo.php';
+            echo get_leave_info_list($param->data);
+        }
+        else if($param->method === 'leave_edit_verify')
+        {
+            require_once constant('MODULES_DIR') . '/leaveInfo.php';
+            echo leave_edit_verify($param->data);
+        }
+        else if($param->method === 'leave_edit_approve')
+        {
+            require_once constant('MODULES_DIR') . '/leaveInfo.php';
+            echo leave_edit_approve($param->data);
+        }
+        else if($param->method === 'delete_leave_by_id')
+        {
+            require_once constant('MODULES_DIR') . '/leaveInfo.php';
+            echo delete_leave_by_id($param->data);
+        }
+        else if($param->method === 'leave_add_edit_remark')
+        {
+            require_once constant('MODULES_DIR') . '/leaveInfo.php';
+            echo leave_add_edit_remark($param->data);
+        }
+        else if($param->method === 'get_leave_remark')
+        {
+            require_once constant('MODULES_DIR') . '/leaveInfo.php';
+            echo get_leave_remark($param->data);
+        }
+        else if($param->method === 'leave_delete_remark')
+        {
+            require_once constant('MODULES_DIR') . '/leaveInfo.php';
+            echo leave_delete_remark($param->data);
+        }
+        else if($param->method === 'get_underline_list')
+        {
+            require_once constant('MODULES_DIR') . '/leaveInfo.php';
+            echo get_underline_list($param->data);
+        }
 		else
 		{
 			echo handle_fail_response('Please provide valid method');

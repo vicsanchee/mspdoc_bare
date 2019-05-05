@@ -109,7 +109,13 @@ $.fn.get_page_name = function()
 	
 		case 'contract':
 			return 7;
-		case 'outbound_document':
+		case 'leave':
+            return 19;
+        case 'leaveInfo':
+            return 19;
+        case 'leaveReport':
+            return 19;
+		case 'inout_documents':
 			return 16;
 		case 'document_archiving':
 			return 17;

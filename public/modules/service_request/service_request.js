@@ -4,7 +4,6 @@ var SESSIONS_DATA	= '';
 var btn_save,btn_save_remarks,btn_verify_approve;
 var total_selected_files    = 0
 var SERVICE_NO		        = '';
-var SERVICE_DATA            = '';
 var CURRENT_PATH	        = 	'../../';
 
 //START - Category of Request for Service
@@ -19,7 +18,6 @@ STATUS_DRAFT                = '222';
 SEND_VERIFY_STATUS          = '223';
 COMPLETE_STATUS             = '224';
 //END - Status of Request for Service
-
 
 
 $.fn.data_table_features = function()
@@ -68,7 +66,6 @@ $.fn.get_list = function(is_scroll)
                 created_by 		    : $('#dd_created_by_search').val(),
                 company_id		    : $('#dd_company_search').val(),
                 status_id	        : $('#dd_status_search').val(),
-                complete_status_id  : COMPLETE_STATUS,
                 view_all		    : MODULE_ACCESS.view_it_all,
                 start_index		    : RECORD_INDEX,
                 limit			    : LIST_PAGE_LIMIT,
@@ -140,7 +137,7 @@ $.fn.populate_list_form = function(data,is_scroll)
                 var status = '';
                 var verify = '';
                 var approve = '';
-                var json_approval 	= JSON.parse(data[i].sr_data).approval_verify;
+                var json_approval 	= JSON.parse(data[i].approvals);
 
                 if(json_approval)
                 {
@@ -150,7 +147,7 @@ $.fn.populate_list_form = function(data,is_scroll)
                     }
                     else
                     {
-                        if(MODULE_ACCESS.verify_it == 1 && JSON.parse(data[i].sr_data).status_id == SEND_VERIFY_STATUS)
+                        if(MODULE_ACCESS.verify_it == 1 && data[i].status_id == SEND_VERIFY_STATUS)
                         {
                             verify = '<button type="button" class="btn btn-info-alt btn-sm btn-label ladda-button tooltips" data-toggle="tooltip" data-placement="left" data-style="expand-left" data-spinner-color="#000000" title="Verify" onclick="$.fn.verify_approval(unescape( $(this).closest(\'tr\').data(\'value\')),this,1)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><span class="hidden-xs">Verify</span></button>';
                         }
@@ -171,7 +168,7 @@ $.fn.populate_list_form = function(data,is_scroll)
                 {
                     if(MODULE_ACCESS.verify_it == 1)
                     {
-                        if(JSON.parse(data[i].sr_data).status_id == SEND_VERIFY_STATUS)
+                        if(data[i].status_id == SEND_VERIFY_STATUS)
                         {
                             verify = '<button type="button" class="btn btn-info-alt btn-sm btn-label ladda-button tooltips" data-toggle="tooltip" data-placement="left" data-style="expand-left" data-spinner-color="#000000" title="Verify" onclick="$.fn.verify_approval(unescape( $(this).closest(\'tr\').data(\'value\')),this,1)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><span class="hidden-xs">Verify</span></button>';
                         }
@@ -203,50 +200,16 @@ $.fn.save_edit_form = function()
 {
     try
     {
-        if(SERVICE_NO == '') {
-            SERVICE_DATA = {
-                category_id: "",
-                employer_id: "",
-                description: "",
-                unit_price: "",
-                qty: "",
-                amount: "",
-                sst: "",
-                total_amount: "",
-                bank_account_details: "",
-                date_required: "",
-                status_id: "",
-                raise_invoice: {
-                    client_id: "",
-                    contact_person: "",
-                    payment_terms: ""
-                },
-                payment: {
-                    payable_to: ""
-                },
-                advance_loan: {
-                    number_of_repayment: "",
-                    each_repayment_amount: "",
-                    advance_or_loan: "",
-                    current_balance_advance_or_loan: ""
-                },
-                assets: {
-                    type_of_assets: "",
-                    duration: "",
-                    remarks: ""
-                },
-                attachment: null,
-                approval_verify: null,
-                remark_list: null
-            };
-        }
+        var data = {
+            service_no		        : SERVICE_NO,
+            category_id             : $('#dd_category').val(),
+            employer_id             : $('#dd_company').val(),
+            emp_id 				    : SESSIONS_DATA.emp_id
+        };
 
         var attachment = [];
 
-        SERVICE_DATA.category_id = $('#dd_category').val();
-        SERVICE_DATA.employer_id = $('#dd_company').val();
-
-        if(SERVICE_DATA.category_id == RAISE_INVOICE) {
+        if(data.category_id == RAISE_INVOICE) {
             if($('#invoice_form').parsley( 'validate' ) == false)
             {
                 btn_save.stop();
@@ -257,20 +220,20 @@ $.fn.save_edit_form = function()
                 attachment.push($(this)[0].innerText.trim());
             });
 
-            SERVICE_DATA.description                    = $('#txt_invoice_description')	    .val();
-            SERVICE_DATA.unit_price                     = $('#txt_invoice_unit_price')	    .val();
-            SERVICE_DATA.qty                            = $('#txt_invoice_quantity')	    .val();
-            SERVICE_DATA.amount                         = $('#txt_invoice_amount')	        .val();
-            SERVICE_DATA.sst                            = $('#dd_invoice_gst_sst')		    .val();
-            SERVICE_DATA.total_amount                   = $('#txt_invoice_total_amount')	.val();
-            SERVICE_DATA.bank_account_details           = $('#txt_invoice_bank_details')	.val();
-            SERVICE_DATA.status_id                      = $('#dd_invoice_status')			.val();
-            SERVICE_DATA.raise_invoice.client_id        = $('#dd_invoice_client')           .val();
-            SERVICE_DATA.raise_invoice.contact_person   = $('#txt_invoice_contact_person')  .val();
-            SERVICE_DATA.raise_invoice.payment_terms    = $('#dd_invoice_payment_terms')    .val();
-            SERVICE_DATA.attachment                     = attachment;
+            data.description                    = $('#txt_invoice_description')	    .val();
+            data.unit_price                     = $('#txt_invoice_unit_price')	    .val();
+            data.qty                            = $('#txt_invoice_quantity')	    .val();
+            data.amount                         = $('#txt_invoice_amount')	        .val();
+            data.sst                            = $('#dd_invoice_gst_sst')		    .val();
+            data.total_amount                   = $('#txt_invoice_total_amount')	.val();
+            data.bank_account_details           = $('#txt_invoice_bank_details')	.val();
+            data.status_id                      = $('#dd_invoice_status')			.val();
+            data.client_id                      = $('#dd_invoice_client')           .val();
+            data.contact_person                 = $('#txt_invoice_contact_person')  .val();
+            data.payment_terms                  = $('#dd_invoice_payment_terms')    .val();
+            data.attachment                     = attachment;
         }
-        else if(SERVICE_DATA.category_id == PAYMENT) {
+        else if(data.category_id == PAYMENT) {
             if($('#payment_form').parsley( 'validate' ) == false)
             {
                 btn_save.stop();
@@ -281,18 +244,18 @@ $.fn.save_edit_form = function()
                 attachment.push($(this)[0].innerText.trim());
             });
 
-            SERVICE_DATA.description                    = $('#txt_payment_description')	    .val();
-            SERVICE_DATA.unit_price                     = $('#txt_payment_unit_price')	    .val();
-            SERVICE_DATA.qty                            = $('#txt_payment_quantity')	    .val();
-            SERVICE_DATA.amount                         = $('#txt_payment_amount')	        .val();
-            SERVICE_DATA.sst                            = $('#dd_payment_gst_sst')		    .val();
-            SERVICE_DATA.total_amount                   = $('#txt_payment_total_amount')	.val();
-            SERVICE_DATA.bank_account_details           = $('#txt_payment_bank_details')	.val();
-            SERVICE_DATA.status_id                      = $('#dd_payment_status')			.val();
-            SERVICE_DATA.payment.payable_to             = $('#txt_payment_payable_to')      .val();
-            SERVICE_DATA.attachment                     = attachment;;
+            data.description                    = $('#txt_payment_description')	    .val();
+            data.unit_price                     = $('#txt_payment_unit_price')	    .val();
+            data.qty                            = $('#txt_payment_quantity')	    .val();
+            data.amount                         = $('#txt_payment_amount')	        .val();
+            data.sst                            = $('#dd_payment_gst_sst')		    .val();
+            data.total_amount                   = $('#txt_payment_total_amount')	.val();
+            data.bank_account_details           = $('#txt_payment_bank_details')	.val();
+            data.status_id                      = $('#dd_payment_status')			.val();
+            data.payable_to                     = $('#txt_payment_payable_to')      .val();
+            data.attachment                     = attachment;;
         }
-        else if(SERVICE_DATA.category_id == LOAN) {
+        else if(data.category_id == LOAN) {
             if($('#loan_form').parsley( 'validate' ) == false)
             {
                 btn_save.stop();
@@ -303,17 +266,17 @@ $.fn.save_edit_form = function()
                 attachment.push($(this)[0].innerText.trim());
             });
 
-            SERVICE_DATA.description                    = $('#txt_loan_description')	    .val();
-            SERVICE_DATA.amount                         = $('#txt_loan_amount')	            .val();
-            SERVICE_DATA.date_required                  = $('#date_loan_required')			.val();
-            SERVICE_DATA.status_id                      = $('#dd_loan_status')			    .val();
-            SERVICE_DATA.advance_loan.number_of_repayment               = $('#txt_loan_repayment_number')   .val();
-            SERVICE_DATA.advance_loan.each_repayment_amount             = $('#txt_loan_repayment_amount')   .val();
-            SERVICE_DATA.advance_loan.advance_or_loan                   = $('#txt_loan_advance')            .val();
-            SERVICE_DATA.advance_loan.current_balance_advance_or_loan   = $('#txt_loan_balance')            .val();
-            SERVICE_DATA.attachment                     = attachment;
+            data.description                    = $('#txt_loan_description')	    .val();
+            data.amount                         = $('#txt_loan_amount')	            .val();
+            data.date_required                  = $('#date_loan_required')			.val();
+            data.status_id                      = $('#dd_loan_status')			    .val();
+            data.number_of_repayment            = $('#txt_loan_repayment_number')   .val();
+            data.each_repayment_amount          = $('#txt_loan_repayment_amount')   .val();
+            data.advance_or_loan                = $('#txt_loan_advance')            .val();
+            data.balance_advance_or_loan        = $('#txt_loan_balance')            .val();
+            data.attachment                     = attachment;
         }
-        else if(SERVICE_DATA.category_id == ASSET) {
+        else if(data.category_id == ASSET) {
             if($('#asset_form').parsley( 'validate' ) == false)
             {
                 btn_save.stop();
@@ -324,22 +287,15 @@ $.fn.save_edit_form = function()
                 attachment.push($(this)[0].innerText.trim());
             });
 
-            SERVICE_DATA.description                    = $('#txt_asset_description')	    .val();
-            SERVICE_DATA.date_required                  = $('#date_asset_needed')			.val();
-            SERVICE_DATA.status_id                      = $('#dd_asset_status')			    .val();
-            SERVICE_DATA.assets.type_of_assets          = $('#dd_asset_type')               .val();
-            SERVICE_DATA.assets.duration                = $('#txt_asset_duration')          .val();
-            SERVICE_DATA.assets.remarks                 = $('#txt_asset_remarks')           .val();
-            SERVICE_DATA.attachment                     = attachment;
+            data.description                    = $('#txt_asset_description')	    .val();
+            data.date_required                  = $('#date_asset_needed')			.val();
+            data.status_id                      = $('#dd_asset_status')			    .val();
+            data.type_of_assets                 = $('#dd_asset_type')               .val();
+            data.duration                       = $('#txt_asset_duration')          .val();
+            data.asset_remark                   = $('#txt_asset_remark')            .val();
+            data.attachment                     = attachment;
         }
 
-
-        var data	=
-            {
-                service_no		        : SERVICE_NO,
-                service_data            : SERVICE_DATA,
-                emp_id 				    : SESSIONS_DATA.emp_id
-            };
 
         $.fn.write_data
         (
@@ -357,13 +313,13 @@ $.fn.save_edit_form = function()
                     }
                     else
                     {
-                        if(return_data.data.service_data.status_id == SEND_VERIFY_STATUS)
+                        if(return_data.data.status_id == SEND_VERIFY_STATUS)
                         {
-                            $.fn.send_email_verifier_approver_service_request(return_data.data,0);
+                            $.fn.send_email_verifier_approver_service_request(return_data.data);
                         }
                     }
 
-                    $('#h4_primary_no').text('Service Number : ' + return_data.data.service_no);
+                    $('#h4_primary_no').text('Service Request Number : ' + return_data.data.service_no);
                     $.fn.show_right_success_noty('Data has been recorded successfully');
                 }
             },false, btn_save
@@ -389,76 +345,7 @@ $.fn.populate_detail_form = function(data)
     {
         var data 	= JSON.parse(data);
         $.fn.show_hide_form	('EDIT');
-        $('#h4_primary_no')		.text('Document Number : ' + data.service_no);
-
-        /*SERVICE_NO		        = data.service_no;
-        SERVICE_DATA                = JSON.parse(data.sr_data);
-
-        $('#dd_category')       .val(SERVICE_DATA.category_id).change();
-        $('#dd_company')        .val(SERVICE_DATA.employer_id).change();
-
-        if(SERVICE_DATA.category_id == RAISE_INVOICE) {
-            $('#txt_invoice_description')	    .val(SERVICE_DATA.description);
-            $('#txt_invoice_unit_price')	    .val(SERVICE_DATA.unit_price);
-            $('#txt_invoice_quantity')	        .val(SERVICE_DATA.qty);
-            $('#txt_invoice_amount')	        .val(SERVICE_DATA.amount);
-            $('#dd_invoice_gst_sst')		    .val(SERVICE_DATA.sst).change();
-            $('#txt_invoice_total_amount')	    .val(SERVICE_DATA.total_amount);
-            $('#txt_invoice_bank_details')	    .val(SERVICE_DATA.bank_account_details);
-            $('#dd_invoice_client')             .val(SERVICE_DATA.raise_invoice.client_id).change();
-            $('#txt_invoice_contact_person')    .val(SERVICE_DATA.raise_invoice.contact_person);
-            $('#dd_invoice_payment_terms')      .val(SERVICE_DATA.raise_invoice.payment_terms).change();
-            if(data.status_id == COMPLETE_STATUS)
-            {
-                $('#dd_invoice_status')         .attr('disabled','disabled');
-                $('#dd_invoice_status')         .append('<option value="'+SERVICE_DATA.status_id+'">'+data.status_name+'</option>');
-            }
-            $('#dd_invoice_status')			    .val(SERVICE_DATA.status_id).change();
-        }
-        else if(SERVICE_DATA.category_id == PAYMENT) {
-            $('#txt_payment_description')	    .val(SERVICE_DATA.description);
-            $('#txt_payment_unit_price')	    .val(SERVICE_DATA.unit_price);
-            $('#txt_payment_quantity')	        .val(SERVICE_DATA.qty);
-            $('#txt_payment_amount')	        .val(SERVICE_DATA.amount);
-            $('#dd_payment_gst_sst')		    .val(SERVICE_DATA.sst).change();
-            $('#txt_payment_total_amount')	    .val(SERVICE_DATA.total_amount);
-            $('#txt_payment_bank_details')	    .val(SERVICE_DATA.bank_account_details);
-            $('#txt_payment_payable_to')        .val(SERVICE_DATA.payment.payable_to);
-            if(data.status_id == COMPLETE_STATUS)
-            {
-                $('#dd_payment_status')         .attr('disabled','disabled');
-                $('#dd_payment_status')         .append('<option value="'+SERVICE_DATA.status_id+'">'+data.status_name+'</option>');
-            }
-            $('#dd_payment_status')			    .val(SERVICE_DATA.status_id).change();
-        }
-        else if(SERVICE_DATA.category_id == LOAN) {
-            $('#txt_loan_description')	        .val(SERVICE_DATA.description);
-            $('#txt_loan_amount')	            .val(SERVICE_DATA.amount);
-            $('#date_loan_required')			.val(SERVICE_DATA.date_required);
-            $('#txt_loan_repayment_number')     .val(SERVICE_DATA.advance_loan.number_of_repayment );
-            $('#txt_loan_repayment_amount')     .val(SERVICE_DATA.advance_loan.each_repayment_amount);
-            $('#txt_loan_advance')              .val(SERVICE_DATA.advance_loan.advance_or_loan);
-            $('#txt_loan_balance')              .val(SERVICE_DATA.advance_loan.current_balance_advance_or_loan);
-            if(data.status_id == COMPLETE_STATUS)
-            {
-                $('#dd_loan_status')            .attr('disabled','disabled');
-                $('#dd_loan_status')            .append('<option value="'+SERVICE_DATA.status_id+'">'+data.status_name+'</option>');
-            }
-            $('#dd_loan_status')			    .val(SERVICE_DATA.status_id).change();
-        }
-        else if(SERVICE_DATA.category_id == ASSET) {
-            $('#txt_asset_description')	        .val(SERVICE_DATA.description);
-            $('#date_asset_needed')			    .val(SERVICE_DATA.date_required);
-            $('#dd_asset_type')                 .val(SERVICE_DATA.assets.type_of_assets).change();
-            $('#txt_asset_duration')            .val(SERVICE_DATA.assets.duration  );
-            $('#txt_asset_remarks')             .val(SERVICE_DATA.assets.remarks );
-            if(data.status_id == COMPLETE_STATUS)
-            {
-                $('#dd_asset_status')           .attr('disabled','disabled');
-                $('#dd_asset_status')           .append('<option value="'+SERVICE_DATA.status_id+'">'+data.status_name+'</option>');
-            }
-            $('#dd_asset_status')			    .val(SERVICE_DATA.status_id).change();
-        }*/
+        $('#h4_primary_no')		.text('Service Request Number : ' + data.service_no);
 
         $.fn.fetch_data
         (
@@ -467,95 +354,93 @@ $.fn.populate_detail_form = function(data)
             {
                 if(return_data.data.details)
                 {
-                    var data 					    = return_data.data.details;
+                    var data 			    = return_data.data.details;
 
                     SERVICE_NO		        = data.service_no;
-                    SERVICE_DATA            = JSON.parse(data.sr_data);
+                    $('#dd_category')       .val(data.category_id).change();
+                    $('#dd_company')        .val(data.employer_id).change();
 
-                    $('#dd_category')       .val(SERVICE_DATA.category_id).change();
-                    $('#dd_company')        .val(SERVICE_DATA.employer_id).change();
-
-                    if(SERVICE_DATA.category_id == RAISE_INVOICE) {
-                        $('#txt_invoice_description')	    .val(SERVICE_DATA.description);
-                        $('#txt_invoice_unit_price')	    .val(SERVICE_DATA.unit_price);
-                        $('#txt_invoice_quantity')	        .val(SERVICE_DATA.qty);
-                        $('#txt_invoice_amount')	        .val(SERVICE_DATA.amount);
-                        $('#dd_invoice_gst_sst')		    .val(SERVICE_DATA.sst).change();
-                        $('#txt_invoice_total_amount')	    .val(SERVICE_DATA.total_amount);
-                        $('#txt_invoice_bank_details')	    .val(SERVICE_DATA.bank_account_details);
-                        $('#dd_invoice_client')             .val(SERVICE_DATA.raise_invoice.client_id).change();
-                        $('#txt_invoice_contact_person')    .val(SERVICE_DATA.raise_invoice.contact_person);
-                        $('#dd_invoice_payment_terms')      .val(SERVICE_DATA.raise_invoice.payment_terms).change();
-                        if(SERVICE_DATA.status_id == COMPLETE_STATUS)
+                    if(data.category_id == RAISE_INVOICE) {
+                        $('#txt_invoice_description')	    .val(data.description);
+                        $('#txt_invoice_unit_price')	    .val(data.unit_price);
+                        $('#txt_invoice_quantity')	        .val(data.qty);
+                        $('#txt_invoice_amount')	        .val(data.amount);
+                        $('#dd_invoice_gst_sst')		    .val(data.sst).change();
+                        $('#txt_invoice_total_amount')	    .val(data.total_amount);
+                        $('#txt_invoice_bank_details')	    .val(data.bank_account_details);
+                        $('#dd_invoice_client')             .val(data.client_id).change();
+                        $('#txt_invoice_contact_person')    .val(data.contact_person);
+                        $('#dd_invoice_payment_terms')      .val(data.payment_terms).change();
+                        if(data.status_id == COMPLETE_STATUS)
                         {
                             $('#dd_invoice_status')         .attr('disabled','disabled');
-                            $('#dd_invoice_status')         .append('<option value="'+SERVICE_DATA.status_id+'">'+data.status_name+'</option>');
+                            $('#dd_invoice_status')         .append('<option value="'+data.status_id+'">'+data.status_name+'</option>');
                         }
-                        $('#dd_invoice_status')			    .val(SERVICE_DATA.status_id).change();
+                        $('#dd_invoice_status')			    .val(data.status_id).change();
 
-                        var attachment = SERVICE_DATA.attachment;
+                        var attachment = JSON.parse(data.attachment);
                         for(var i = 0; i < attachment.length; i++)
                         {
                             $('#document_invoice').append('<div class="file-upload new"><span class=""><a href="'+data.filepath+attachment[i]+'" target="_blank">'+attachment[i]+'</a></span></div>');
                         }
                     }
-                    else if(SERVICE_DATA.category_id == PAYMENT) {
-                        $('#txt_payment_description')	    .val(SERVICE_DATA.description);
-                        $('#txt_payment_unit_price')	    .val(SERVICE_DATA.unit_price);
-                        $('#txt_payment_quantity')	        .val(SERVICE_DATA.qty);
-                        $('#txt_payment_amount')	        .val(SERVICE_DATA.amount);
-                        $('#dd_payment_gst_sst')		    .val(SERVICE_DATA.sst).change();
-                        $('#txt_payment_total_amount')	    .val(SERVICE_DATA.total_amount);
-                        $('#txt_payment_bank_details')	    .val(SERVICE_DATA.bank_account_details);
-                        $('#txt_payment_payable_to')        .val(SERVICE_DATA.payment.payable_to);
-                        if(SERVICE_DATA.status_id == COMPLETE_STATUS)
+                    else if(data.category_id == PAYMENT) {
+                        $('#txt_payment_description')	    .val(data.description);
+                        $('#txt_payment_unit_price')	    .val(data.unit_price);
+                        $('#txt_payment_quantity')	        .val(data.qty);
+                        $('#txt_payment_amount')	        .val(data.amount);
+                        $('#dd_payment_gst_sst')		    .val(data.sst).change();
+                        $('#txt_payment_total_amount')	    .val(data.total_amount);
+                        $('#txt_payment_bank_details')	    .val(data.bank_account_details);
+                        $('#txt_payment_payable_to')        .val(data.payable_to);
+                        if(data.status_id == COMPLETE_STATUS)
                         {
                             $('#dd_payment_status')         .attr('disabled','disabled');
-                            $('#dd_payment_status')         .append('<option value="'+SERVICE_DATA.status_id+'">'+data.status_name+'</option>');
+                            $('#dd_payment_status')         .append('<option value="'+data.status_id+'">'+data.status_name+'</option>');
                         }
-                        $('#dd_payment_status')			    .val(SERVICE_DATA.status_id).change();
+                        $('#dd_payment_status')			    .val(data.status_id).change();
 
-                        var attachment = SERVICE_DATA.attachment;
+                        var attachment = JSON.parse(data.attachment);
                         for(var i = 0; i < attachment.length; i++)
                         {
                             $('#document_payment').append('<div class="file-upload new"><span class=""><a href="'+data.filepath+attachment[i]+'" target="_blank">'+attachment[i]+'</a></span></div>');
                         }
                     }
-                    else if(SERVICE_DATA.category_id == LOAN) {
-                        $('#txt_loan_description')	        .val(SERVICE_DATA.description);
-                        $('#txt_loan_amount')	            .val(SERVICE_DATA.amount);
-                        $('#date_loan_required')			.val(SERVICE_DATA.date_required);
-                        $('#txt_loan_repayment_number')     .val(SERVICE_DATA.advance_loan.number_of_repayment );
-                        $('#txt_loan_repayment_amount')     .val(SERVICE_DATA.advance_loan.each_repayment_amount);
-                        $('#txt_loan_advance')              .val(SERVICE_DATA.advance_loan.advance_or_loan);
-                        $('#txt_loan_balance')              .val(SERVICE_DATA.advance_loan.current_balance_advance_or_loan);
-                        if(SERVICE_DATA.status_id == COMPLETE_STATUS)
+                    else if(data.category_id == LOAN) {
+                        $('#txt_loan_description')	        .val(data.description);
+                        $('#txt_loan_amount')	            .val(data.amount);
+                        $('#date_loan_required')			.val(data.date_required);
+                        $('#txt_loan_repayment_number')     .val(data.number_of_repayment );
+                        $('#txt_loan_repayment_amount')     .val(data.each_repayment_amount);
+                        $('#txt_loan_advance')              .val(data.advance_or_loan);
+                        $('#txt_loan_balance')              .val(data.balance_advance_or_loan);
+                        if(data.status_id == COMPLETE_STATUS)
                         {
                             $('#dd_loan_status')            .attr('disabled','disabled');
-                            $('#dd_loan_status')            .append('<option value="'+SERVICE_DATA.status_id+'">'+data.status_name+'</option>');
+                            $('#dd_loan_status')            .append('<option value="'+data.status_id+'">'+data.status_name+'</option>');
                         }
-                        $('#dd_loan_status')			    .val(SERVICE_DATA.status_id).change();
+                        $('#dd_loan_status')			    .val(data.status_id).change();
 
-                        var attachment = SERVICE_DATA.attachment;
+                        var attachment = JSON.parse(data.attachment);
                         for(var i = 0; i < attachment.length; i++)
                         {
                             $('#document_loan').append('<div class="file-upload new"><span class=""><a href="'+data.filepath+attachment[i]+'" target="_blank">'+attachment[i]+'</a></span></div>');
                         }
                     }
-                    else if(SERVICE_DATA.category_id == ASSET) {
-                        $('#txt_asset_description')	        .val(SERVICE_DATA.description);
-                        $('#date_asset_needed')			    .val(SERVICE_DATA.date_required);
-                        $('#dd_asset_type')                 .val(SERVICE_DATA.assets.type_of_assets).change();
-                        $('#txt_asset_duration')            .val(SERVICE_DATA.assets.duration  );
-                        $('#txt_asset_remarks')             .val(SERVICE_DATA.assets.remarks );
-                        if(SERVICE_DATA.status_id == COMPLETE_STATUS)
+                    else if(data.category_id == ASSET) {
+                        $('#txt_asset_description')	        .val(data.description);
+                        $('#date_asset_needed')			    .val(data.date_required);
+                        $('#dd_asset_type')                 .val(JSON.parse(data.type_of_assets)).change();
+                        $('#txt_asset_duration')            .val(data.duration);
+                        $('#txt_asset_remarks')             .val(data.asset_remark);
+                        if(data.status_id == COMPLETE_STATUS)
                         {
                             $('#dd_asset_status')           .attr('disabled','disabled');
-                            $('#dd_asset_status')           .append('<option value="'+SERVICE_DATA.status_id+'">'+data.status_name+'</option>');
+                            $('#dd_asset_status')           .append('<option value="'+data.status_id+'">'+data.status_name+'</option>');
                         }
-                        $('#dd_asset_status')			    .val(SERVICE_DATA.status_id).change();
+                        $('#dd_asset_status')			    .val(data.status_id).change();
 
-                        var attachment = SERVICE_DATA.attachment;
+                        var attachment = JSON.parse(data.attachment);
                         for(var i = 0; i < attachment.length; i++)
                         {
                             $('#document_asset').append('<div class="file-upload new"><span class=""><a href="'+data.filepath+attachment[i]+'" target="_blank">'+attachment[i]+'</a></span></div>');
@@ -626,13 +511,87 @@ $.fn.delete_service_request = function(data)
 };
 
 
+$.fn.verify_approval = function(data,event,status)
+{
+    try
+    {
+        btn_verify_approve = Ladda.create(event);
+        btn_verify_approve.start();
+
+        var data 	    = JSON.parse(data);
+
+        var approvals =
+            {
+                verify  : {
+                    verified        : null,
+                    verified_by     : null,
+                    verified_date   : null
+                },
+                approve : {
+                    approved        : null,
+                    approved_by     : null,
+                    approved_date   : null
+                }
+            };
+
+        var status_id = null;
+
+        if(status == 1){
+            approvals.verify.verified = 1;
+            approvals.verify.verified_by = SESSIONS_DATA.emp_id;
+            approvals.verify.verified_date = moment().format('YYYY-MM-DD HH:mm:ss');
+            status_id = data.status_id;
+        }
+        if(status == 2){
+            approvals = JSON.parse(data.approvals);
+            approvals.approve.approved = 1;
+            approvals.approve.approved_by = SESSIONS_DATA.emp_id;
+            approvals.approve.approved_date = moment().format('YYYY-MM-DD HH:mm:ss');
+            status_id = COMPLETE_STATUS;
+        }
+
+        var data_approvals	=
+            {
+                service_no          : data.service_no,
+                approvals           : approvals,
+                status_id           : status_id,
+                module_id			: MODULE_ACCESS.module_id,
+                emp_id 			    : SESSIONS_DATA.emp_id
+            };
+
+        $.fn.write_data
+        (
+            $.fn.generate_parameter('service_request_verify_approval', data_approvals),
+            function(return_data)
+            {
+                if(return_data.data)
+                {
+                    if(status == 2)
+                    {
+                        $.fn.add_remark_for_complete(return_data.data);
+                    }
+                    else
+                    {
+                        RECORD_INDEX = 0;
+                        $.fn.get_list(false);
+                    }
+                }
+            },false,btn_verify_approve
+        );
+    }
+    catch(err)
+    {
+        $.fn.log_error(arguments.callee.caller,err.message);
+    }
+};
+
+
 $.fn.view_remark = function(data)
 {
     try
     {
         var data 	    = JSON.parse(data);
-        var sr_data     = JSON.parse(data.sr_data);
-        var remarks     = sr_data.remark_list;
+        var remarks     = JSON.parse(data.remarks);
 
         if (remarks) // check if there is any data, precaution
         {
@@ -682,8 +641,7 @@ $.fn.add_edit_remark = function()
             return;
         }
         var data        = JSON.parse($('#service_request').attr('data-value'));
-        var sr_data     = JSON.parse(data.sr_data);
-        var remarks     = sr_data.remark_list;
+        var remarks     = JSON.parse(data.remarks);
 
         var remark_rec =
             {
@@ -702,18 +660,16 @@ $.fn.add_edit_remark = function()
             remarks.push(remark_rec);
         }
 
-        sr_data.remark_list = remarks;
-
         var data_service	=
             {
                 service_no      : data.service_no,
-                service_data	: sr_data,
+                remarks     	: remarks,
                 emp_id          : SESSIONS_DATA.emp_id
             };
 
         $.fn.write_data
         (
-            $.fn.generate_parameter('add_edit_service_request', data_service),
+            $.fn.generate_parameter('service_request_add_edit_remark', data_service),
             function(return_data)
             {
                 if(return_data.data)
@@ -736,27 +692,76 @@ $.fn.add_edit_remark = function()
 };
 
 
-$.fn.delete_remark = function(data)
+$.fn.add_remark_for_complete = function(data)
 {
     try
     {
-        var data            = JSON.parse(data);
-        var sr_data         = JSON.parse(data.sr_data);
-        var delete_data     = JSON.parse(data.delete_data);
+        var remarks     = JSON.parse(data.remarks);
 
-        var remarks         = sr_data.remark_list;
-        sr_data.remark_list = remarks.filter(obj => obj.remarks != delete_data.remarks);
+        var remark_rec =
+            {
+                remarks         : data.remarks_new,
+                created_by      : SESSIONS_DATA.name,
+                created_date    : moment().format('YYYY-MM-DD HH:mm:ss')
+            };
 
-        var data_service	=
+        if(remarks)
+        {
+            remarks.push(remark_rec);
+        }
+        else
+        {
+            remarks = [];
+            remarks.push(remark_rec);
+        }
+
+        var data	=
             {
                 service_no      : data.service_no,
-                service_data	: sr_data,
+                remarks	        : remarks,
                 emp_id          : SESSIONS_DATA.emp_id
             };
 
         $.fn.write_data
         (
-            $.fn.generate_parameter('add_edit_service_request', data_service),
+            $.fn.generate_parameter('service_request_add_edit_remark', data),
+            function(return_data)
+            {
+                if(return_data.data)
+                {
+                    RECORD_INDEX = 0;
+                    $.fn.get_list(false);
+                }
+
+            },false
+        );
+    }
+    catch(err)
+    {
+        $.fn.log_error(arguments.callee.caller,err.message);
+    }
+};
+
+
+$.fn.delete_remark = function(data)
+{
+    try
+    {
+        var data            = JSON.parse(data);
+        var remarks         = JSON.parse(data.remarks);
+        var delete_data     = JSON.parse(data.delete_data);
+        remarks             = remarks.filter(obj => obj.remarks != delete_data.remarks);
+
+        var data_service	=
+            {
+                service_no      : data.service_no,
+                remarks     	: remarks,
+                emp_id          : SESSIONS_DATA.emp_id
+            };
+
+        $.fn.write_data
+        (
+            $.fn.generate_parameter('service_request_add_edit_remark', data_service),
             function(return_data)
             {
                 if(return_data.data)
@@ -771,95 +776,6 @@ $.fn.delete_remark = function(data)
         );
 
         $('#remarkListModal').modal('hide');
-    }
-    catch(err)
-    {
-        $.fn.log_error(arguments.callee.caller,err.message);
-    }
-};
-
-
-$.fn.verify_approval = function(data,event,status)
-{
-    try
-    {
-        btn_verify_approve = Ladda.create(event);
-        btn_verify_approve.start();
-
-        var data 	    = JSON.parse(data);
-        var sr_data     = JSON.parse(data.sr_data);
-
-        var approvals =
-            {
-                verify  : {
-                    verified        : null,
-                    verified_by     : null,
-                    verified_date   : null
-                },
-                approve : {
-                    approved        : null,
-                    approved_by     : null,
-                    approved_date   : null
-                }
-            };
-
-
-        if(status == 1){
-            approvals.verify.verified = 1;
-            approvals.verify.verified_by = SESSIONS_DATA.emp_id;
-            approvals.verify.verified_date = moment().format('YYYY-MM-DD HH:mm:ss');
-            $.fn.send_email_verifier_approver_service_request(data,1);
-        }
-        if(status == 2){
-            approvals = sr_data.approval_verify;
-            approvals.approve.approved = 1;
-            approvals.approve.approved_by = SESSIONS_DATA.emp_id;
-            approvals.approve.approved_date = moment().format('YYYY-MM-DD HH:mm:ss');
-            sr_data.status_id = COMPLETE_STATUS;
-
-            var remarks     = sr_data.remark_list;
-            var remark_rec =
-                {
-                    remarks         : data.complete_status_name,
-                    created_by      : SESSIONS_DATA.name,
-                    created_date    : moment().format('YYYY-MM-DD HH:mm:ss')
-                };
-            if(remarks)
-            {
-                remarks.push(remark_rec);
-            }
-            else
-            {
-                remarks = [];
-                remarks.push(remark_rec);
-            }
-            sr_data.remark_list = remarks;
-
-            $.fn.send_email_verifier_approver_service_request(data,2);
-        }
-
-        sr_data.approval_verify = approvals;
-
-        var data_service	=
-            {
-                service_no      : data.service_no,
-                service_data	: sr_data,
-                emp_id          : SESSIONS_DATA.emp_id
-            };
-
-        $.fn.write_data
-        (
-            $.fn.generate_parameter('add_edit_service_request', data_service),
-            function(return_data)
-            {
-                if(return_data.data)
-                {
-                    RECORD_INDEX = 0;
-                    $.fn.get_list(false);
-                }
-            },false,btn_verify_approve
-        );
-
     }
     catch(err)
     {
@@ -884,7 +800,6 @@ $.fn.reset_form = function(form)
         else if(form == 'form')
         {
             SERVICE_NO		                = '';
-            SERVICE_DATA                    = '';
             $('#dd_category')			    .val('').change();
             $('#dd_company')		        .val('').change();
 
@@ -1474,16 +1389,16 @@ $.fn.upload_file  = function(param)
         let failed_file     = [];
 
         var id_doc = '';
-        if(param.service_data.category_id == RAISE_INVOICE) {
+        if(param.category_id == RAISE_INVOICE) {
             id_doc = 'document_invoice';
         }
-        if(param.service_data.category_id == PAYMENT) {
+        if(param.category_id == PAYMENT) {
             id_doc = 'document_payment';
         }
-        if(param.service_data.category_id == LOAN) {
+        if(param.category_id == LOAN) {
             id_doc = 'document_loan';
         }
-        if(param.service_data.category_id == ASSET) {
+        if(param.category_id == ASSET) {
             id_doc = 'document_asset';
         }
 
@@ -1506,9 +1421,9 @@ $.fn.upload_file  = function(param)
                     {
                         total_completed += 1;
                         if(total_files == total_completed){
-                            if(param.service_data.status_id == SEND_VERIFY_STATUS)
+                            if(param.status_id == SEND_VERIFY_STATUS)
                             {
-                                $.fn.send_email_verifier_approver_service_request(param,0);
+                                $.fn.send_email_verifier_approver_service_request(param);
                             }
                         }
                         console.log(result);
@@ -1525,7 +1440,7 @@ $.fn.upload_file  = function(param)
     }
 };
 
-$.fn.send_email_verifier_approver_service_request = function(param,type)
+$.fn.send_email_verifier_approver_service_request = function(param)
 {
     try
     {
@@ -1533,16 +1448,8 @@ $.fn.send_email_verifier_approver_service_request = function(param,type)
             {
                 service_no					    : param.service_no,
                 module_id					    : MODULE_ACCESS.module_id,
-                emp_id 							: SESSIONS_DATA.emp_id,
-                email_type                      : type,
-                attachment                      : []
+                emp_id 							: SESSIONS_DATA.emp_id
             };
-
-        if(param.sr_data)
-        {
-            param.service_data = JSON.parse(param.sr_data);
-        }
-        data.attachment = param.service_data.attachment;
 
         $.fn.write_data
         (

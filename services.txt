@@ -1,0 +1,98 @@
+else if($param->method === 'add_edit_leave')
+        {
+            require_once constant('MODULES_DIR') . '/leave.php';
+            echo add_edit_leave($param->data);
+        }
+		else if($param->method === 'upload_edit_leave')
+        {
+            require_once constant('MODULES_DIR') . '/leave.php';
+            echo upload_edit_leave($param->data);
+        }
+		else if($param->method === 'get_leave_list')
+        {
+            require_once constant('MODULES_DIR') . '/leave.php';
+            echo get_leave_list($param->data);
+        }
+		else if($param->method === 'get_balance_leave')
+        {
+            require_once constant('MODULES_DIR') . '/leave.php';
+            echo get_balance_leave($param->data);
+        }
+		else if($param->method === 'get_leave_details')
+        {
+            require_once constant('MODULES_DIR') . '/leave.php';
+            echo get_leave_details($param->data);
+        }
+		else if($param->method === 'get_holidays')
+        {
+            require_once constant('MODULES_DIR') . '/leave.php';
+            echo get_holidays($param->data);
+        }
+		else if($param->method === 'delete_leave_details')
+		{
+		    require_once constant('MODULES_DIR') . '/leave.php';
+		    echo delete_leave_details($param->data);
+		}
+        else if($param->method === 'get_leave_by_day')
+        {
+            require_once constant('MODULES_DIR') . '/leave.php';
+            echo get_leave_by_day($param->data);
+        }
+        else if($param->method === 'get_leave_report')
+        {
+        	require_once constant('MODULES_DIR') 	. '/leave.php';
+        	echo get_leave_report($param->data);
+        }
+        else if($param->method === 'get_leave_dashboard_list')
+        {
+        	require_once constant('MODULES_DIR') 	. '/leave.php';
+        	echo get_leave_dashboard_list($param->data);
+        }
+        else if($param->method === 'update_leave_attachment_filename')
+        {
+        	require_once constant('MODULES_DIR') 	. '/leave.php';
+        	echo update_leave_attachment_filename($param->data);
+        }
+        
+        
+        
+		else if($param->method === 'get_leave_info_list')
+        {
+            require_once constant('MODULES_DIR') . '/leaveInfo.php';
+            echo get_leave_info_list($param->data);
+        }
+        else if($param->method === 'leave_edit_verify')
+        {
+            require_once constant('MODULES_DIR') . '/leaveInfo.php';
+            echo leave_edit_verify($param->data);
+        }
+		else if($param->method === 'leave_edit_approve')
+        {
+            require_once constant('MODULES_DIR') . '/leaveInfo.php';
+            echo leave_edit_approve($param->data);
+        }
+		else if($param->method === 'delete_leave_by_id')
+        {
+            require_once constant('MODULES_DIR') . '/leaveInfo.php';
+            echo delete_leave_by_id($param->data);
+        }
+		else if($param->method === 'leave_add_edit_remark')
+        {
+            require_once constant('MODULES_DIR') . '/leaveInfo.php';
+            echo leave_add_edit_remark($param->data);
+        }
+		else if($param->method === 'get_leave_remark')
+        {
+            require_once constant('MODULES_DIR') . '/leaveInfo.php';
+            echo get_leave_remark($param->data);
+        }
+		else if($param->method === 'leave_delete_remark')
+		{
+            require_once constant('MODULES_DIR') . '/leaveInfo.php';
+		    echo leave_delete_remark($param->data);
+		}
+		else if($param->method === 'get_underline_list')
+		{
+            require_once constant('MODULES_DIR') . '/leaveInfo.php';
+		    echo get_underline_list($param->data);
+		}

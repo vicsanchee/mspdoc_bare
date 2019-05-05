@@ -532,7 +532,7 @@ $asset_type        = db_query('id,descr','cms_master_list',"category_id = 20");
                                         </div>
                                         <label class="control-label col-sm-2">Remarks</label>
                                         <div class="col-sm-4">
-                                            <textarea id="txt_asset_remarks" class="form-control marginBottom10px" required="required"></textarea>
+                                            <textarea id="txt_asset_remark" class="form-control marginBottom10px" required="required"></textarea>
                                         </div>
                                     </div>
 

@@ -101,7 +101,7 @@ else if($page_name == 'admin_dash.php')
 	echo include_js_files($current_path . 'assets/plugins/form-daterangepicker/moment.min.js');
 	echo include_js_files($current_path . 'assets/plugins/form-daterangepicker/daterangepicker.min.js');
 }
-else if($page_name == 'outbound_document.php')
+else if($page_name == 'inout_documents.php')
 {
     echo include_js_files($current_path . 'assets/plugins/form-daterangepicker/moment.min.js');
     echo include_js_files($current_path . 'assets/plugins/select2-4.0.6-rc.1/dist/js/select2.min.js');
@@ -145,6 +145,35 @@ else if($page_name == 'service_request.php')
     echo include_js_files($current_path . 'assets/js/jspdf/plugins/jspdf.plugin.autotable.js');
     echo include_js_files($current_path . 'assets/js/jspdf/plugins/html2canvas.js');
     echo include_js_files($current_path . 'assets/js/jspdf/exportpdf.js');
+}
+else if($page_name == 'leave.php')
+{
+    echo include_js_files($current_path . 'assets/plugins/form-select2/select2.min.js');
+    echo include_js_files($current_path . 'assets/plugins/form-daterangepicker/moment.min.js');
+    echo include_js_files($current_path . 'assets/plugins/form-daterangepicker/daterangepicker.min.js');
+    echo include_js_files($current_path . 'assets/plugins/bootstrap-toggle/js/bootstrap-toggle.min.js');
+    echo include_js_files($current_path . 'assets/plugins/form-parsley/parsley.min.js');					   // form validations
+    echo include_js_files($current_path . 'assets/plugins/jquery-fileupload/js/jquery.iframe-transport.js');   // file upload
+    echo include_js_files($current_path . 'assets/plugins/jquery-fileupload/js/jquery.fileupload.js');         // file upload
+    echo include_js_files($current_path . 'assets/plugins/datatables/jquery.dataTables.min.js');         	   // data table
+    echo include_js_files($current_path . 'assets/plugins/bootbox/bootbox.min.js');
+}
+else if($page_name == 'leaveInfo.php')
+{
+    echo include_js_files($current_path . 'assets/plugins/form-select2/select2.min.js');
+    echo include_js_files($current_path . 'assets/plugins/form-daterangepicker/moment.min.js');
+    echo include_js_files($current_path . 'assets/plugins/form-daterangepicker/daterangepicker.min.js');
+    echo include_js_files($current_path . 'assets/plugins/form-parsley/parsley.min.js');					   // form validations
+    echo include_js_files($current_path . 'assets/plugins/datatables/jquery.dataTables.min.js');         	   // data table
+    echo include_js_files($current_path . 'assets/plugins/bootbox/bootbox.min.js');         	   			   // modal prompt
+}
+else if($page_name == 'leaveReport.php')
+{
+    echo include_js_files($current_path . 'assets/plugins/form-select2/select2.min.js');
+    echo include_js_files($current_path . 'assets/plugins/form-daterangepicker/moment.min.js');
+    echo include_js_files($current_path . 'assets/plugins/form-daterangepicker/daterangepicker.min.js');
+    echo include_js_files($current_path . 'assets/plugins/form-parsley/parsley.min.js');					   // form validations
+    echo include_js_files($current_path . 'assets/plugins/datatables/jquery.dataTables.min.js');         	   // data table
 }
 if (file_exists($page_name_without_ext . '.js'))
 {
