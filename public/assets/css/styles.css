@@ -191,6 +191,14 @@ th {
   flex-direction: column;
   border-radius: 50%;
 }
+
+.toggle.btn-sm {
+  min-width: 72px !important;
+}
+
+.margin-bottom-0 {
+  margin-bottom: 0px !important;
+}
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
   *,

@@ -147,7 +147,7 @@ elseif( $_SESSION['is_supervisor'] == 1)
                                         <th>Start Date</th>
 										<th>End Date</th>
                                         <th>Type</th>
-                                        <th>Days</th>
+                                        <th>Days/Hours</th>
 										<th>Reason</th>
                                         <th>Status</th>
                                         <th>Action</th>
@@ -193,7 +193,8 @@ elseif( $_SESSION['is_supervisor'] == 1)
                             	<div class="col-sm-12">
                                     <div class="panel panel-grape">
                                         <div class="panel-body">
-                                            <div class="col-sm-12" id="leave_details">
+                                            <div id="div_leave_summary">
+
                                             </div>
                                         </div>
                                     </div>
@@ -214,7 +215,7 @@ elseif( $_SESSION['is_supervisor'] == 1)
 														<input type="checkbox" class="group-checkable" id="group_checkbox" />
 													</th>
                                                     <th>Date</th>
-                                                    <th>No. of Days</th>
+                                                    <th>No. of Days/Hours</th>
                                                     <th>Action</th>
                                 					<th>Payment</th>
                                                 </tr>

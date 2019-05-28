@@ -19,6 +19,11 @@ LEAVE_ID = '';
 NOOFDAYS = '';
 BALANCE_LEAVE = 0;
 
+AN_LEAVE_ID = '47';
+MC_LEAVE_ID = '48';
+EM_LEAVE_ID = '55';
+TIME_OFF_ID = '227';
+
 
 $.fn.data_table_features = function ()
 {
@@ -114,14 +119,11 @@ $.fn.get_leave_details = function ()
 {
     try
     {
+
         var data =
-        {
-            an_type_id: 47,
-            me_type_id: 48,
-            em_type_id: 55,
-            up_type_id: 194,
-            emp_id: SESSIONS_DATA.emp_id
-        };
+            {
+                emp_id: SESSIONS_DATA.emp_id
+            };
 
         $.fn.fetch_data
         (
@@ -130,54 +132,7 @@ $.fn.get_leave_details = function ()
             {
                 if (return_data)
                 {
-                    let data =
-                    {
-                        an_leave_no_of_days         : 0,
-                        an_leave_brought_forward    : 0,
-                        me_leave_no_of_days         : 0,
-                        me_leave_brought_forward    : 0,
-                        an_leave_taken              : 0,
-                        me_leave_taken              : 0,
-                        an_paid_leave_taken         : 0,
-                        me_paid_leave_taken         : 0,
-                        em_leave_taken              : 0
-                    };
-
-                    if (return_data.data.an_leave_entitle)
-                    {
-                        data.an_leave_no_of_days = return_data.data.an_leave_entitle.no_of_days;
-                        data.an_leave_brought_forward = return_data.data.an_leave_entitle.brought_forward;
-                    }
-                    if (return_data.data.me_leave_entitle)
-                    {
-                        data.me_leave_no_of_days = return_data.data.me_leave_entitle.no_of_days;
-                        data.me_leave_brought_forward = return_data.data.me_leave_entitle.brought_forward;
-                    }
-                    if  (return_data.data.an_leave_taken.taken_days)
-                    {
-                        data.an_leave_taken = return_data.data.an_leave_taken.taken_days;
-                    }
-                    if (return_data.data.me_leave_taken.taken_days)
-                    {
-                        data.me_leave_taken = return_data.data.me_leave_taken.taken_days;
-                    }
-                    if (return_data.data.an_paid_leave_taken.taken_days)
-                    {
-                        data.an_paid_leave_taken = return_data.data.an_paid_leave_taken.taken_days;
-                    }
-                    if (return_data.data.me_paid_leave_taken.taken_days)
-                    {
-                        data.me_paid_leave_taken = return_data.data.me_paid_leave_taken.taken_days;
-                    }
-                    if (return_data.data.an_leave_taken.em_taken)
-                    {
-                        data.em_leave_taken = return_data.data.an_leave_taken.em_taken;
-                    }
-
-                    $.fn.populate_leave_details(data);
-                    // $.fn.populate_leave_details(an_leave_no_of_days, an_leave_brought_forward, an_leave_taken, an_paid_leave_taken, me_leave_no_of_days, me_leave_brought_forward, me_leave_taken, me_paid_leave_taken);
-
-
+                    $.fn.populate_leave_details(return_data.data);
                 }
             }, true
         );
@@ -192,44 +147,60 @@ $.fn.populate_leave_details = function (data)
 {
     try
     {
-        $('#disp_an_no_of_days').html(parseFloat(data.an_leave_no_of_days).toFixed(1));
-        $('#disp_an_brought_forward').html(parseFloat(data.an_leave_brought_forward).toFixed(1));
-        $('#disp_an_taken_paid').html(parseFloat(data.an_paid_leave_taken).toFixed(1));
-        $('#disp_an_taken_unpaid').html((parseFloat(data.an_leave_taken) - parseFloat(data.an_paid_leave_taken)).toFixed(1));
-        $('#disp_an_taken_emergency').html(parseFloat(data.em_leave_taken).toFixed(1)  + " / 4.0");
-        $('#disp_an_balance').html((parseFloat(data.an_leave_no_of_days) + parseFloat(data.an_leave_brought_forward) - parseFloat(data.an_leave_taken)).toFixed(1));
+        var row = '';
 
-        $('#disp_me_no_of_days').html(parseFloat(data.me_leave_no_of_days).toFixed(1));
-        $('#disp_me_taken_paid').html(parseFloat(data.me_paid_leave_taken).toFixed(1));
-        $('#disp_me_taken_unpaid').html((parseFloat(data.me_leave_taken) - parseFloat(data.me_paid_leave_taken)).toFixed(1));
-        $('#disp_me_balance').html((parseFloat(data.me_leave_no_of_days) - parseFloat(data.me_leave_taken)).toFixed(1));
+        for(var i = 0; i < data.length; i++) {
 
-        // var leave_info = '<h3 class="text-center">Approved Leave Summary</h3>';
-        //
-        // leave_info += '<table class="table table-responsive text-center">';
-        // leave_info += '<thead><tr>';
-        // leave_info += '<th colspan="4"><h4>Annual Leave(Days)</h4></th>';
-        // leave_info += '</tr></thead>';
-        // leave_info += '<tbody><tr>';
-        // leave_info += '<td><h4><span class="text-info">Entitle for this year<br /><span class="text-primary">' + parseFloat(an_leave_no_of_days).toFixed(1) + '</span></span></h4></td>';
-        // leave_info += '<td><h4><span class="text-info">Brought Forward<br /><span class="text-primary">' + parseFloat(an_leave_brought_forward).toFixed(1) + '</span></span></h4></td>';
-        // leave_info += '<td><h4><span class="text-info">Taken in This Year<br /><span class="text-primary">Paid : ' + parseFloat(an_paid_leave_taken).toFixed(1) + '&nbsp;|&nbsp;' + 'Unpaid : ' + (parseFloat(an_leave_taken) - parseFloat(an_paid_leave_taken)).toFixed(1) + '</span></span></h4></td>';
-        // leave_info += '<td><h4><span class="text-info">Available Leave<br /><span class="text-primary">' + ((parseFloat(an_leave_no_of_days) + parseFloat(an_leave_brought_forward)) - parseFloat(an_paid_leave_taken)).toFixed(1) + '</span></span></h4></td>';
-        // leave_info += '</tbody></tr>';
-        // leave_info += '</table>';
-        //
-        // leave_info += '<table class="table table-responsive text-center">';
-        // leave_info += '<thead><tr>';
-		// leave_info += '<th colspan="3"><h4>Medical Leave(Days)</h4></th>';
-        // leave_info += '</tr></thead>';
-        // leave_info += '<tbody><tr>';
-        // leave_info += '<td><h4><span class="text-info">Entitle for this year<br /><span class="text-primary">' + parseFloat(me_leave_no_of_days).toFixed(1) + '</span></span></h4></td>';
-        // leave_info += '<td><h4><span class="text-info">Taken in This Year<br /><span class="text-primary">Paid : ' + parseFloat(me_paid_leave_taken).toFixed(1) + '&nbsp;|&nbsp;' + 'Unpaid : ' + (parseFloat(me_leave_taken) - parseFloat(me_paid_leave_taken)).toFixed(1) + '</span></span></h4></td>';
-        // leave_info += '<td><h4><span class="text-info">Available Leave<br /><span class="text-primary">' + ((parseFloat(me_leave_no_of_days) + parseFloat(me_leave_brought_forward)) - parseFloat(me_paid_leave_taken)).toFixed(1) + '</span></span></h4></td>';
-        // leave_info += '</tbody></tr>';
-        // leave_info += '</table>';
-        //
-        // $('#leave_details').html(leave_info);
+            var entitle_leave = data[i].entitle_leave ? data[i].entitle_leave : 0;
+            var brought_forward = data[i].brought_forward ? data[i].brought_forward : 0;
+            if(data[i].leave_id == TIME_OFF_ID) {
+                entitle_leave = parseFloat(entitle_leave) * 8;
+                brought_forward = parseFloat(brought_forward) * 8;
+            }
+            var paid_leave_taken = data[i].paid_leave_taken ? data[i].paid_leave_taken : 0;
+            var unpaid_leave_taken = data[i].unpaid_leave_taken ? data[i].unpaid_leave_taken : 0;
+            var available_leave = (parseFloat(entitle_leave) + parseFloat(brought_forward)) - (parseFloat(paid_leave_taken));
+
+            row += '<div class="row">';
+
+            row += '<div class="col-md-12 clearfix">' +
+                '<h4 class="pull-left" style="margin: 0px;">' + data[i].leave_type + ' <small>(' + (data[i].leave_id == TIME_OFF_ID ? 'Hours' : 'Days') + ')</small></h4>' +
+                '</div>';
+
+            row += '<div class="col-xs-6 col-md-3">' +
+                '<h3 class="text-center text-primary margin-bottom-0">' + parseFloat(entitle_leave).toFixed(1) + '</h3>' +
+                '<div class="text-center text-info">Entitled for this year</div>' +
+                '</div>';
+
+            row += '<div class="col-xs-6 col-md-2">' +
+                '<h3 class="text-center text-primary margin-bottom-0">' + parseFloat(brought_forward).toFixed(1) + '</h3>' +
+                '<div class="text-center text-info">Brought Forward</div>' +
+                '</div>';
+
+            row += '<div class="col-xs-6 col-md-2">' +
+                '<h3 class="text-center text-primary margin-bottom-0">' + parseFloat(paid_leave_taken).toFixed(1) + '</h3>' +
+                '<div class="text-center text-info">Taken this year (Paid)</div>' +
+                '</div>';
+
+            row += '<div class="col-xs-6 col-md-2">' +
+                '<h3 class="text-center text-primary margin-bottom-0">' + parseFloat(unpaid_leave_taken).toFixed(1) + '</h3>' +
+                '<div class="text-center text-info">Taken this year (Unpaid)</div>' +
+                '</div>';
+
+            row += '<div class="col-xs-6 col-md-3">' +
+                '<h3 class="text-center text-primary margin-bottom-0">' + parseFloat(available_leave).toFixed(1) + '</h3>' +
+                '<div class="text-center text-info">Available Leave</div>' +
+                '</div>';
+
+            row += '</div>';
+
+            if(data.length > (i+1)) {
+                row += '<hr>';
+            }
+
+        }
+
+        $('#div_leave_summary').html(row);
     }
     catch (err)
     {
@@ -269,6 +240,20 @@ $.fn.save_edit_form = function ()
 {
     try
     {
+        var leave_type_id 	= $('#dd_leave_type').val();
+
+        if(leave_type_id == TIME_OFF_ID)
+        {
+            leave_data = [];
+            var leave_param = {};
+            var start_part		        = $('#start_date').val().split('-');
+            leave_param.leave_date		= start_part[2] +'-'+ start_part[1] +'-'+ start_part[0];
+            leave_param.no_of_days 	    = $('#dd_leave_time_off').val();
+            leave_param.half_day_opt    = 0;
+            leave_data.push(leave_param);
+            leave_days                  = $('#dd_leave_time_off').val();
+        }
+
 		if(leave_data.length == 0)
 		{
 			$.fn.show_right_error_noty('Please select at least one leave');
@@ -276,7 +261,6 @@ $.fn.save_edit_form = function ()
 		}
 		else
 		{
-         	var leave_type_id 	= $('#dd_leave_type').val();
 			var reason 			= $('#txt_reason').val();
          	var filename 		= $('#hidden_filename').val();
 
@@ -295,7 +279,7 @@ $.fn.save_edit_form = function ()
             };
             
             
-            if ($('#dd_leave_type').val() == 48)
+            if ($('#dd_leave_type').val() == MC_LEAVE_ID)
             {
                 data.cost     	= $('#txt_cost').val();
                 data.gst      	= $('#txt_gst').val();
@@ -358,21 +342,32 @@ $.fn.populate_list_form = function (data, is_scroll)
                 let end_date     = moment(data[i].end_date);
                 let applied_date = moment(data[i].created_date);
 
+                var half_day_opt = '';
+                if(data[i].no_of_days == '0.5') {
+                    if(data[i].half_day_opt == '1') {
+                        half_day_opt = '(First Half)';
+                    }
+                    if(data[i].half_day_opt == '2') {
+                        half_day_opt = '(Second Half)';
+                    }
+                }
+
+
                 row += '<tr><td>';
                 if (data[i].verified == 0)
                 {
                     row += '<a class="tooltips" href="javascript:void(0)" data-value=\'' + data_val + '\' onclick="$.fn.delete_form(unescape($(this).attr(\'data-value\')))" data-trigger="hover" data-original-title="Delete data "><i class="fa fa-trash-o"/></a>';
                 }
 
-                if (data[i].type_id == '48')
+                if (data[i].type_id == MC_LEAVE_ID)
                 {
                     row += '&nbsp;<a class="tooltips" href="javascript:void(0)" data-value=\'' + data_val + '\' onclick="$.fn.view_file(unescape($(this).attr(\'data-value\')))" data-trigger="hover" data-original-title="View File "><i class="fa fa-picture-o"/></a>';
                 }
                 row += '</td><td width="10%">' + start_date.format('D-MMM-YYYY') + '</td>' +
                     '<td width="10%">' + end_date.format('D-MMM-YYYY') + '</td>' +
                     '<td width="10%">' + applied_date.format('D-MMM-YYYY') + '</td>' +
-					'<td>' + data[i].type + '</td>' +
-                    '<td>' + data[i].no_of_days + '</td>' +
+					'<td>' + data[i].type + half_day_opt + '</td>' +
+                    '<td>' + data[i].no_of_days + (data[i].type_id == TIME_OFF_ID ? ' Hour(s)': '') + '</td>' +
                     '<td>' + data[i].reason + '</td>';
 
                 if (data[i].verified == 0)
@@ -477,7 +472,7 @@ $.fn.populate_list_leave_by_day = function (data)
             {
                 row += '<tr>';
                 row += '<td>' + data[i].leave_date + '</td>' +
-                       '<td>' + data[i].leave_no_of_days + '</td>';
+                       '<td>' + data[i].leave_no_of_days + (data[i].type_id == TIME_OFF_ID ? ' Hour(s)': '') + '</td>';
 
 
                 if (data[i].approved == 1)
@@ -612,13 +607,22 @@ $.fn.delete_form = function (data)
 
 $.fn.view_file_status = function (type_id)
 {
-	if (type_id == '48')
+	if (type_id == MC_LEAVE_ID)
 	{
-      $('#leave_file,#leave_file_cost').show();
+        $('#leave_file,#leave_file_cost').show();
+        $('#leave_time_off,#btn_save_time_off').hide();
+        $('#leave_end_date,#btn_view_days,#leave_days_check').show();
 	}
+	else if (type_id == TIME_OFF_ID)
+    {
+        $('#leave_time_off,#btn_save_time_off').show();
+        $('#leave_end_date,#btn_view_days,#leave_days_check').hide();
+    }
 	else
 	{
 		$('#leave_file,#leave_file_cost').hide();
+        $('#leave_time_off,#btn_save_time_off').hide();
+        $('#leave_end_date,#btn_view_days,#leave_days_check').show();
 	}
 };
 
@@ -626,18 +630,34 @@ $.fn.change_balance_leave = function (action)
 {
 	var day_option = [];
 	var all_leave_days = 0.0;
+    var count = 0;
 	$('#leave_form input[name="chk_full"]').each(function() {
 		if($(this).is(':checked'))
 		{
 			day_option.push(1.0);
 			all_leave_days = parseFloat(all_leave_days) + 1.0;
+            $("#half_option_"+count+"").hide();
 		}
 		if(!$(this).is(':checked'))
 		{
 			day_option.push(0.5);
 			all_leave_days = parseFloat(all_leave_days) + 0.5;
+            $("#half_option_"+count+"").show();
 		}
+        count++;
 	});
+
+    var half_day_opt = [];
+    $('#leave_form input[name="chk_half_opt"]').each(function() {
+        if($(this).is(':checked'))
+        {
+            half_day_opt.push(1);
+        }
+        if(!$(this).is(':checked'))
+        {
+            half_day_opt.push(2);
+        }
+    });
 
 	var count = 0;
 	leave_days = 0.0;
@@ -651,6 +671,7 @@ $.fn.change_balance_leave = function (action)
 				leave_days = parseFloat(leave_days) + parseFloat(day_option[count]);
 				leave_param.leave_date 		= $(this).val();
 				leave_param.no_of_days 	= day_option[count];
+                leave_param.half_day_opt = leave_param.no_of_days == '0.5' ? half_day_opt[count] : 0;
 				leave_data.push(leave_param);
 			}
 		}
@@ -661,6 +682,7 @@ $.fn.change_balance_leave = function (action)
 				leave_days = parseFloat(leave_days) + parseFloat(day_option[count]);
 				leave_param.leave_date 		= $(this).val();
 				leave_param.no_of_days 	= day_option[count];
+                leave_param.half_day_opt = leave_param.no_of_days == '0.5' ? half_day_opt[count] : 0;
 				leave_data.push(leave_param);
 			}
 		}
@@ -741,10 +763,11 @@ $.fn.view_days = function ()
 					{
 						row 	+= '<tr class="'+txt_class+'">';
 						row 	+= '<td width="10%"><input type="checkbox" id="chk_day" name="chk_day" value="'+moment(curr_date).format('YYYY-MM-DD')+'" onchange="$.fn.change_balance_leave(\'one\')"></td>';
-						row 	+= '<td width="30%">' +moment(curr_date).format('DD-MM-YYYY')+ '</td>';
-						row 	+= '<td width="30%">' +day_name+ '</td>';
-						row 	+= '<td><input type="checkbox" id="chk_full_'+i+'" name="chk_full" data-toggle="toggle" checked  onchange="$.fn.change_balance_leave(\'one\')"></td>';
-						//row 	+= '<td><div class="control-label"><div class="toggle"></div></div><input type="checkbox" id="chk_full" name="chk_full" checked></td>';
+						row 	+= '<td width="25%">' +moment(curr_date).format('DD-MM-YYYY')+ '</td>';
+						row 	+= '<td width="25%">' +day_name+ '</td>';
+						row 	+= '<td><input type="checkbox" id="chk_full_'+i+'" name="chk_full" data-toggle="toggle" checked onchange="$.fn.change_balance_leave(\'one\')"></td>';
+                        row 	+= '<td><div id="half_option_'+i+'" style="display: none;"><input type="checkbox" id="chk_half_opt_'+i+'" name="chk_half_opt" data-toggle="toggle" checked onchange="$.fn.change_balance_leave(\'one\')"></div></td>';
+                        //row 	+= '<td><div class="control-label"><div class="toggle"></div></div><input type="checkbox" id="chk_full" name="chk_full" checked></td>';
 						row 	+= '</tr>';
 					}
 					curr_date = moment(curr_date).add(1, 'days');
@@ -767,6 +790,11 @@ $.fn.view_days = function ()
 						off: 'HALF',
 						size: 'small'
 					});
+                    $('#chk_half_opt_'+j+'').bootstrapToggle({
+                        on: 'FIRST',
+                        off: 'SECOND',
+                        size: 'small'
+                    });
 				}
 
 				$.fn.avaliable_leave_info();
@@ -792,10 +820,10 @@ $.fn.avaliable_leave_info = function ()
 		var type_id		= $('#dd_leave_type').val();
 
  		var alt_type_id = '';
-        if (type_id == '47' || type_id == '55')
+        if (type_id == AN_LEAVE_ID || type_id == EM_LEAVE_ID)
         {
-            type_id = '47';
-            alt_type_id = '55';
+            type_id = AN_LEAVE_ID;
+            alt_type_id = EM_LEAVE_ID;
         }
 
         if (type_id != '')
@@ -1112,7 +1140,7 @@ $.fn.bind_command_events = function ()
 {
     try
     {
-        $('#btn_add_leave').click(function (e)
+        $('#btn_add_leave,#btn_save_time_off').click(function (e)
         {
             e.preventDefault();
             RECORD_INDEX 	= 0;

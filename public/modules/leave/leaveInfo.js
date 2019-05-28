@@ -9,6 +9,11 @@ var APPROVE_TYPE 	= '';
 var btn_save, btn_save_remarks, btn_approve;
 var leave_id_data 		= [];
 
+AN_LEAVE_ID = '47';
+MC_LEAVE_ID = '48';
+EM_LEAVE_ID = '55';
+TIME_OFF_ID = '227';
+
 CURRENT_PATH	= '../../';
 
 $.fn.data_table_features = function()
@@ -131,13 +136,23 @@ $.fn.populate_list_form = function(data,is_scroll)
                 let start_date = moment(data[i].start_date);
                 let end_date   = moment(data[i].end_date);
 				data_val = escape(JSON.stringify(data[i])); //.replace(/'/,"");
+
+                var half_day_opt = '';
+                if(data[i].no_of_days == '0.5') {
+                    if(data[i].half_day_opt == '1') {
+                        half_day_opt = '(First Half)';
+                    }
+                    if(data[i].half_day_opt == '2') {
+                        half_day_opt = '(Second Half)';
+                    }
+                }
 				row += '<tr id="TR_ROW_' + tr_row + '">';
 				
 					row += '<td width="15%">'  + data[i].name						+ '</td>' +
 							'<td width="10%">' + start_date.format('D-MMM-YYYY') 	+ '</td>' +
 							'<td width="10%">' + end_date.format('D-MMM-YYYY') 		+ '</td>' +
-							'<td>' 			   + data[i].type						+ '</td>' +
-							'<td>' 			   + data[i].no_of_days					+ '</td>' +
+							'<td>' 			   + data[i].type    +   half_day_opt	+ '</td>' +
+							'<td>' 			   + data[i].no_of_days + (data[i].type_id == TIME_OFF_ID ? ' Hour(s)': '') + '</td>' +
 							'<td>' 			   + data[i].reason;
 					row += '</td>';
 
@@ -201,7 +216,7 @@ $.fn.populate_list_form = function(data,is_scroll)
 						{
 							row += '<a class="tooltips" href="javascript:void(0)" data-value=\'' + data_val + '\' onclick="$.fn.delete_form(unescape($(this).attr(\'data-value\')), $(this).closest(\'tr\').prop(\'id\'))" data-trigger="hover" data-original-title="Delete data "><i class="fa fa-trash-o"/></a>';
 						}
-						if(data[i].type_id == '48' && data[i].filename != '' && data[i].filename != null)
+						if(data[i].type_id == MC_LEAVE_ID && data[i].filename != '' && data[i].filename != null)
 						{
 							row += '&nbsp;<a target="_blank" href="' + data[i].filepath + '"><i class="fa fa-picture-o"/></a>';
 						}
@@ -542,9 +557,9 @@ $.fn.view_leave_record = function(data,table_row_id)
 
 		var param	=
 		{
-			an_type_id		: 47,
-			me_type_id		: 48,
-			em_type_id		: 55,
+			an_type_id		: AN_LEAVE_ID,
+			me_type_id		: MC_LEAVE_ID,
+			em_type_id		: EM_LEAVE_ID,
 			emp_id			: ROW_DATA.emp_id
 		};
 		$.fn.fetch_data
@@ -554,46 +569,8 @@ $.fn.view_leave_record = function(data,table_row_id)
 			{
 				if(return_data.code == 0)
 				{
+                    $.fn.populate_leave_details(return_data.data);
 					
-					var an_leave_no_of_days 		= 0;
-					var an_leave_brought_forward 	= 0;
-					var me_leave_no_of_days 		= 0;
-					var me_leave_brought_forward 	= 0;
-					var an_leave_taken   			= 0;
-					var me_leave_taken   			= 0;
-					var an_paid_leave_taken   		= 0;
-					var me_paid_leave_taken   		= 0;
-
-					if(return_data.data.an_leave_entitle)
-					{
-						an_leave_no_of_days  		= return_data.data.an_leave_entitle.no_of_days;
-						an_leave_brought_forward 	= return_data.data.an_leave_entitle.brought_forward;
-					}
-					else
-					{
-						an_leave_no_of_days  		= an_leave_no_of_days ;
-						an_leave_brought_forward 	= an_leave_brought_forward;
-					}
-
-					if(return_data.data.me_leave_entitle)
-					{
-						me_leave_no_of_days  		= return_data.data.me_leave_entitle.no_of_days;
-						me_leave_brought_forward 	= return_data.data.me_leave_entitle.brought_forward;
-					}
-					else
-					{
-						me_leave_no_of_days  		= me_leave_no_of_days;
-						me_leave_brought_forward 	= me_leave_brought_forward;
-					}
-
-					(return_data.data.an_leave_taken.taken_days) ? an_leave_taken = return_data.data.an_leave_taken.taken_days : an_leave_taken = an_leave_taken;
-					(return_data.data.me_leave_taken.taken_days) ? me_leave_taken = return_data.data.me_leave_taken.taken_days : me_leave_taken = me_leave_taken;
-
-					(return_data.data.an_paid_leave_taken.taken_days) ? an_paid_leave_taken = return_data.data.an_paid_leave_taken.taken_days : an_paid_leave_taken = an_paid_leave_taken;
-					(return_data.data.me_paid_leave_taken.taken_days) ? me_paid_leave_taken = return_data.data.me_paid_leave_taken.taken_days : me_paid_leave_taken = me_paid_leave_taken;
-
-					$.fn.populate_leave_details(an_leave_no_of_days,an_leave_brought_forward,an_leave_taken,an_paid_leave_taken,me_leave_no_of_days,me_leave_brought_forward,me_leave_taken,me_paid_leave_taken);
-
 					$.fn.view_leave_by_day(data);
 					
 					$.fn.show_hide_form('INFO');
@@ -611,44 +588,66 @@ $.fn.view_leave_record = function(data,table_row_id)
     }
 };
 
-$.fn.populate_leave_details = function(an_leave_no_of_days,an_leave_brought_forward,an_leave_taken,an_paid_leave_taken,me_leave_no_of_days,me_leave_brought_forward,me_leave_taken,me_paid_leave_taken)
+$.fn.populate_leave_details = function(data)
 {
 	try
 	{
 
-		var leave_info = '<h3 class="text-center">Approved Leave Summary</h3>';
+        var row = '';
 
-		leave_info += 	'<h4>Annual Leave(Days) :</h4>';
-		leave_info += 	'<table class="table table-bordered table-responsive text-center">';
-		leave_info += 	'<thead><tr>';
-		leave_info += 	'<th class="text-center">Entitle for this year</th>';
-		leave_info += 	'<th class="text-center">Brought Forward</th>';
-		leave_info += 	'<th class="text-center">Taken in This Year</th>';
-		leave_info += 	'<th class="text-center">Available Leave</th>';
-		leave_info += 	'</tr></thead>';
-		leave_info += 	'<tbody><tr>';
-		leave_info += 	'<td>' + parseFloat(an_leave_no_of_days).toFixed(1) + '</td>';
-		leave_info += 	'<td>' + parseFloat(an_leave_brought_forward).toFixed(1) + '</td>';
-		leave_info += 	'<td><b>Paid :</b>' + parseFloat(an_paid_leave_taken).toFixed(1) + '&nbsp;|&nbsp;'+'<b>Unpaid :</b>' + (parseFloat(an_leave_taken) - parseFloat(an_paid_leave_taken)).toFixed(1) + '</td>';
-		leave_info += 	'<td>' + ((parseFloat(an_leave_no_of_days) + parseFloat(an_leave_brought_forward)) - parseFloat(an_paid_leave_taken)).toFixed(1) + '</td>';
-		leave_info += 	'</tbody></tr>';
-		leave_info += 	'</table>';
+        for(var i = 0; i < data.length; i++) {
 
-		leave_info += 	'<h4>Medical Leave(Days) :</h4>';
-		leave_info += 	'<table class="table table-bordered table-responsive text-center">';
-		leave_info += 	'<thead><tr>';
-		leave_info += 	'<th class="text-center">Entitle for this year</th>';
-		leave_info += 	'<th class="text-center">Taken in This Year</th>';
-		leave_info += 	'<th class="text-center">Available Leave</th>';
-		leave_info += 	'</tr></thead>';
-		leave_info += 	'<tbody><tr>';
-		leave_info += 	'<td>' + parseFloat(me_leave_no_of_days).toFixed(1) + '</td>';
-		leave_info += 	'<td><b>Paid :</b>' + parseFloat(me_paid_leave_taken).toFixed(1) + '&nbsp;|&nbsp;'+'<b>Unpaid :</b>' + (parseFloat(me_leave_taken) - parseFloat(me_paid_leave_taken)).toFixed(1) + '</td>';
-		leave_info += 	'<td>' + ((parseFloat(me_leave_no_of_days) + parseFloat(me_leave_brought_forward)) - parseFloat(me_paid_leave_taken)).toFixed(1) + '</td>';
-		leave_info += 	'</tbody></tr>';
-		leave_info += 	'</table>';
+            var entitle_leave = data[i].entitle_leave ? data[i].entitle_leave : 0;
+            var brought_forward = data[i].brought_forward ? data[i].brought_forward : 0;
+            if(data[i].leave_id == TIME_OFF_ID) {
+                entitle_leave = parseFloat(entitle_leave) * 8;
+                brought_forward = parseFloat(brought_forward) * 8;
+            }
+            var paid_leave_taken = data[i].paid_leave_taken ? data[i].paid_leave_taken : 0;
+            var unpaid_leave_taken = data[i].unpaid_leave_taken ? data[i].unpaid_leave_taken : 0;
+            var available_leave = (parseFloat(entitle_leave) + parseFloat(brought_forward)) - (parseFloat(paid_leave_taken));
 
-		$('#leave_details')			.html(leave_info);
+            row += '<div class="row">';
+
+            row += '<div class="col-md-12 clearfix">' +
+                '<h4 class="pull-left" style="margin: 0px;">' + data[i].leave_type + ' <small>(' + (data[i].leave_id == TIME_OFF_ID ? 'Hours' : 'Days') + ')</small></h4>' +
+                '</div>';
+
+            row += '<div class="col-xs-6 col-md-3">' +
+                '<h3 class="text-center text-primary margin-bottom-0">' + parseFloat(entitle_leave).toFixed(1) + '</h3>' +
+                '<div class="text-center text-info">Entitled for this year</div>' +
+                '</div>';
+
+            row += '<div class="col-xs-6 col-md-2">' +
+                '<h3 class="text-center text-primary margin-bottom-0">' + parseFloat(brought_forward).toFixed(1) + '</h3>' +
+                '<div class="text-center text-info">Brought Forward</div>' +
+                '</div>';
+
+            row += '<div class="col-xs-6 col-md-2">' +
+                '<h3 class="text-center text-primary margin-bottom-0">' + parseFloat(paid_leave_taken).toFixed(1) + '</h3>' +
+                '<div class="text-center text-info">Taken this year (Paid)</div>' +
+                '</div>';
+
+            row += '<div class="col-xs-6 col-md-2">' +
+                '<h3 class="text-center text-primary margin-bottom-0">' + parseFloat(unpaid_leave_taken).toFixed(1) + '</h3>' +
+                '<div class="text-center text-info">Taken this year (Unpaid)</div>' +
+                '</div>';
+
+            row += '<div class="col-xs-6 col-md-3">' +
+                '<h3 class="text-center text-primary margin-bottom-0">' + parseFloat(available_leave).toFixed(1) + '</h3>' +
+                '<div class="text-center text-info">Available Leave</div>' +
+                '</div>';
+
+            row += '</div>';
+
+            if(data.length > (i+1)) {
+                row += '<hr>';
+            }
+
+        }
+
+        $('#div_leave_summary').html(row);
+
 	}
 	catch(err)
 	{
@@ -712,14 +711,14 @@ $.fn.populate_list_leave_by_day = function(data)
 				}
 					
 				row += '<td>' + data[i].leave_date			+ '</td>' +
-					   '<td>' + data[i].leave_no_of_days 	+ '</td>';
+					   '<td>' + data[i].leave_no_of_days    + (data[i].type_id == TIME_OFF_ID ? ' Hour(s)': '') + '</td>';
 				
 				
 				if(data[i].approved_by != null)
 				{
 					if(data[i].approved == 1)
 					{
-						row += '<td><span class="text-success"><b>APPROVED</b></span></td>';
+						row += '<td><span class="text-success"><b>APPROVED</b></span>&nbsp;&nbsp;<a class="btn btn-danger tooltips pull-right" href="javascript:void(0)" data-value=\'' + data_val + '\' onclick="$.fn.do_cancel_leave(unescape( $(this).attr(\'data-value\')) )">Cancel</a></td>';
 						if(data[i].paid == 1)
 						{
 							row += '<td><span class="text-success"><b>PAID</b></span></td>';
@@ -732,12 +731,12 @@ $.fn.populate_list_leave_by_day = function(data)
 				}
 				else if(data[i].rejected == 1)
 				{
-					row += '<td><span class="text-danger"><b>REJECT</b></span></td>';
+					row += '<td><span class="text-danger"><b>REJECT</b></span>&nbsp;&nbsp;<a class="btn btn-danger tooltips pull-right" href="javascript:void(0)" data-value=\'' + data_val + '\' onclick="$.fn.do_cancel_leave(unescape( $(this).attr(\'data-value\')) )">Cancel</a></td>';
 					row += '<td>-</td>';
 				}
 				else
 				{
-					row += '<td><span class="text-info"><b>PENDING</b></span></td>';
+					row += '<td><span class="text-info"><b>PENDING</b></span>&nbsp;&nbsp;<a class="btn btn-danger tooltips pull-right" href="javascript:void(0)" data-value=\'' + data_val + '\' onclick="$.fn.do_cancel_leave(unescape( $(this).attr(\'data-value\')) )">Cancel</a></td>';
 					row += '<td>-</td>';
 				}
 
@@ -762,6 +761,68 @@ $.fn.populate_list_leave_by_day = function(data)
 		$.fn.log_error(arguments.callee.caller,err.message);
 	}
 };
+
+$.fn.do_cancel_leave = function(data)
+{
+    try
+    {
+        data = JSON.parse(data);
+
+        var new_no_of_days = parseFloat(parseFloat(data.no_of_days) - parseFloat(data.leave_no_of_days)).toFixed(1);
+
+        var data =
+		{
+			id			 		: data.id,
+            leave_id 	 		: data.leave_id,
+            no_of_days   		: new_no_of_days,
+			emp_id		 		: SESSIONS_DATA.emp_id
+		};
+
+        bootbox.confirm
+        ({
+            title: "Cancel Confirmation",
+            message: "Please confirm before you cancel.",
+            buttons:
+                {
+                    cancel:
+                        {
+                            label: '<i class="fa fa-times"></i> Cancel'
+                        },
+                    confirm:
+                        {
+                            label: '<i class="fa fa-check"></i> Confirm'
+                        }
+                },
+            callback: function (result)
+            {
+
+                if (result == true)
+                {
+                    $.fn.write_data
+                    (
+                        $.fn.generate_parameter('cancel_leave_day', data),
+                        function (return_data)
+                        {
+                            if (return_data)
+                            {
+                                RECORD_INDEX = 0;
+                                $('#tbl_leave_record > tbody').empty();
+                                $.fn.populate_list_leave_by_day(return_data.data.list, false);
+                                $.fn.show_right_success_noty('Data has been cancelled successfully');
+                            }
+
+                        }, false
+                    );
+                }
+            }
+        });
+    }
+    catch(err)
+    {
+        $.fn.log_error(arguments.callee.caller,err.message);
+    }
+};
+
 
 $.fn.prepare_approval = function()
 {

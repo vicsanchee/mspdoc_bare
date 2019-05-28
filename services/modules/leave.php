@@ -46,6 +46,9 @@ function get_leave_list($params)
 				, (select concat('" . constant("UPLOAD_DIR_URL")  . "', 'leave_doc', '/', cms_leave.emp_id, '/', cms_leave.filename)) as mc
 				, cms_leave.verified
 				, cms_leave.approved
+				, (select half_day_opt
+                  from cms_leave_by_day where cms_leave.id = cms_leave_by_day.leave_id 
+                  and cms_leave.no_of_days = 0.5) as half_day_opt
                 , IFNULL((select sum(cms_leave_by_day.leave_no_of_days) 
                   from cms_leave_by_day where cms_leave.id = cms_leave_by_day.leave_id 
                   and cms_leave_by_day.approved = 1),0) as sum_approved
@@ -61,7 +64,6 @@ function get_leave_list($params)
                 ",
                 $where, $start_index, $limit, "start_date", "DESC");
 
-				//date_format(cms_leave.end_date,'" . constant('UI_DATE_FORMAT') .  "') as end_date
 
         if(count($rs) < 1 || !isset($rs))
         {
@@ -98,13 +100,15 @@ function get_leave_by_day($params)
 
         if($leave_id != "")
         {
-			$where 	.=  " AND cms_leave_by_day.leave_id = " . $leave_id;
+			$where 	.=  " AND cms_leave_by_day.leave_id = " . $leave_id . " AND cms_leave_by_day.is_active = 1";
         }
 
         $rs = db_query_list
               (
                 "cms_leave_by_day.id
 				, cms_leave_by_day.leave_id
+				, cms_leave.type_id
+				, cms_leave.no_of_days
 				, date_format(cms_leave_by_day.leave_date,'" . constant('UI_DATE_FORMAT') .  "') as leave_date
 				, cms_leave_by_day.leave_no_of_days
 				, cms_leave_by_day.paid
@@ -117,12 +121,10 @@ function get_leave_by_day($params)
                 ",
                 "
                 cms_leave_by_day
+                    INNER JOIN cms_leave
+                	    ON (cms_leave_by_day.leave_id = cms_leave.id)
                 ",
                 $where, $start_index, $limit, "cms_leave_by_day.leave_date", "ASC");
-
-		// $leave_remarks			=	json_decode(get_leave_remark($params));
-
-		// $rs['leave_remarks']	=	$leave_remarks->data;
 
         if(count($rs) < 1 || !isset($rs))
         {
@@ -140,34 +142,83 @@ function get_leave_by_day($params)
     }
 }
 
+function cancel_leave_day($params)
+{
+    try
+    {
+        log_it(__FUNCTION__, $params);
+
+        $id  		        = if_property_exist($params,'id');
+        $leave_id           = if_property_exist($params,'leave_id');
+        $no_of_days         = if_property_exist($params,'no_of_days');
+        $emp_id		        = if_property_exist($params,'emp_id');
+
+        if($id === NULL || $id == '')
+        {
+            return handle_fail_response('ID is mandatory');
+        }
+
+        $data = array
+        (
+            ':id'	  		=> $id,
+            ':is_active'  	=> 0
+        );
+
+        $data 		= add_timestamp_to_array($data,$emp_id, 1);
+        $result 	= db_update($data, 'cms_leave_by_day','id');
+
+        $data_leave = array
+        (
+            ':id'	  		=> $leave_id,
+            ':no_of_days'  	=> $no_of_days
+        );
+
+        $data_leave = add_timestamp_to_array($data_leave,$emp_id, 1);
+        $result     = db_update($data_leave, 'cms_leave','id');
+
+        $list       = json_decode(get_leave_by_day($params));
+
+        return handle_success_response('Success', $list->data);
+    }
+    catch(Exception $e)
+    {
+        handle_exception($e);
+    }
+}
+
 function get_leave_details($params)
 {
     try
     {
         log_it(__FUNCTION__, $params);
 
-		$an_type_id					= if_property_exist($params, 'an_type_id','');
-		$me_type_id					= if_property_exist($params, 'me_type_id','');
-		$em_type_id					= if_property_exist($params, 'em_type_id','');
+        $emp_id				= if_property_exist($params, 'emp_id','');
+        $from_date 		=  date("Y").'-01-01';
+        $to_date 		=  date("Y").'-12-31';
+        $curr_year 	    =  date("Y");
 
-		$params->type_id 			= 	$an_type_id	;
-		$params->alt_type_id 		= 	$em_type_id;
-        $an_leave_entitle			=	get_leave_entitle($params);
-		$an_leave_taken				=	get_leave_taken($params);
-		$an_paid_leave_taken		=	get_paid_leave_taken($params);
+        $where		=	" cms_emp_leave.id != ''";
 
-		$params->type_id 			= 	$me_type_id;
-		$params->alt_type_id 		= 	'';
-		$me_leave_entitle			=	get_leave_entitle($params);
-		$me_leave_taken				=	get_leave_taken($params);
-		$me_paid_leave_taken		=	get_paid_leave_taken($params);
+        if($emp_id != "")
+        {
+            $where 	.=  " AND cms_emp_leave.emp_id = " . $emp_id . " AND cms_emp_leave.applicable_year = " . $curr_year . " AND cms_emp_leave.is_active = 1";
+        }
 
-		$rs['an_leave_entitle']		=	$an_leave_entitle[0];// Get the entitile leave for annual leave
-		$rs['me_leave_entitle']		=	$me_leave_entitle[0];// Get the entitile leave for medical leave
-		$rs['an_leave_taken']		=	$an_leave_taken[0]; // Count the taken leave for annual leave
-		$rs['me_leave_taken']		=	$me_leave_taken[0]; // Count the taken leave for medical leave
-		$rs['an_paid_leave_taken']	=	$an_paid_leave_taken[0]; // Count the taken paid leave for annual leave
-		$rs['me_paid_leave_taken']	=	$me_paid_leave_taken[0]; // Count the taken paid leave for medical leave
+        $rs = db_query
+        (
+            "cms_master_list.id as leave_id
+                ,cms_master_list.descr as leave_type 
+                ,cms_emp_leave.no_of_days as entitle_leave
+				,cms_emp_leave.brought_forward as brought_forward
+				,(select sum(leave_no_of_days) from cms_leave_by_day,cms_leave where cms_leave_by_day.leave_id = cms_leave.id AND cms_leave.emp_id = '" . $emp_id . "' AND cms_leave.type_id = cms_master_list.id  AND cms_leave.is_active = 1 AND cms_leave_by_day.approved = 1 AND cms_leave_by_day.paid = 1 AND cms_leave_by_day.leave_date >= '" . $from_date . "' AND cms_leave_by_day.leave_date <= '" . $to_date . "') as paid_leave_taken
+				,(select sum(leave_no_of_days) from cms_leave_by_day,cms_leave where cms_leave_by_day.leave_id = cms_leave.id AND cms_leave.emp_id = '" . $emp_id . "' AND cms_leave.type_id = cms_master_list.id  AND cms_leave.is_active = 1 AND cms_leave_by_day.approved = 1 AND cms_leave_by_day.paid = 0 AND cms_leave_by_day.leave_date >= '" . $from_date . "' AND cms_leave_by_day.leave_date <= '" . $to_date . "') as unpaid_leave_taken
+                ",
+            "
+                cms_emp_leave
+                 INNER JOIN cms_master_list 
+                        ON (cms_emp_leave.master_list_id = cms_master_list.id)
+                ",
+            $where);
 
         if(count($rs) < 1 || !isset($rs))
         {
@@ -221,139 +272,6 @@ function get_leave_entitle($params)
         {
             // return handle_success_response('Success', $rs);
             return $rs;
-        }
-    }
-    catch(Exception $e)
-    {
-        handle_exception($e);
-    }
-}
-
-function get_leave_taken($params)
-{
-    try
-    {
-        log_it(__FUNCTION__, $params);
-
-		$type_id		= if_property_exist($params, 'type_id','');
-		$alt_type_id	= if_property_exist($params, 'alt_type_id','');
-        $emp_id			= if_property_exist($params, 'emp_id','');
-        $where			=	" cms_leave_by_day.id != ''";
-
-		$from_date 		=  date("Y").'-01-01';
-		$to_date 		=  date("Y").'-12-31';
-
-        if($emp_id != "" && $type_id != "")
-        {
-			if($alt_type_id != "")
-			{
-				$type 	=  " AND (cms_leave.type_id = " . $type_id ." OR cms_leave.type_id = " . $alt_type_id .")";
-			}
-			else
-			{
-				$type 	=  " AND cms_leave.type_id = " . $type_id;
-			}
-
-			$where 	.=  " AND cms_leave.emp_id = " . $emp_id . " AND cms_leave_by_day.leave_date >= '" . $from_date . "' AND cms_leave_by_day.leave_date <= '" . $to_date . "' AND cms_leave_by_day.approved = 1 AND cms_leave.is_active = 1" . $type;
-        }
-
-        $rs = db_query
-            (
-                "sum(cms_leave_by_day.leave_no_of_days) as taken_days
-                ",
-                "
-                cms_leave_by_day
-				INNER JOIN cms_leave
-                	ON (cms_leave_by_day.leave_id = cms_leave.id)
-                ",
-                $where
-            );
-
-        // Adding query to get emergency leave taken (I'm avoiding to alter existing code)
-        // $rs_em = '';
-        if($alt_type_id != "")
-        {
-            $rs_em = db_query
-            (
-                "sum(cms_leave_by_day.leave_no_of_days) as em_taken",
-                // FROM
-                "cms_leave_by_day INNER JOIN cms_leave
-                    ON (cms_leave_by_day.leave_id = cms_leave.id)",
-                // WHERE
-                "cms_leave_by_day.id != ''
-                AND cms_leave_by_day.leave_date >= '" . $from_date . "'
-                AND cms_leave_by_day.leave_date <= '" . $to_date . "'
-                AND cms_leave_by_day.approved = 1
-                AND cms_leave.type_id = " . $alt_type_id . "
-                AND cms_leave.emp_id = " . $emp_id . "
-                AND cms_leave.is_active = 1"
-            );
-            $rs[0]['em_taken'] = $rs_em[0]['em_taken'];
-        }
-
-		if(count($rs) < 1 || !isset($rs))
-        {
-            return handle_fail_response('No record found');
-        }
-        else
-        {
-            return $rs;
-            // return handle_success_response('Success', $rs);
-        }
-    }
-    catch(Exception $e)
-    {
-        handle_exception($e);
-    }
-}
-
-function get_paid_leave_taken($params)
-{
-    try
-    {
-        log_it(__FUNCTION__, $params);
-
-		$type_id		= if_property_exist($params, 'type_id','');
-		$alt_type_id	= if_property_exist($params, 'alt_type_id','');
-        $emp_id			= if_property_exist($params, 'emp_id','');
-        $where			=	" cms_leave_by_day.id != ''";
-
-		$from_date 		=  date("Y").'-01-01';
-		$to_date 		=  date("Y").'-12-31';
-
-        if($emp_id != "" && $type_id != "")
-        {
-			if($alt_type_id != "")
-			{
-				$type 	=  " AND (cms_leave.type_id = " . $type_id ." OR cms_leave.type_id = " . $alt_type_id .")";
-			}
-			else
-			{
-				$type 	=  " AND cms_leave.type_id = " . $type_id;
-			}
-
-			$where 	.=  " AND cms_leave.emp_id = " . $emp_id . " AND cms_leave_by_day.leave_date >= '" . $from_date . "' AND cms_leave_by_day.leave_date <= '" . $to_date . "' AND cms_leave_by_day.paid = 1 AND cms_leave_by_day.approved = 1 AND cms_leave.is_active = 1" . $type;
-        }
-
-        $rs = db_query
-              (
-                "sum(cms_leave_by_day.leave_no_of_days) as taken_days
-                ",
-                "
-                cms_leave_by_day
-				INNER JOIN cms_leave
-                	ON (cms_leave_by_day.leave_id = cms_leave.id)
-                ",
-                $where);
-
-		if(count($rs) < 1 || !isset($rs))
-        {
-            return handle_fail_response('No record found');
-        }
-        else
-        {
-            return $rs;
-            // return handle_success_response('Success', $rs);
         }
     }
     catch(Exception $e)
@@ -633,6 +551,7 @@ function add_edit_leave_by_day($params)
 				':leave_id'				=> 	$leave_id,
 				':leave_date'			=>  $leave_data[$i] -> leave_date,
 				':leave_no_of_days'		=>  $leave_data[$i] -> no_of_days,
+                ':half_day_opt'		    =>  $leave_data[$i] -> half_day_opt,
 				':created_by'			=>  $emp_id
 			);
 

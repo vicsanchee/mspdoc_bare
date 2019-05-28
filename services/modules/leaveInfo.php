@@ -94,6 +94,9 @@ function get_leave_info_list($params)
 			,concat('" . constant("UPLOAD_DIR_URL") . "', 'leave_doc', '/',cms_leave.emp_id, '/', cms_leave.filename) as filepath
             , cms_leave.verified
             , cms_leave.approved
+            , (select half_day_opt
+                  from cms_leave_by_day where cms_leave.id = cms_leave_by_day.leave_id 
+                  and cms_leave.no_of_days = 0.5) as half_day_opt
             , IFNULL((select sum(cms_leave_by_day.leave_no_of_days) 
         	           from cms_leave_by_day where cms_leave.id = cms_leave_by_day.leave_id 
         	           and cms_leave_by_day.rejected = 1),0) as rejected

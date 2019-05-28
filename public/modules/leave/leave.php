@@ -15,7 +15,6 @@ $curr_year 	=  date("Y");
 $emp_leave_type		= db_query('cms_master_list.id as id,cms_master_list.descr as descr,cms_emp_leave.no_of_days','cms_emp_leave INNER JOIN cms_master_list ON
              cms_emp_leave.master_list_id = cms_master_list.id','cms_emp_leave.emp_id = '.$_SESSION['emp_id'].' AND cms_emp_leave.applicable_year = ' . $curr_year . ' AND cms_emp_leave.is_active = 1');
 
-$extra_leave_type	= db_query('id,descr','cms_master_list','category_id = 16 AND id = 55');
 $expenses         	= db_query('id,descr','cms_master_list','id = 195 AND is_active = 1');
 
 
@@ -32,117 +31,47 @@ $expenses         	= db_query('id,descr','cms_master_list','id = 195 AND is_acti
                 <div class="col-md-12">
                     <div class="panel panel-primary">
                         <div class="panel-body">
-                            <div class="row">
-                                <div class="col-md-12 clearfix">
-                                    <h4 class="pull-left" style="margin: 0 0 10px;">Annual Leave <small>(Days)</small></h4>
-                                </div>
 
-                                <div class="col-xs-6 col-md-2">
-                                    <h1 id="disp_an_no_of_days" class="text-center text-primary">-</h1>
-                                    <p class="text-center text-info">Entitled for this year</p>
-                                </div>
+                            <div id="div_leave_summary">
 
-                                <div class="col-xs-6 col-md-2">
-                                    <h1 id="disp_an_brought_forward" class="text-center text-primary">-</h1>
-                                    <p class="text-center text-info">Brought Forward</p>
-                                </div>
-
-                                <div class="col-xs-6 col-md-2">
-                                    <h1 id="disp_an_taken_paid" class="text-center text-primary">-</h1>
-                                    <p class="text-center text-info">Taken this year (Paid)</p>
-                                </div>
-
-                                <div class="col-xs-6 col-md-2">
-                                    <h1 id="disp_an_taken_unpaid" class="text-center text-primary">-</h1>
-                                    <p class="text-center text-info">Taken this year (Unpaid)</p>
-                                </div>
-
-                                <div class="col-xs-6 col-md-2">
-                                    <h1 id="disp_an_taken_emergency" class="text-center text-primary">-</h1>
-                                    <p class="text-center text-info">Taken this year (Emergency)</p>
-                                </div>
-
-                                <div class="col-xs-6 col-md-2">
-                                    <h1 id="disp_an_balance" class="text-center text-primary">-</h1>
-                                    <p class="text-center text-info">Available Leave</p>
-                                </div>
                             </div>
 
-                            <hr>
-
-                            <div class="row">
-                                <div class="col-md-12 clearfix">
-                                    <h4 class="pull-left" style="margin: 0 0 10px;">Medical Leave <small>(Days)</small></h4>
-                                </div>
-
-                                <div class="col-xs-6 col-md-3">
-                                    <h1 id="disp_me_no_of_days" class="text-center text-primary">-</h1>
-                                    <p class="text-center text-info">Entitled for this year</p>
-                                </div>
-
-                                <div class="col-xs-6 col-md-3">
-                                    <h1 id="disp_me_taken_paid" class="text-center text-primary">-</h1>
-                                    <p class="text-center text-info">Taken this year (Paid)</p>
-                                </div>
-
-                                <div class="col-xs-6 col-md-3">
-                                    <h1 id="disp_me_taken_unpaid" class="text-center text-primary">-</h1>
-                                    <p class="text-center text-info">Taken this year (Unpaid)</p>
-                                </div>
-
-                                <div class="col-xs-6 col-md-3">
-                                    <h1 id="disp_me_balance" class="text-center text-primary">-</h1>
-                                    <p class="text-center text-info">Available Leave</p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
 			<div class="row">
-                 <!-- <div class="col-md-12">
-                    <div class="panel panel-grape">
-                        <div class="panel-heading">
-                            <h4>Leave Details</h4>
-                        </div>
-
-    					<div class="panel-body">
-                        	<div class="col-md-12">
-                        		<div class="form-group" id="leave_details">
-
-                         		</div>
-                        	</div>
-                        </div>
-					</div>
-                </div> -->
-
 
                 <div class="col-md-12">
                     <div class="panel panel-grape">
     					<div class="panel-body">
 
-                        	<!--<div class="col-sm-12">
-                            	<div class="alert alert-info">Click on a date or date range to add the leave.</div>
-                        		<div id='calendar-drag'></div>
-                                <br>
-                                <div class="col-sm-12">
-                                    <div class="col-sm-1" style="width:20px; height:20px; border:1px solid #666; background-color:#0062C4;"></div>
-                                    <div class="col-sm-2">Annual Leave(Full Day)</div>
-                                    <div class="col-sm-1" style="width:20px; height:20px; border:1px solid #666; background-color:#79BCFF;"></div>
-                                    <div class="col-sm-2">Annual Leave(Half Day)</div>
-                                    <div class="col-sm-1" style="width:20px; height:20px; border:1px solid #666; background-color:#814141;"></div>
-                                    <div class="col-sm-2">Medical Leave(Full Day)</div>
-                                    <div class="col-sm-1" style="width:20px; height:20px; border:1px solid #666; background-color:#CD9C9C;"></div>
-                                    <div class="col-sm-2">Medical Leave(Half Day)</div>
-                                </div>
-                        	</div> -->
-
-                            <!--<h3 class="text-center">Apply Your Leave</h3>-->
-
                             <form class="form-horizontal" data-validate="parsley" id="leave_form">
 
-                                <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="dd_leave_type" class="col-sm-2 control-label">Leave Type :</label>
+                                    <div class="col-sm-4">
+                                        <select id="dd_leave_type" style="width:100%" class="populate" required="required" onchange="$.fn.view_file_status(this.value)">
+                                            <option value="">Please Select</option>
+                                            <?php
+                                            for($i = 0; $i < count($emp_leave_type); $i++)
+                                            {
+                                                ?>
+                                                <option value="<?php echo($emp_leave_type[$i]['id']) ?>"><?php echo($emp_leave_type[$i]['descr']) ?></option>
+                                                <?php
+                                            }
+                                            ?>
+                                        </select>
+                                    </div>
+                                    <label for="txt_reason" class="col-sm-2 control-label">Reason :</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control marginBottom10px" id="txt_reason" placeholder="Required Field"  required="required">
+                                    </div>
+
+                                </div>
+
+                                <div>
                                     <div class="form-group">
 
                                         <label for="start_date" class="col-sm-2 control-label">Start Date :</label>
@@ -152,67 +81,45 @@ $expenses         	= db_query('id,descr','cms_master_list','id = 195 AND is_acti
                                                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                                             </div>
                                         </div>
-                                        <label for="end_date" class="col-sm-2 control-label">End Date :</label>
-                                        <div class="col-sm-4">
-                                            <div class="input-group">
-                                                <input type="text" id="end_date" class="form-control" data-date-format="dd-mm-yyyy"  placeholder="e.g dd-mm-yyyy" required="required">
-                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        <div id="leave_end_date">
+                                            <label for="end_date" class="col-sm-2 control-label">End Date :</label>
+                                            <div class="col-sm-4">
+                                                <div class="input-group">
+                                                    <input type="text" id="end_date" class="form-control" data-date-format="dd-mm-yyyy"  placeholder="e.g dd-mm-yyyy" required="required">
+                                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="leave_time_off">
+                                            <label for="dd_leave_time_off" class="col-sm-2 control-label">Leave Type :</label>
+                                            <div class="col-sm-4">
+                                                <select id="dd_leave_time_off" style="width:100%" class="populate">
+                                                    <option value="1" selected>1 Hour</option>
+                                                    <option value="2">2 Hours</option>
+                                                    <option value="3">3 Hours</option>
+                                                </select>
                                             </div>
                                         </div>
 
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="dd_leave_type" class="col-sm-2 control-label">Leave Type :</label>
-                                        <div class="col-sm-4">
-                                            <select id="dd_leave_type" style="width:100%" class="populate" required="required" onchange="$.fn.view_file_status(this.value)">
-                                                <option value="">Please Select</option>
-                                                <?php
-                                                for($i = 0; $i < count($emp_leave_type); $i++)
-                                                {
-                                                ?>
-                                                    <option value="<?php echo($emp_leave_type[$i]['id']) ?>"><?php echo($emp_leave_type[$i]['descr']) ?></option>
-                                                <?php
-                                                }
-                                                ?>
-                                                <!--Populate Emergency Leave and Unpaid Leave-->
-                                                <!--Start-->
-                                                <?php
-                                                if(count($emp_leave_type)>0)
-                                                {
-                                                    for($i = 0; $i < count($extra_leave_type); $i++)
-                                                    {
-                                                ?>
-                                                        <option value="<?php echo($extra_leave_type[$i]['id']) ?>"><?php echo($extra_leave_type[$i]['descr']) ?></option>
-                                                <?php
-                                                    }
-                                                }
-                                                ?>
-                                                <!--End-->
-                                            </select>
-                                        </div>
-                                        <label for="txt_reason" class="col-sm-2 control-label">Reason :</label>
-                                        <div class="col-sm-4">
-                                            <input type="text" class="form-control marginBottom10px" id="txt_reason" placeholder="Required Field"  required="required">
-                                        </div>
 
-                                    </div>
-
-                                    <div class="form-group">
-                                    	
-                                    	<label for="chk_weekend" class="col-sm-2 control-label">Allow Days :</label>
-                                        <div class="col-sm-4" style="padding-top:5px;">
-                                            <div class="col-sm-1">
-                                                <input type="checkbox" id="chk_allow_weekend" name="chk_allow_weekend">
-                                            </div>
-                                            <div class="col-sm-5">
-                                                <b>Weekend Days.</b>
-                                            </div>
-                                            <div class="col-sm-1">
-                                                <input type="checkbox" id="chk_allow_holiday" name="chk_allow_holiday">
-                                            </div>
-                                            <div class="col-sm-5">
-                                                <b>Public Holidays.</b>
+                                        <div id="leave_days_check">
+                                            <label for="chk_weekend" class="col-sm-2 control-label">Allow Days :</label>
+                                            <div class="col-sm-4" style="padding-top:5px;">
+                                                <div class="col-sm-1">
+                                                    <input type="checkbox" id="chk_allow_weekend" name="chk_allow_weekend">
+                                                </div>
+                                                <div class="col-sm-5">
+                                                    <b>Weekend Days.</b>
+                                                </div>
+                                                <div class="col-sm-1">
+                                                    <input type="checkbox" id="chk_allow_holiday" name="chk_allow_holiday">
+                                                </div>
+                                                <div class="col-sm-5">
+                                                    <b>Public Holidays.</b>
+                                                </div>
                                             </div>
                                         </div>
                                         
@@ -306,6 +213,7 @@ $expenses         	= db_query('id,descr','cms_master_list','id = 195 AND is_acti
                                         <div class="pull-right">
                                             <div class="col-sm-12" style="text-align:right">
                                                 <button type="button" class="btn btn-primary-alt ladda-button" data-style="expand-left" data-spinner-color="#000000" id="btn_view_days">View Leave Days</button>
+                                                <button type="button" class="btn btn-primary-alt ladda-button" data-style="expand-left" data-spinner-color="#000000" id="btn_save_time_off"><i class="fa fa-save"></i> Save</button>
                                             </div>
                                         </div>
 
@@ -331,6 +239,7 @@ $expenses         	= db_query('id,descr','cms_master_list','id = 195 AND is_acti
                                                 <th>DATE</th>
                                                 <th>DAY</th>
                                                 <th>DURATION</th>
+                                                <th>&nbsp;</th>
                                             </thead>
                                             <tbody>
 
@@ -400,7 +309,7 @@ $expenses         	= db_query('id,descr','cms_master_list','id = 195 AND is_acti
 										<th>End Date</th>
 										<th>Applied Date</th>
                                         <th>Type</th>
-                                        <th>Days</th>
+                                        <th>Days/Hours</th>
 										<th>Reason</th>
                                         <th>Verification</th>
                                         <th>Leave Record</th>
@@ -437,7 +346,7 @@ $expenses         	= db_query('id,descr','cms_master_list','id = 195 AND is_acti
                         <thead>
                             <tr>
                             	<th>Date</th>
-                                <th>Days</th>
+                                <th>Days/Hours</th>
                                 <th>Action</th>
                                 <th>Payment</th>
 							</tr>
